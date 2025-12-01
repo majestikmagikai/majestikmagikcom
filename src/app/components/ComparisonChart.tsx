@@ -45,7 +45,7 @@ function Cell({ val }: { val: boolean | string }) {
 
 const ComparisonChart: React.FC = () => {
     return (
-        <section className="bg-slate-900 py-16 md:py-24">
+        <section id="comparison-chart" className="bg-slate-900 py-16 md:py-24">
             <div className="container mx-auto px-6">
                 <div className="mx-auto mb-10 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-100 scroll-animate">Why Choose Majestik Magik</h2>

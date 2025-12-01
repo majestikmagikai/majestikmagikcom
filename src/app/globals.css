@@ -185,6 +185,101 @@ body {
   /* Keeps the state at the end of the animation */
 }
 
+
+/* Outer frame: animated gradient + glow */
+.hero-screenshot-frame {
+  position: relative;
+  border-radius: 1.5rem;       /* rounded-2xl */
+  padding: 4px;                /* thin border padding */
+  perspective: 1200px;         /* needed for 3D tilt */
+  isolation: isolate;          /* keeps blend effects clean */
+}
+
+.hero-screenshot-frame::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: inherit;
+  z-index: -1;
+
+  /* Indigo → blue → teal gradient */
+  background: linear-gradient(
+    120deg,
+    #4f46e5,
+    #2563eb,
+    #14b8a6,
+    #4f46e5
+  );
+  background-size: 220% 220%;
+
+  filter: blur(24px);
+  opacity: 0.7;
+
+  /* Moving gradient + breathing glow */
+  animation:
+    mm-gradient-shift 16s ease-in-out infinite,
+    mm-glow-pulse 5s ease-in-out infinite;
+}
+
+/* The actual screenshot card */
+.hero-screenshot-inner {
+  border-radius: 1.25rem;      /* rounded-xl/2xl hybrid */
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
+  box-shadow:
+    0 22px 55px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(148, 163, 184, 0.15);
+
+  transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* 3D tilt + slight lift on hover */
+.hero-screenshot-frame.group:hover .hero-screenshot-inner {
+  transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
+  box-shadow:
+    0 32px 80px rgba(15, 23, 42, 0.98),
+    0 0 0 1px rgba(191, 219, 254, 0.26);
+  filter: brightness(1.03);
+}
+
+/* Intensify glow on hover */
+.hero-screenshot-frame.group:hover::before {
+  opacity: 1;
+  filter: blur(28px);
+}
+
+/* Moving gradient */
+@keyframes mm-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Breathing glow */
+@keyframes mm-glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(0.97);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+
+
 /* --- Services Card Hover Effect Styles --- */
 .services-card-hover-animate {
   transition: transform 0.3s ease-in-out;
