@@ -1,11 +1,20 @@
 # This is a configuration file for Cloudflare's command-line tool, Wrangler.
 # It's used to configure and deploy your Next.js application to Cloudflare Pages.
 
-name = "majestikmagikcom"
+name = "majestikmagikcom" # The name of your Cloudflare Pages project
 
 # The compatibility date specifies the version of the Workers runtime to use.
 # It's a good practice to use a recent date to leverage the latest features.
 compatibility_date = "2024-04-05"
+
+# --- Cloudflare Pages Configuration ---
+# This section configures your project for deployment to Cloudflare Pages.
+[pages]
+# The build output directory for your Next.js application.
+build_output_dir = ".next"
+# The command to build your Next.js application.
+build_command = "npm run build"
+
 
 # --- Local Development Configuration ---
 # The following settings are useful when running `wrangler pages dev` locally.
@@ -13,7 +22,7 @@ compatibility_date = "2024-04-05"
 # [vars]
 # # You can set environment variables for local development here.
 # # For example, if you were not using a .dev.vars file:
-NEXT_PUBLIC_GEMINI_API_KEY=AIzaSyCghNNBdN1q0455EyfE0eFRVvdd3cHX0RY
+# # NEXT_PUBLIC_GEMINI_API_KEY = "your_local_gemini_key"
 
 # --- Bindings ---
 # Bindings allow your application to interact with Cloudflare resources like KV, D1, and R2.
