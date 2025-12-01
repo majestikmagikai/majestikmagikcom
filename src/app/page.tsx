@@ -13,7 +13,7 @@ import {
   TeamSection,
   TestimonialsSection,
   Chatbot,
-  VideoModal
+
 } from './components';
 
 import './globals.css';
@@ -35,8 +35,6 @@ const App = () => {
   const [geminiAi, setGeminiAi] = useState<GoogleGenAI | null>(null);
   const [isGeminiInitialized, setIsGeminiInitialized] = useState<boolean>(false);
 
-  // Video Modal State
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   // Chatbot State
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
@@ -185,11 +183,7 @@ const App = () => {
           chatMessagesEndRef={chatMessagesEndRef as React.RefObject<HTMLDivElement>}
 
         />
-        <VideoModal
-          isOpen={isVideoModalOpen}
-          onClose={() => setIsVideoModalOpen(false)}
-          videoSrc="/videos/MajestikMagik-Ad-Website.mp4"
-        />
+        
       </div>
     </>
   );
