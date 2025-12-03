@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <div
         className="absolute inset-0 z-10"
         style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.8) 0%, rgba(15, 23, 42, 0.95) 70%)', 
+          background: 'radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.8) 0%, rgba(15, 23, 42, 0.95) 70%)',
         }}
       ></div>
       <div className="container relative px-6 mx-auto z-20">
@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             {/* SEO-optimized H1 */}
             <h1 className="mb-6 md:mb-8 text-5xl md:text-6xl lg:text-7xl text-white font-semibold scroll-animate text-left">
               <span className="text-transparent bg-clip-text animate-gradient-x">
-                Introducing Majestik Magik <br/>AI-BOS
+                Introducing Majestik Magik <br />AI-BOS
               </span>
             </h1>
 
@@ -71,13 +71,14 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.1s" }}
             >
-              The First AI Business Operating System to integrate XP leveling, a token economy, and multi-model AI orchestration—designed specifically for entrepreneurial execution and business growth.
+              Majestik Magik AI-BOS is different. It&apos;s the first AI Business Operating System, a structured environment where humans and AI work together to build, learn, and execute real-world tasks.
             </p>
             <p
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.5s" }}
             >
-              Embark on your business journey with state-of-the-art technology, real-time guidance, and a supportive community — all designed to help you launch faster, grow smarter, and stay consistent.
+
+              With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype.
             </p>
 
             {/* Accessibility helper to reinforce long-tail terms without cluttering UI */}
@@ -85,7 +86,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               The First Gamified AI Business Operating System to integrate XP leveling, a token economy, and multi-model AI orchestration—designed specifically for entrepreneurial execution and business growth.
             </p>
 
-            
+
           </div>
           {/* Majestik Majestik AI Screenshot */}
           <div className="w-full md:w-1/2 px-4 flex items-center justify-center">
@@ -96,7 +97,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   alt="Majestik Magik AI Screenshot"
                   width={800}
                   height={600}
-                  className="w-full h-auto rounded-2xl"                  
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
               <p className="mb-3 inline-flex items-center mt-4 gap-2 rounded-full bg-slate-900/60 px-4 py-1 text-xs font-medium text-slate-200 border border-slate-700/70">
