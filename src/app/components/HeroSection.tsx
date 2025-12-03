@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             {/* SEO-optimized H1 */}
             <h1 className="mb-6 md:mb-8 text-5xl md:text-6xl lg:text-7xl text-white font-semibold scroll-animate text-left">
               <span className="text-transparent bg-clip-text animate-gradient-x">
-                Introducing Majestik Magik AI-BOS
+                Introducing Majestik Magik <br/>AI-BOS
               </span>
             </h1>
 
