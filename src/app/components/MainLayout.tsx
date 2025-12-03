@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react'; // useEffect removed
+import React, { useState } from 'react'; 
 import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
