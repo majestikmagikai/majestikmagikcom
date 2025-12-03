@@ -121,7 +121,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit ${partner.id}`}
-                  className="flex items-center justify-center flex-shrink-0 mr-8 sm:mr-12 last:mr-0"
+                  className="flex items-center justify-center shrink-0 mr-8 sm:mr-12 last:mr-0"
                 >
                   {partner.content}
                 </a>
