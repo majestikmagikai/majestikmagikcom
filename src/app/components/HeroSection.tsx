@@ -102,7 +102,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               </div>
               <p className="mb-3 inline-flex items-center mt-4 gap-2 rounded-full bg-slate-900/60 px-4 py-1 text-xs font-medium text-slate-200 border border-slate-700/70">
                 <span className="h-4 w-4 rounded-full bg-emerald-400 animate-pulse" />
-                New • Launching December 9, 2025
+                New • Launching December 23, 2025
               </p>
             </div>
           </div>
