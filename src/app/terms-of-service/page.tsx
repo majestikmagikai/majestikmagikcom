@@ -18,7 +18,7 @@ const TermsOfServiceContent = () => {
     return (
         <div className="text-slate-300 leading-relaxed space-y-4">
             <h1 className="text-3xl md:text-4xl font-bold text-slate-100 mb-1">Terms of Service for Majestik Magik</h1>
-            <p className="text-sm text-slate-400 mb-4">Last Updated: May 15, 2025</p>
+            <p className="text-sm text-slate-400 mb-4">Last Updated: December 29, 2025</p>
 
             <p>
                 These Terms of Service (&quot;Terms&quot;) govern your use of the website https://www.majestikmagik.com (the &quot;Site&quot;) and the website design and development services provided by Majestik Magik (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) (the &quot;Services&quot;). By accessing the Site or engaging our Services, you (&quot;you&quot; or &quot;client&quot;) agree to be bound by these Terms.
@@ -49,7 +49,29 @@ const TermsOfServiceContent = () => {
 
             {/* Section 3 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">3. Client Responsibilities</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">3. AI-BOS Service Terms</h2>
+                <p>In addition to our website services, Majestik Magik provides AI-BOS (Artificial Intelligence Business Operating System), an AI-powered platform designed to enhance business operations. The following terms specifically apply to your use of AI-BOS:</p>
+
+                <h3 className="text-xl font-semibold text-slate-200 mt-4 mb-2">AI-BOS Usage Guidelines</h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Permitted Use:</strong> AI-BOS may be used solely for lawful business purposes in accordance with applicable laws and regulations.</li>
+                    <li><strong>Account Responsibility:</strong> You are responsible for maintaining the confidentiality of your AI-BOS account credentials and for all activities that occur under your account.</li>
+                    <li><strong>Data Input:</strong> You must ensure that any data, content, or information you input into AI-BOS is accurate, legal, and does not violate third-party rights.</li>
+                    <li><strong>AI Output Review:</strong> While AI-BOS strives for accuracy, you acknowledge that AI-generated content may contain errors or inaccuracies. You agree to review and verify all AI-generated outputs before relying on them for business decisions.</li>
+                    <li><strong>Prohibited Activities:</strong> You may not use AI-BOS to generate harmful, illegal, discriminatory, or misleading content, or for any purpose that violates these Terms.</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-slate-200 mt-4 mb-2">AI-BOS Data and Privacy</h3>
+                <p>Your use of AI-BOS involves the processing of data through our AI systems. You retain ownership of your data but grant us the necessary rights to process it for providing the AI-BOS service. Please refer to our Privacy Policy for detailed information about data handling practices.</p>
+                <p className="mt-2 p-3 bg-yellow-900/30 border-l-4 border-yellow-500 rounded-r-lg"><strong>Important Notice:</strong> AI-BOS conversations and outputs may be reviewed by our team for quality assurance and service improvement purposes. Do not input sensitive personal information, financial data, or confidential business secrets that you do not want reviewed.</p>
+
+                <h3 className="text-xl font-semibold text-slate-200 mt-4 mb-2">AI-BOS Availability and Updates</h3>
+                <p>AI-BOS is provided on an &quot;as available&quot; basis. We may update, modify, or discontinue features of AI-BOS at our discretion. We will make reasonable efforts to provide advance notice of significant changes that may affect your use of the service.</p>
+            </div>
+
+            {/* Section 4 */}
+            <div className="space-y-2">
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">4. Client Responsibilities</h2>
                 <p>To enable us to provide the Services effectively, you agree to:</p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
                     <li>Provide us with clear and timely instructions, information, and materials necessary for the project.</li>
@@ -60,9 +82,9 @@ const TermsOfServiceContent = () => {
                 </ul>
             </div>
 
-            {/* Section 4 */}
+            {/* Section 5 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">4. Payment Terms</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">5. Payment Terms</h2>
                 <p>The fees for our Services will be outlined in a separate agreement or proposal. Unless otherwise agreed in writing, payment terms are as follows:</p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
                     <li>A deposit may be required to commence work on a project.</li>
@@ -72,9 +94,9 @@ const TermsOfServiceContent = () => {
                 </ul>
             </div>
 
-            {/* Section 5 */}
+            {/* Section 6 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">5. Intellectual Property</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">6. Intellectual Property</h2>
                 <ul className="list-disc list-inside space-y-1 ml-4">
                     <li><strong>Client Content:</strong> You retain ownership of the content you provide to us (text, images, etc.). You grant us a non-exclusive license to use, reproduce, and modify this content solely for the purpose of providing the Services.</li>
                     <li><strong>Developed Work:</strong> Upon full payment of all agreed-upon fees, you will own the final website design and development work, excluding any third-party components (such as themes, plugins, or stock images) which may have their own licensing terms. We retain the right to showcase the completed project in our portfolio.</li>
@@ -82,17 +104,17 @@ const TermsOfServiceContent = () => {
                 </ul>
             </div>
 
-            {/* Section 6 */}
+            {/* Section 7 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">6. Project Timeline</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">7. Project Timeline</h2>
                 <p>
                     Project timelines will be estimated and communicated in a separate agreement or proposal. These timelines are dependent on various factors, including the complexity of the project, the timely provision of materials and feedback from the client, and unforeseen circumstances. We will make reasonable efforts to adhere to the agreed-upon timelines but are not liable for delays outside of our direct control.
                 </p>
             </div>
 
-            {/* Section 7 */}
+            {/* Section 8 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">7. Warranties and Disclaimer</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">8. Warranties and Disclaimer</h2>
                 <p>
                     We warrant that the Services will be performed in a professional and workmanlike manner. However, to the maximum extent permitted by applicable law in the United States, we disclaim all other warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
                 </p>
@@ -101,17 +123,17 @@ const TermsOfServiceContent = () => {
                 </p>
             </div>
 
-            {/* Section 8 */}
+            {/* Section 9 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">8. Limitation of Liability</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">9. Limitation of Liability</h2>
                 <p>
                     To the maximum extent permitted by applicable law in the United States, Majestik Magik shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of or relating to your use of the Site or our Services, even if we have been advised of the possibility of such damages. Our total liability to you for any claim arising out of or relating to these Terms or our Services shall be limited to the total amount of fees paid by you to us for the specific Services in question.
                 </p>
             </div>
 
-            {/* Section 9 */}
+            {/* Section 10 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">9. Indemnification</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">10. Indemnification</h2>
                 <p>You agree to indemnify and hold harmless Majestik Magik, its affiliates, officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable attorneys&apos; fees) arising out of or relating to:</p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
                     <li>Your breach of these Terms.</li>
@@ -121,41 +143,41 @@ const TermsOfServiceContent = () => {
                 </ul>
             </div>
 
-            {/* Section 10 */}
+            {/* Section 11 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">10. Termination</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">11. Termination</h2>
                 <p>
                     Either party may terminate the Services upon written notice if the other party materially breaches these Terms and fails to cure such breach within a reasonable period (as defined by applicable law in the United States) after receiving written notice of the breach. We may also terminate the Services for convenience upon reasonable notice to you. Upon termination, you shall pay us for all Services performed up to the date of termination.
                 </p>
             </div>
 
-            {/* Section 11 */}
+            {/* Section 12 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">11. Governing Law and Dispute Resolution</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">12. Governing Law and Dispute Resolution</h2>
                 <p>
                     These Terms shall be governed by and construed in accordance with the laws of the United States. Any disputes arising out of or relating to these Terms or our Services shall be subject to the exclusive jurisdiction of the courts of the United States, unless otherwise agreed in writing.
                 </p>
             </div>
 
-            {/* Section 12 */}
+            {/* Section 13 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">12. Entire Agreement</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">13. Entire Agreement</h2>
                 <p>
                     These Terms, together with any separate agreements or proposals provided to you, constitute the entire agreement between you and Majestik Magik regarding the subject matter hereof and supersede all prior or contemporaneous communications and proposals, whether oral or written.
                 </p>
             </div>
 
-            {/* Section 13 */}
+            {/* Section 14 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">13. Modifications to Terms</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">14. Modifications to Terms</h2>
                 <p>
                     We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon posting on the Site. Your continued use of the Site or engagement of our Services after the posting of revised Terms constitutes your acceptance of the changes. It is your responsibility to review these Terms periodically.
                 </p>
             </div>
 
-            {/* Section 14 */}
+            {/* Section 15 */}
             <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">14. Contact Us</h2>
+                <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">15. Contact Us</h2>
                 <p>If you have any questions or concerns about these Terms of Service, please contact us at:</p>
                 <address className="not-italic mt-2">
                     Majestik Magik<br />
