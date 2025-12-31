@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
 
 const TeamSection: React.FC = () => {
   return (
-    <section id="team" aria-labelledby="team-heading" className="py-16 md:py-24 bg-slate-900">
+    <section id="about" aria-labelledby="team-heading" className="py-16 md:py-24 bg-slate-900">
       <div className="container px-6 mx-auto">
         <div className="mb-16 text-center">
           <h2 id="team-heading" className="flex items-center justify-center mb-4 text-3xl font-bold text-slate-100 scroll-animate md:text-4xl">

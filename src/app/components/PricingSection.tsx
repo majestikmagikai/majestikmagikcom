@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckIcon } from './Icons';
+//import { CheckIcon } from './Icons';
 
 interface PricingPlan {
   name: string;
@@ -53,13 +53,13 @@ const DEFAULT_MICRO_SERVICES: MicroService[] = [
 ];
 
 const PricingSection: React.FC<PricingSectionProps> = ({
-  pricingPlans,
+  //
   microServices = DEFAULT_MICRO_SERVICES,
 }) => {
   return (
     <section id="pricing" aria-labelledby="pricing-plans-heading" className="py-16 md:py-24 bg-slate-900">
       <div className="container px-6 mx-auto">
-        {/* Header */}
+        {/* Header 
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h1 id="pricing-plans-heading" className="text-3xl font-bold text-slate-100 md:text-4xl scroll-animate">
             Worry-Free Website Care Plans
@@ -70,9 +70,9 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           <p className="mt-4 text-md text-slate-500 scroll-animate" style={{ transitionDelay: '0.3s' }}>
             Trusted by 20+ local businesses in Richmond
           </p>
-        </div>
+        </div> */}
 
-        {/* Plans Grid */}
+        {/* Plans Grid 
         <div className="grid items-stretch gap-8 md:grid-cols-1 lg:grid-cols-3 justify-center">
           {pricingPlans.map((plan, index) => {
             const monthlyPrice = plan.investment?.monthlyPlan?.price || '';
@@ -117,7 +117,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Micro Services */}
         <div

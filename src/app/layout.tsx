@@ -57,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-transparent bg-gradient-to-br from-slate-800 via to-slate-800 text-slate-200 overflow-x-hidden">
+      <body className="bg-transparent bg-linear-to-br from-slate-800 via to-slate-800 text-slate-200 overflow-x-hidden">
         {/* Use the MainLayout Client Component to wrap the children and handle interactive elements */}
         <MainLayout>
           {children}
@@ -79,15 +79,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'AW-16649126006');
           `}
-        </Script>
-
-        <Script id="mailerlite-universal" strategy="afterInteractive">
-          {`(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-            (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-            ml('account', '1747571');`}
-        </Script>
+        </Script>  
 
 
         {/* Facebook Pixel Code */}
@@ -132,13 +124,6 @@ export default function RootLayout({
           })}
         </Script>
         
-        <Script id="mailerlite-universal" strategy="afterInteractive">
-          {`(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-            (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-            ml('account', '1747571');`}
-        </Script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

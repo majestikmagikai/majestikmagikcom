@@ -15,9 +15,11 @@ export default function MainLayout({
   const navItems = [
     { name: 'Home', url: '/#home' },
     { name: 'Shop', url: '/#shop' },
-    { name: 'Team', url: '/#team' },
+    { name: 'Pricing', url: '/#pricing' },
+    { name: 'About', url: '/#about' },
     { name: 'Testimonials', url: '/#testimonials' },
-    { name: 'Contact', url: '/#contact' }   
+    { name: 'Contact', url: '/#contact' },
+    { name: 'Login', url: 'https://app.majestikmagik.com/sign-in', external: true }
   ];
 
   // Get the current URL path

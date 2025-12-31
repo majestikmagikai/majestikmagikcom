@@ -71,15 +71,27 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.1s" }}
             >
-              Majestik Magik AI-BOS is different. It&apos;s the first AI Business Operating System, a structured environment where humans and AI work together to build, learn, and execute real-world tasks.
+             The AI Business Operating System is different. It is a structured platform where humans and AI work together to build, learn, and execute real-world business tasks.
             </p>
             <p
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.5s" }}
             >
 
-              With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype.
+              With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype. Think of it as an RPG for entrepreneurs.
             </p>
+
+            {/* Signup CTA Button */}
+            <div className="mb-6 scroll-animate" style={{ transitionDelay: "0.7s" }}>
+              <a
+                href="https://app.majestikmagik.com/sign-up"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+              >
+                Sign Up For 3-Day Free Trial
+              </a>
+            </div>
 
             {/* Accessibility helper to reinforce long-tail terms without cluttering UI */}
             <p className="sr-only">
@@ -99,11 +111,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   height={600}
                   className="w-full h-auto rounded-2xl"
                 />
-              </div>
-              <p className="mb-3 inline-flex items-center mt-4 gap-2 rounded-full bg-slate-900/60 px-4 py-1 text-xs font-medium text-slate-200 border border-slate-700/70">
-                <span className="h-4 w-4 rounded-full bg-emerald-400 animate-pulse" />
-                New • Official Launch - December 30, 2025
-              </p>
+              </div>              
             </div>
           </div>
 

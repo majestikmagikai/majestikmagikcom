@@ -58,15 +58,27 @@ const Header: React.FC<HeaderProps> = ({
 
         <nav className="hidden xl:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.url}
-              className="text-slate-300 hover:text-indigo-400 transition-colors font-semibold duration-600 ease-in-out text-sm md:text-base"
-              onClick={(e) => handleNavClick(e, item)}
-              {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-            >
-              {item.name}
-            </a>
+            item.name === 'Login' ? (
+              <a
+                key={item.name}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <a
+                key={item.name}
+                href={item.url}
+                className="text-slate-300 hover:text-indigo-400 transition-colors font-semibold duration-600 ease-in-out text-sm md:text-base"
+                onClick={(e) => handleNavClick(e, item)}
+                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                {item.name}
+              </a>
+            )
           ))}
         </nav>
 
@@ -92,15 +104,27 @@ const Header: React.FC<HeaderProps> = ({
         <div className="xl:hidden absolute top-full left-0 right-0 bg-slate-950/90 backdrop-blur-md shadow-slate-950 shadow-lg z-40" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-3 sm:px-3">
             {navItems.map((item) => (
-              <a
-                key={`mobile-${item.name}`}
-                href={item.url}
-                className="block rounded-md px-3 py-2 text-base font-semibold text-slate-300 hover:bg-slate-700 hover:text-indigo-400 transition-colors duration-300"
-                onClick={(e) => handleNavClick(e, item)}
-                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
-                {item.name}
-              </a>
+              item.name === 'Login' ? (
+                <a
+                  key={`mobile-${item.name}`}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-md px-3 py-2 text-base font-semibold bg-indigo-600 hover:bg-indigo-700 text-white transition-colors duration-200 text-center"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <a
+                  key={`mobile-${item.name}`}
+                  href={item.url}
+                  className="block rounded-md px-3 py-2 text-base font-semibold text-slate-300 hover:bg-slate-700 hover:text-indigo-400 transition-colors duration-300"
+                  onClick={(e) => handleNavClick(e, item)}
+                  {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </div>
         </div>

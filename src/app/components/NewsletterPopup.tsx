@@ -49,7 +49,7 @@ export default function NewsletterPopup() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[1000] flex items-center justify-center">
+    <div className="fixed inset-0 z-1000 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/50" onClick={close} />
       <div className="relative w-full max-w-md rounded-2xl bg-indigo-600 p-6 shadow-xl">
         <button
