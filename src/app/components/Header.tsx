@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
 
         <nav className="hidden xl:flex items-center space-x-8">
           {navItems.map((item) => (
-            item.name === 'Login' ? (
+            item.external ? (
               <a
                 key={item.name}
                 href={item.url}
@@ -104,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="xl:hidden absolute top-full left-0 right-0 bg-slate-950/90 backdrop-blur-md shadow-slate-950 shadow-lg z-40" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-3 sm:px-3">
             {navItems.map((item) => (
-              item.name === 'Login' ? (
+              item.external ? (
                 <a
                   key={`mobile-${item.name}`}
                   href={item.url}

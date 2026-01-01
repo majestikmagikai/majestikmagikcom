@@ -71,14 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.1s" }}
             >
-             The AI Business Operating System is different. It is a structured platform where humans and AI work together to build, learn, and execute real-world business tasks.
-            </p>
-            <p
-              className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
-              style={{ transitionDelay: "0.5s" }}
-            >
-
-              With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype. Think of it as an RPG for entrepreneurs.
+             The AI Business Operating System is different. It is a structured platform where humans and AI work together to build, learn, and execute real-world business tasks. With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype. Think of it as an RPG for entrepreneurs.
             </p>
 
             {/* Signup CTA Button */}
