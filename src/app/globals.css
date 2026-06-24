@@ -190,7 +190,7 @@ body {
 .hero-screenshot-frame {
   position: relative;
   border-radius: 1.5rem;       /* rounded-2xl */
-  padding: 4px;                /* thin border padding */
+  padding: 2px;                /* thin border padding */
   perspective: 1200px;         /* needed for 3D tilt */
   isolation: isolate;          /* keeps blend effects clean */
 }
@@ -212,8 +212,8 @@ body {
   );
   background-size: 220% 220%;
 
-  filter: blur(24px);
-  opacity: 0.7;
+  filter: blur(20px);
+  opacity: 0.9;
 
   /* Moving gradient + breathing glow */
   animation:
@@ -227,8 +227,8 @@ body {
   overflow: hidden;
   background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
   box-shadow:
-    0 22px 55px rgba(15, 23, 42, 0.95),
-    0 0 0 1px rgba(148, 163, 184, 0.15);
+    0 22px 35px rgba(15, 23, 42, 0.411),
+    0 0 0 1px rgba(148, 163, 184, 0.075);
 
   transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
   transform-style: preserve-3d;
@@ -242,7 +242,7 @@ body {
 .hero-screenshot-frame.group:hover .hero-screenshot-inner {
   transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
   box-shadow:
-    0 32px 80px rgba(15, 23, 42, 0.98),
+    0 32px 40px rgba(15, 23, 42, 0.98),
     0 0 0 1px rgba(191, 219, 254, 0.26);
   filter: brightness(1.03);
 }
@@ -269,12 +269,12 @@ body {
 /* Breathing glow */
 @keyframes mm-glow-pulse {
   0%, 100% {
-    opacity: 0.6;
-    transform: scale(0.97);
+    opacity: 0.3;
+    transform: scale(0.87);
   }
   50% {
     opacity: 1;
-    transform: scale(1.04);
+    transform: scale(0.95);
   }
 }
 
