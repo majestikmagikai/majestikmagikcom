@@ -12,9 +12,9 @@ import './globals.css';
 // The metadata export now works correctly because this is a Server Component.
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.majestikmagik.com'),
-  title: 'Majestik Magik | Helping Small Businesses Build Powerful Digital Systems that Attract Customers',
+  title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
   description:
-    'Majestik Magik helps small businesses build powerful digital systems that attract customers. Powered by AI, we create high-converting websites, automated funnels, custom AI tools, and modern branding built for growth. Launch your business faster with Majestik Magik AI.',
+    'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
   authors: [{ name: 'Majestik Magik' }],
   manifest: '/site.webmanifest',
   icons: {
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     apple: '/img/majestikmagik_logo_indigo.png',
   },
   openGraph: {
-    title: 'Majestik Magik | Helping Small Businesses Build Powerful Digital Systems that Attract Customers',
+    title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
-      'Majestik Magik helps small businesses build powerful digital systems that attract customers. Using the Majestik Magik AI builder, you can create app concepts, generate websites, and launch digital systems built to convert. Perfect for entrepreneurs who want to grow fast.',
+      'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     url: 'https://www.majestikmagik.com',
     siteName: 'Majestik Magik',
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Majestik Magik | Helping Small Businesses Build Powerful Digital Systems that Attract Customers',
+    title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
-      'Build powerful digital systems that attract customers — with AI. Majestik Magik creates modern websites, automated funnels, and smart business tools tailored to your industry. Launch fast with Majestik Magik AI.',
+      'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     images: ['/img/screenshot_mm.png'],
   },
 };
@@ -150,7 +150,9 @@ export default function RootLayout({
               "Shopify bug fixes",
               "Webflow updates",
               "Website speed optimization",
-              "Technical SEO fixes"
+              "Technical SEO fixes",
+              "Business Operations",
+              "Business Strategy"
             ]
           })
         }} />

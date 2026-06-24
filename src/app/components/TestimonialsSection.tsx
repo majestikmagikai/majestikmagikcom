@@ -39,42 +39,16 @@ const TestimonialsSection = () => {
       stars: 5,
       source: 'Majestik Magik Client',
     },
-    {
-      name: 'Janice G',
-      testimonial:
-        'Jamil did a great job cleaning our home. I will definitely recommend him to our friends and family!',
-      stars: 5,
-      source: 'Homeaglow — Verified Cleaning',
-      location: 'Ford, VA',
-      date: '5 days ago',
-    },
+    
     {
       name: 'John M',
       testimonial:
         "Jamil was magnificent. He's got a winning personality and really delivered on cleaning our place.",
       stars: 5,
-      source: 'Homeaglow — Verified Cleaning',
+      source: 'Majestik Magik Client',
       location: 'Henrico, VA',
-      date: '1 week ago',
-    },
-    {
-      name: 'Melissa C',
-      testimonial:
-        'He always does a very thorough cleaning. Very friendly and easy going. A+ highly recommended.',
-      stars: 5,
-      source: 'Homeaglow — Verified Cleaning',
-      location: 'Richmond, VA',
-      date: '5 months ago',
-    },
-    {
-      name: 'Dèsirèe (Sarai) A',
-      testimonial:
-        'Jamil is an excellent professional and I trust him to return on the regular.',
-      stars: 5,
-      source: 'Homeaglow — Verified Cleaning',
-      location: 'Fort Gregg-Adams, VA',
-      date: '4 months ago',
-    },
+      
+    },    
   ];
 
   return (
@@ -132,18 +106,7 @@ const TestimonialsSection = () => {
             </article>
           ))}
         </div>
-
-        {/* CTA Button */}
-        <div className="text-center mt-12">
-          <a
-            href="https://www.homeaglow.com/jamilmat" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-md transition-colors duration-300"
-          >
-            See more reviews →
-          </a>
-        </div>
+        
       </div>
     </section>
   );

@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             {/* SEO-optimized H1 */}
             <h1 className="mb-6 md:mb-8 text-5xl md:text-6xl lg:text-7xl text-white font-semibold scroll-animate text-left">
               <span className="text-transparent bg-clip-text animate-gradient-x">
-                Introducing Majestik Magik <br />AI-BOS
+                Introducing Majestik Magik <br />Pivot Quest
               </span>
             </h1>
 
@@ -71,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
               style={{ transitionDelay: "0.1s" }}
             >
-             The AI Business Operating System is different. It is a structured platform where humans and AI work together to build, learn, and execute real-world business tasks. With multi-model orchestration, a gamified XP and token system, and domain-specific containment, AI-BOS measures progress by action and results - not hype. Think of it as an RPG for entrepreneurs.
+             We engineer high-performance, context-aware applications powered by guardrailed foundational models and permanent memory. Experience our architecture in action with Pivot Quest v1.0, the ultimate gamified workspace built to accelerate your business operations.
             </p>
 
             {/* Signup CTA Button */}
@@ -82,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
               >
-                Sign Up For 3-Day Free Trial
+                Sign Up Now!
               </a>
             </div>
 
