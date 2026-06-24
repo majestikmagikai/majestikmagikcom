@@ -57,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-transparent bg-linear-to-br from-slate-800 via to-slate-800 text-slate-200 overflow-x-hidden">
+      <body className="bg-transparent text-slate-200 overflow-x-hidden">
         {/* Use the MainLayout Client Component to wrap the children and handle interactive elements */}
         <MainLayout>
           {children}

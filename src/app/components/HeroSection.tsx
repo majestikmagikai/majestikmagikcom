@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <div
         className="absolute inset-0 z-10"
         style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.8) 0%, rgba(15, 23, 42, 0.95) 70%)',
+          background: 'radial-gradient(circle at 50% 50%, #ffffffcc 0%, rgba(186, 200, 235, 0.95) 70%)',
         }}
       ></div>
       <div className="container relative px-6 mx-auto z-20">
@@ -68,10 +68,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
             {/* Keyword-rich supporting paragraph */}
             <p
-              className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-200 scroll-animate text-left"
+              className="max-w-xl mb-4 md:mb-6 text-lg md:text-xl text-slate-950/70 scroll-animate text-left"
               style={{ transitionDelay: "0.1s" }}
             >
-             We engineer high-performance, context-aware applications powered by guardrailed foundational models and permanent memory. Experience our architecture in action with Pivot Quest v1.0, the ultimate gamified workspace built to accelerate your business operations.
+             We engineer high-performance, context-aware workspaces built for rapid execution. No generic prompts. No lost context. Just guardrailed strategic engines with permanent memory to keep your business on the main trail. Experience our architecture in action with Pivot Quest v1.0, the ultimate gamified workspace built to accelerate your business operations.
             </p>
 
             {/* Signup CTA Button */}
@@ -88,7 +88,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
             {/* Accessibility helper to reinforce long-tail terms without cluttering UI */}
             <p className="sr-only">
-              The First Gamified AI Business Operating System to integrate XP leveling, a token economy, and multi-model AI orchestration—designed specifically for entrepreneurial execution and business growth.
+              We engineer high-performance, context-aware workspaces built for rapid execution. No generic prompts. No lost context. Just guardrailed strategic engines with permanent memory to keep your business on the main trail.
             </p>
 
 

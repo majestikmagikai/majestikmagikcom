@@ -33,20 +33,21 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isMobileMenuOpen
-      ? 'bg-slate-950/70 backdrop-blur-md shadow-2xl shadow-slate-950'
-      : 'bg-transparent shadow-none'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled || isMobileMenuOpen
+          ? 'bg-white/40 backdrop-blur-md border-b border-indigo-100/20 shadow-sm shadow-indigo-950/5'
+          : 'bg-transparent border-b border-transparent shadow-none'
+        }`}
     >
       <div className="container mx-auto px-6 py-6 flex justify-between items-center">
         <button
           onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center space-x-2 text-2xl text-white cursor-pointer"
+          className="flex items-center space-x-2 text-2xl text-indigo-600 cursor-pointer"
           aria-label="Majestik Magik Home"
           type="button"
         >
           <Image
-            src="/img/logo_majestikmagik_inc.png"
+            src="/img/majestikmagik_logo_indigo-64x64.png"
             className="w-10 h-10 lazy-logo"
             alt="Majestik Magik icon"
             loading="lazy"
@@ -72,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({
               <a
                 key={item.name}
                 href={item.url}
-                className="text-slate-300 hover:text-indigo-400 transition-colors font-semibold duration-600 ease-in-out text-sm md:text-base"
+                className="text-slate-500 hover:text-indigo-400 transition-colors font-semibold duration-600 ease-in-out text-sm md:text-base"
                 onClick={(e) => handleNavClick(e, item)}
                 {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
@@ -83,10 +84,10 @@ const Header: React.FC<HeaderProps> = ({
         </nav>
 
         <div className="xl:hidden flex items-center">
-           <button
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-controls="mobile-menu"
-            className="text-slate-300 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 p-1 rounded-md cursor-pointer"
+            className="text-indigo-600 hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 p-1 rounded-md cursor-pointer"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             type="button"
           >
