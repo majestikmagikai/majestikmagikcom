@@ -143,7 +143,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             {microServices.map((m) => (
               <div
                 key={m.service}
-                className="rounded-xl border border-slate-700/60 bg-slate-200 p-5 shadow-lg hover:border-slate-600 transition"
+                className="rounded-xl bg-slate-200 p-5 shadow-lg hover:border-slate-600 transition"
               >
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-slate-700 font-semibold">{m.service}</h3>

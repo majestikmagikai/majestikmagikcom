@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
 
   return (
-    <footer id="contact" aria-labelledby="contact-heading" className="bg-slate-800  text-slate-400">
+    <footer id="contact" aria-labelledby="contact-heading" className="bg-slate-200 text-slate-600">
       <div className="container px-6 py-12 mx-auto w-full">
 
         {/* Top Contact Bar */}
@@ -228,10 +228,10 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
       {/* Bottom Copyright Bar */}
 
-      <div className="bg-slate-900">
+      <div className="bg-indigo-900">
         <div className="container px-6 py-4 mx-auto border-t border-slate-800">
           <div className="flex flex-col items-center justify-between text-sm md:flex-row">
-            <p className="mb-4 text-center md:mb-0 md:text-left">
+            <p className="mb-4 text-center text-slate-300 md:mb-0 md:text-left">
               &copy; {new Date().getFullYear()} Majestik Magik, Inc. All rights reserved.
             </p>
 

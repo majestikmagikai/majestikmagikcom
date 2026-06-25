@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
           {testimonials.map((t, index) => (
             <article
               key={`${t.name}-${index}`}
-              className="flex h-full flex-col rounded-lg bg-slate-800 p-6 shadow-xl border border-slate-700/40 hover:shadow-indigo-500/30 hover:-translate-y-1 transition scroll-animate"
+              className="flex h-full flex-col rounded-lg bg-slate-200 p-6 shadow-xl border border-slate-700/40 hover:shadow-indigo-500/30 hover:-translate-y-1 transition scroll-animate"
               style={{ transitionDelay: `${0.2 + index * 0.06}s` }}
             >
               <header className="flex items-center mb-4">
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
                   )}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white">{t.name}</h3>
+                  <h3 className="text-lg font-semibold text-slate-600">{t.name}</h3>
                   <div className="flex items-center gap-1" aria-label={`${t.stars} out of 5 stars`}>
                     {[1, 2, 3, 4, 5].map((n) => (
                       <Star key={n} filled={n <= t.stars} />
@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
                 </div>
               </header>
 
-              <p className="text-slate-100 leading-relaxed mb-4">“{t.testimonial}”</p>
+              <p className="text-slate-600 leading-relaxed mb-4">“{t.testimonial}”</p>
 
               <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 text-sm text-slate-400">
                 {t.source && (

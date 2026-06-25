@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
 
 const TeamSection: React.FC = () => {
   return (
-    <section id="about" aria-labelledby="team-heading" className="py-16 md:py-24 bg-transparent">
+    <section id="about" aria-labelledby="team-heading" className="py-20 md:py-32 bg-transparent">
       <div className="container px-6 mx-auto">
         <div className="mb-16 text-center">
           <h2 id="team-heading" className="flex items-center justify-center mb-4 text-3xl font-bold text-slate-600 scroll-animate md:text-4xl">
@@ -53,7 +53,7 @@ const TeamSection: React.FC = () => {
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="flex flex-col items-center p-6 transition-transform team-card-hover-animate  duration-300 transform bg-slate-800 rounded-xl shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-1 h-full hover:scale-105 scroll-animate"
+              className="flex flex-col items-center p-6 transition-transform team-card-hover-animate duration-300 transform bg-slate-200 rounded-xl shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-1 h-full hover:scale-105 scroll-animate"
               style={{ transitionDelay: `${0.2 + index * 0.15}s` }}
             >
               <Image
@@ -66,9 +66,9 @@ const TeamSection: React.FC = () => {
               />
               <h3 className="mb-1 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">{member.name}</h3>
               <p className="mb-3 font-semibold text-indigo-300">{member.title}</p>              
-              <p className="mb-4 text-sm font-semibold text-slate-400 hover:text-indigo-500"><a href={member.emailUrl}>{member.email}</a></p>
+              <p className="mb-4 text-sm font-semibold text-slate-600 hover:text-indigo-500"><a href={member.emailUrl}>{member.email}</a></p>
               <Image src="/img/my_signature.png" alt="Jamil Matheny Signature" width={150} height={100} className="mb-4 invert" />
-              <p className="flex-grow px-2 mb-4 text-sm text-slate-400">{member.bio}
+              <p className="flex-grow px-2 mb-4 text-sm text-slate-600">{member.bio}
                 <Link href={member.url} className="transition-colors duration-300 font-bold text-indigo-300 hover:text-indigo-500 mx-2"> Read More</Link>
               </p>
               <div className="flex mt-auto space-x-4">
