@@ -31,10 +31,10 @@ const teamMembers: TeamMember[] = [
 
 const TeamSection: React.FC = () => {
   return (
-    <section id="about" aria-labelledby="team-heading" className="py-16 md:py-24 bg-slate-900">
+    <section id="about" aria-labelledby="team-heading" className="py-16 md:py-24 bg-transparent">
       <div className="container px-6 mx-auto">
         <div className="mb-16 text-center">
-          <h2 id="team-heading" className="flex items-center justify-center mb-4 text-3xl font-bold text-slate-100 scroll-animate md:text-4xl">
+          <h2 id="team-heading" className="flex items-center justify-center mb-4 text-3xl font-bold text-slate-600 scroll-animate md:text-4xl">
             <Image
               src="https://www.svgrepo.com/show/500929/magic.svg"
               className="lazy-logo w-8 h-8 mr-2 filter brightness-0 invert"

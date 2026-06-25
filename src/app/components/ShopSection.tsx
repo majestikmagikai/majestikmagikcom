@@ -33,7 +33,7 @@ export const ShopSection = () => {
         <source src="/videos/majestikmagik_shop_bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 bg-slate-950/90 z-10"></div>
+      <div className="absolute inset-0 bg-slate-950/60 z-10"></div>
 
       <div className="container relative px-6 mx-auto z-20">
         <div className="grid md:grid-cols-2 gap-12 items-center scroll-animate">
@@ -47,14 +47,10 @@ export const ShopSection = () => {
             >
               Majestik Magik Apparel
             </h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-slate-200 mb-6">
               Express your creativity and ambition through Majestik Magik’s official apparel line.
               Each piece represents innovation, empowerment, and hustle — designed for creators,
               visionaries, and builders shaping the future.
-            </p>
-            <p className="text-slate-400 mb-8">
-              From premium tees and hoodies to sleek accessories, our collection embodies the
-              movement behind Majestik Magik: turning ideas into impact.
             </p>
             <a
               href="https://majestikmagik.printful.me/"

@@ -162,9 +162,8 @@ const App = () => {
           <HeroSection          
             onLearnMore={() => document.getElementById('comparison-chart')?.scrollIntoView({ behavior: 'smooth' })}
           />
-       
-          <PricingSection pricingPlans={[]} />
           <ShopSection />
+          <PricingSection pricingPlans={[]} />          
           <TeamSection />
           <TestimonialsSection />
         </main>

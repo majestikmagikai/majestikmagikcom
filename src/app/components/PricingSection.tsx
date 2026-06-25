@@ -57,7 +57,11 @@ const PricingSection: React.FC<PricingSectionProps> = ({
   microServices = DEFAULT_MICRO_SERVICES,
 }) => {
   return (
-    <section id="pricing" aria-labelledby="pricing-plans-heading" className="py-16 md:py-24 bg-slate-900">
+    <section
+      id="pricing"
+      aria-labelledby="pricing-plans-heading"
+      className="py-16 md:py-24 bg-transparent relative z-20"
+    >
       <div className="container px-6 mx-auto">
         {/* Header 
         <div className="mb-16 text-center max-w-3xl mx-auto">
@@ -126,10 +130,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           className="mt-16 md:mt-24"
         >
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <h2 id="micro-services-heading" className="text-2xl md:text-3xl font-bold text-slate-100">
+            <h2 id="micro-services-heading" className="text-2xl md:text-3xl font-bold text-slate-500">
               Quick Fix Micro-Services
             </h2>
-            <p className="mt-3 text-slate-400">
+            <p className="mt-3 text-slate-500">
               High-impact fixes delivered remotely — same day or within 2 business days.
             </p>
           </div>
@@ -139,10 +143,10 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             {microServices.map((m) => (
               <div
                 key={m.service}
-                className="rounded-xl border border-slate-700/60 bg-slate-800 p-5 shadow-lg hover:border-slate-600 transition"
+                className="rounded-xl border border-slate-700/60 bg-slate-200 p-5 shadow-lg hover:border-slate-600 transition"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-slate-100 font-semibold">{m.service}</h3>
+                  <h3 className="text-slate-700 font-semibold">{m.service}</h3>
                   <span className="text-indigo-300 font-bold whitespace-nowrap">{m.price}</span>
                 </div>
                 {m.blurb ? (
