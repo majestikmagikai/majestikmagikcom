@@ -127,14 +127,14 @@ const PricingSection: React.FC<PricingSectionProps> = ({
         <div
           id="micro-services"
           aria-labelledby="micro-services-heading"
-          className="mt-16 md:mt-24"
+          className="mt-auto md:mt-auto"
         >
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 id="micro-services-heading" className="text-2xl md:text-3xl font-bold text-slate-500">
               Quick Fix Micro-Services
             </h2>
             <p className="mt-3 text-slate-500">
-              High-impact fixes delivered remotely — same day or within 2 business days.
+              High-impact fixes delivered remotely — within 24-72 hour turnaround time.
             </p>
           </div>
 

@@ -109,12 +109,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           </div>
 
 
-          {/* Companies Partner Banner */}
-          <p className="text-sm text-slate-500 mt-30 mb-4 scroll-animate text-center">
-            Trusted by businesses in Richmond, VA and beyond
-          </p>
+          {/* Companies Partner Banner */}          
           <div className="scrolling-logos-wrapper scroll-animate">
-            <div className="scrolling-logos-container">
+            <div className="scrolling-logos-container mt-24">
               {[...partners, ...partners, ...partners].map((partner, index) => (
                 <a
                   key={`${partner.id}-${index}`}
@@ -122,7 +119,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit ${partner.id}`}
-                  className="flex items-center justify-center shrink-0 mr-8 sm:mr-12 last:mr-0"
+                  className="flex items-center justify-center shrink-0 mr-8 sm:mr-12 last:mr-0 grayscale hover:grayscale-0 transition-all duration-300"
                 >
                   {partner.content}
                 </a>
