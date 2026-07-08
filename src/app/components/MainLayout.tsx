@@ -19,7 +19,7 @@ export default function MainLayout({
     { name: 'About', url: '/#about' },
     { name: 'Testimonials', url: '/#testimonials' },
     { name: 'Contact', url: '/#contact' },
-    { name: 'Login', url: 'https://app.majestikmagik.com/dashboard', external: true }
+    { name: 'Login', url: 'https://app.majestikmagik.dev/dashboard', external: true }
   ];
 
   // Get the current URL path

@@ -77,7 +77,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             {/* Signup CTA Button */}
             <div className="mb-6 scroll-animate" style={{ transitionDelay: "0.7s" }}>
               <a
-                href="https://app.majestikmagik.com/sign-up"
+                href="https://app.majestikmagik.dev/sign-up"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
