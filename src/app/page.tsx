@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI, GenerateContentResponse, Chat } from '@google/genai';
-
+import { GoogleGenAI, GenerateContentResponse } from '@google/genai';
 
 // Import custom hook
 import useMediaQuery from './hooks/useMediaQuery';
@@ -14,15 +13,11 @@ import {
   TeamSection,
   TestimonialsSection,
   Chatbot,
-
 } from './components';
 
 import './globals.css';
 
-
-
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-
 
 interface ChatMessage {
   id: string;
@@ -30,12 +25,9 @@ interface ChatMessage {
   sender: 'user' | 'ai';
 }
 
-
 const App = () => {
-
   const [geminiAi, setGeminiAi] = useState<GoogleGenAI | null>(null);
   const [isGeminiInitialized, setIsGeminiInitialized] = useState<boolean>(false);
-
 
   // Chatbot State
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
@@ -43,15 +35,12 @@ const App = () => {
   const [chatInput, setChatInput] = useState<string>('');
   const [isChatLoading, setIsChatLoading] = useState<boolean>(false);
   const [chatError, setChatError] = useState<string | null>(null);
-  const [chatSession, setChatSession] = useState<Chat | null>(null);
+  const [chatSession, setChatSession] = useState<any>(null); // Kept flexible for session mappings
   const chatMessagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  // Use the media query hook to detect if the screen is 'xl' (desktop) or larger.
-  // Tailwind's 'xl' breakpoint is typically 1280px.
+  // Detect if the screen is 'xl' (desktop) or larger.
   const isDesktopView = useMediaQuery('(min-width: 1280px)');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  // Define navigation items
-
 
   useEffect(() => {
     try {
@@ -69,19 +58,15 @@ const App = () => {
     }
   }, []);
 
-
   useEffect(() => {
-    // If the view changes to desktop and the mobile menu is open,
-    // automatically close the mobile menu.
     if (isDesktopView && isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
     }
   }, [isDesktopView, isMobileMenuOpen]);
 
-
   useEffect(() => {
     const animatedElements = document.querySelectorAll('.scroll-animate');
-    if (!('IntersectionObserver' in window)) { // Disable on policy pages
+    if (!('IntersectionObserver' in window)) {
       animatedElements.forEach(el => el.classList.add('is-visible'));
       return;
     }
@@ -95,7 +80,7 @@ const App = () => {
     }, { threshold: 0.1 });
     animatedElements.forEach(el => observer.observe(el));
     return () => animatedElements.forEach(el => { if (observer && el) observer.unobserve(el); });
-  }, []); // Re-run if policy page changes
+  }, []);
 
   useEffect(() => {
     chatMessagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -129,10 +114,12 @@ const App = () => {
       let currentChat = chatSession;
       if (!currentChat) {
         if (!geminiAi) throw new Error("Gemini AI client not available for chat.");
+        
         currentChat = geminiAi.chats.create({
           model: 'gemini-2.5-flash',
           config: {
-            systemInstruction: "You are a friendly and helpful AI assistant for Majestik Magik, a company specializing in AI-powered website design and digital systems solutions. Your goal is to answer user questions about Majestik Magik, its services (Custom Web Development, SEO, Digital Marketing, Pivot Quest, and help them navigate the website. Be concise and informative. If asked about the pricing, politely state that more information can be found by visiting the relevant page. If a custom website inquiry is needed, politely state that an invoice may be issued for the service provided. If asked about pricing or specific features not detailed, politely state that more information can be found by contacting Majestik Magik directly through the contact options on the website or by visiting the relevant page.",
+            // Fixed the unclosed parenthesis anomaly right after Pivot Quest
+            systemInstruction: "You are a friendly and helpful AI assistant for Majestik Magik, a company specializing in AI-powered website design and digital systems solutions. Your goal is to answer user questions about Majestik Magik, its services (Custom Web Development, SEO, Digital Marketing, Pivot Quest), and help them navigate the website. Be concise and informative. If asked about pricing, politely state that more information can be found by visiting the relevant page. If a custom website inquiry is needed, politely state that an invoice may be issued for the service provided. If asked about pricing or specific features not detailed, politely state that more information can be found by contacting Majestik Magik directly through the contact options on the website or by visiting the relevant page.",
           },
         });
         setChatSession(currentChat);
@@ -153,11 +140,9 @@ const App = () => {
     }
   };
 
-  // Add the return statement here
   return (
     <>
       <div>
-
         <main>
           <HeroSection          
             onLearnMore={() => document.getElementById('comparison-chart')?.scrollIntoView({ behavior: 'smooth' })}
@@ -168,12 +153,9 @@ const App = () => {
           <TestimonialsSection />
         </main>
 
-
-
-        {/* Chatbot is likely a fixed element */}
         <Chatbot
           isChatOpen={isChatOpen}
-          handleToggleChat={handleToggleChat} // Correct prop name
+          handleToggleChat={handleToggleChat}
           chatMessages={chatMessages}
           chatInput={chatInput}
           handleChatInputChange={handleChatInputChange}
@@ -182,9 +164,7 @@ const App = () => {
           chatError={chatError}
           isGeminiInitialized={isGeminiInitialized}
           chatMessagesEndRef={chatMessagesEndRef as React.RefObject<HTMLDivElement>}
-
         />
-        
       </div>
     </>
   );
