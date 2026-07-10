@@ -51,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           className="max-w-3xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90"
           style={{ transitionDelay: "0.1s" }}
         >
-          We engineer high-performance, context-aware workspaces built for rapid execution. No generic prompts. No lost context. Just our very own guardrailed strategic engine to keep your business on the main trail. Experience our architecture in action with Pivot Quest, the ultimate gamified workspace built to accelerate your business operations.
+          High-performance, context-aware workspaces built for rapid execution. Stop wrestling with generic prompts and lost context. Pivot Quest deploys a guardrailed strategic engine fine-tuned to keep your business scaling on the main trail.
         </p>
 
         {/* Clean Call To Action Layer */}
@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             rel="noopener noreferrer"
             className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_4px_30px_rgba(26,81,244,0.4)] hover:shadow-[0_4px_40px_rgba(26,81,244,0.6)]"
           >
-            Sign Up Today!
+            Start Today!
           </a>
         </div>
 
@@ -82,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               width={1200}
               height={800}
               priority
-              className="w-full h-auto rounded-xl border border-slate-950/80 opacity-95 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.005]"
+              className="w-full h-auto rounded-xl border border-slate-950/80 opacity-95 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.015]"
             />
           </div>
         </div>

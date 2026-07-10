@@ -59,14 +59,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
       <div className="container relative px-6 py-16 mx-auto w-full max-w-7xl z-20">
 
         {/* Top Contact Bar styled like node routing configurations */}
-        <div className={`mx-auto grid grid-cols-1 gap-8 mb-14 md:grid-cols-3 justify-items-stretch ${isAlwaysVisible ? 'is-visible' : ''}`}>
-          <div className="flex items-start space-x-4 p-4 rounded-xl bg-slate-900/40 border border-slate-900/60 backdrop-blur-sm">
-            <div className="mt-1"><LocationIcon /></div>
-            <div>
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">Node Hub Location</p>
-              <p className="text-sm mt-1 text-slate-300">405 E. Laburnum Ave. Ste 3, Richmond, VA 23222</p>
-            </div>
-          </div>
+        <div className={`mx-auto grid grid-cols-1 gap-8 mb-14 md:grid-cols-2 justify-items-stretch ${isAlwaysVisible ? 'is-visible' : ''}`}>       
           
           <div className="flex items-start space-x-4 p-4 rounded-xl bg-slate-900/40 border border-slate-900/60 backdrop-blur-sm">
             <div className="mt-1"><PhoneIcon /></div>
@@ -81,8 +74,8 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
             <div>
               <p className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">Direct Signal Packet</p>
               <p className="text-sm mt-1">
-                <a href="mailto:contact@majestikmagik.com" className="text-slate-300 transition-colors hover:text-indigo-400 font-mono">
-                  contact@majestikmagik.com
+                <a href="mailto:contact@majestikmagik.dev" className="text-slate-300 transition-colors hover:text-indigo-400 font-mono">
+                  contact@majestikmagik.dev
                 </a>
               </p>
             </div>
