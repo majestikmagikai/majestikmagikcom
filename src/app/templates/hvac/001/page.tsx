@@ -5,6 +5,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 // --- Helper Icon Components ---
 const SnowflakeIcon = ({ className }: { className?: string }) => (
@@ -159,7 +160,7 @@ export default function HvacWebsitePage() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row-reverse items-center gap-12">
                     <div className="md:w-1/2">
-                        <img src="https://placehold.co/600x400/0891B2/FFFFFF?text=Certified+Technician&font=montserrat" alt="Certified HVAC technician working on a unit" className="rounded-lg shadow-2xl" />
+                        <Image src="https://placehold.co/600x400/0891B2/FFFFFF?text=Certified+Technician&font=montserrat" alt="Certified HVAC technician working on a unit" className="rounded-lg shadow-2xl" />
                     </div>
                     <div className="md:w-1/2">
                         <h2 className="text-4xl font-bold text-slate-800 mb-4">Your Local Comfort Experts</h2>

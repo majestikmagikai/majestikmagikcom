@@ -5,6 +5,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 // --- Helper Icon Components ---
 const HomeShieldIcon = ({ className }: { className?: string }) => (
@@ -159,7 +161,7 @@ export default function RoofingWebsitePage() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row-reverse items-center gap-12">
                     <div className="md:w-1/2">
-                        <img src="https://placehold.co/600x400/B91C1C/FFFFFF?text=Quality+Craftsmanship&font=montserrat" alt="Roofer installing shingles with precision" className="rounded-lg shadow-2xl" />
+                        <Image src="https://placehold.co/600x400/B91C1C/FFFFFF?text=Quality+Craftsmanship&font=montserrat" alt="Roofer installing shingles with precision" className="rounded-lg shadow-2xl" />
                     </div>
                     <div className="md:w-1/2">
                         <h2 className="text-4xl font-bold text-slate-900 mb-4">The RVA Roofing Difference</h2>

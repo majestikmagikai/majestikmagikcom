@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 // --- SVG Icons ---
 // Using inline SVGs for performance and easy color manipulation.
@@ -119,7 +121,7 @@ export default function App() {
                     <div className="flex items-center justify-between h-20">
                         {/* Logo */}
                         <a href="#" className="flex items-center space-x-3">
-                            <img src={companyInfo.logoUrl} alt="Thomas & Son Plumbing Logo" className="h-30 w-auto md:h-18" />
+                            <Image src={companyInfo.logoUrl} alt="Thomas & Son Plumbing Logo" className="h-30 w-auto md:h-18" />
                         </a>
 
                         {/* Desktop Navigation */}
@@ -236,7 +238,7 @@ export default function App() {
                                 </div>
                             </div>
                             <div className="mt-10 lg:mt-0">
-                                <img className="rounded-lg shadow-xl" src="https://placehold.co/600x400/111827/ef4444?text=Our+Work" alt="Bathroom renovation project" />
+                                <Image className="rounded-lg shadow-xl" src="https://placehold.co/600x400/111827/ef4444?text=Our+Work" alt="Bathroom renovation project" />
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 // FIX: Removed 'next/font/google' import to resolve build error.
 // The app will now use the default system font stack.
 
@@ -168,7 +169,7 @@ export default function PlumbingWebsitePage() {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center gap-12">
                     <div className="md:w-1/2">
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Clean+Work+Area&font=montserrat" alt="Clean and organized plumbing work area" className="rounded-lg shadow-2xl" />
+                        <Image src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Clean+Work+Area&font=montserrat" alt="Clean and organized plumbing work area" className="rounded-lg shadow-2xl" />
                     </div>
                     <div className="md:w-1/2">
                         <h2 className="text-4xl font-bold text-blue-900 mb-4">The Richmond Plumber You Can Trust</h2>

@@ -5,6 +5,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Playfair_Display, Lato } from 'next/font/google';
 import { PhoneIcon, ClockIcon, MapPinIcon, ChevronDownIcon } from 'lucide-react';
 
@@ -101,7 +102,7 @@ export default function RestaurantPage() {
         {/* Hero Section */}
         <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center text-white text-center">
           <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
-            <source src="/img/restaurant_hero.mp4" type="video/mp4" />
+            <source src="/Image/restaurant_hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -172,20 +173,20 @@ export default function RestaurantPage() {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="grid gap-4">
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[0]} alt="Plated dish" />
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[1]} alt="Cocktail" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[0]} alt="Plated dish" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[1]} alt="Cocktail" />
                     </div>
                     <div className="grid gap-4">
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[2]} alt="Restaurant interior" />
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[3]} alt="Chef at work" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[2]} alt="Restaurant interior" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src={galleryImages[3]} alt="Chef at work" />
                     </div>
                     <div className="grid gap-4">
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x800/1a1a1a/c4b59d?text=Wine+Cellar&font=playfair" alt="Wine cellar" />
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x400/1a1a1a/c4b59d?text=Dining+Table&font=playfair" alt="Dining table setting" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x800/1a1a1a/c4b59d?text=Wine+Cellar&font=playfair" alt="Wine cellar" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x400/1a1a1a/c4b59d?text=Dining+Table&font=playfair" alt="Dining table setting" />
                     </div>
                      <div className="grid gap-4">
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x400/1a1a1a/c4b59d?text=Dessert&font=playfair" alt="Dessert plating" />
-                        <img className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x800/1a1a1a/c4b59d?text=Entrance&font=playfair" alt="Restaurant entrance" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x400/1a1a1a/c4b59d?text=Dessert&font=playfair" alt="Dessert plating" />
+                        <Image className="h-auto max-w-full rounded-lg shadow-lg" src="https://placehold.co/600x800/1a1a1a/c4b59d?text=Entrance&font=playfair" alt="Restaurant entrance" />
                     </div>
                 </div>
             </div>
@@ -205,7 +206,7 @@ export default function RestaurantPage() {
                         </a>
                     </div>
                     <div className="md:w-1/2">
-                        <img src="https://placehold.co/600x500/1a1a1a/c4b59d?text=Private+Dining+Room&font=playfair" alt="Elegant private dining room" className="rounded-lg shadow-2xl" />
+                        <Image src="https://placehold.co/600x500/1a1a1a/c4b59d?text=Private+Dining+Room&font=playfair" alt="Elegant private dining room" className="rounded-lg shadow-2xl" />
                     </div>
                 </div>
             </div>

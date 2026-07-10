@@ -86,7 +86,7 @@ const ServicesSection: React.FC = () => {
                   className="flex items-center justify-center flex-shrink-0 mx-4 sm:mx-6 tooltip" // Added tooltip class if you want to add custom tooltips later
                   data-tip={tech.name} // For potential CSS/JS tooltip libraries
                 >
-                  <Image 
+                  <Image
                     src={tech.imgSrc}
                     alt={tech.alt}
                     className="lazy-logo h-10 sm:h-12 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"

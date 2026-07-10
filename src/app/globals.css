@@ -1,26 +1,35 @@
-/* 
- * Globals
- *
- */
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-/* Import Tailwind */
+/* ==========================================================================
+   Majestik Core Engine - Refactored Configuration
+   ========================================================================== */
+
+/* --- 📦 Core Imports --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 
+/* --- 🏛️ Global Base Styling --- */
 html,
 body {
-  font-family: 'Poppins';
+  font-family: 'Inter', sans-serif;
+  background-color: #fbfbfb; /* Tenstorrent Clean Off-White Base */
 }
 
+/* ==========================================================================
+   🎯 Structural Design System & Canvas Framework
+   ========================================================================== */
 
+/* Tenstorrent Blueprint Canvas Grid (Light Context) */
+.tenstorrent-canvas {
+  background-color: #fbfbfb;
+  background-image: radial-gradient(#dbe1e6 1.1px, transparent 1.1px);
+  background-size: 24px 24px;
+}
 
-/* --- Scroll Animation Styles --- */
+/* Scroll Performance Engine */
 .scroll-animate {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-delay: 0.2s;
-  /* A default delay for a nice effect */
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
 .scroll-animate.is-visible {
@@ -28,59 +37,76 @@ body {
   transform: translateY(0);
 }
 
+/* ==========================================================================
+   🖥️ 3D Fan-Friendly Screenshot Component
+   ========================================================================== */
 
-/* --- Infinite Logo Scroller --- */
-@keyframes marquee-scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-    /* Moves left by half the total width (one set of logos) */
-  }
+/* Outer structural bounding frame */
+.hero-screenshot-frame {
+  position: relative;
+  border-radius: 1.5rem;       /* rounded-2xl */
+  padding: 2px;                /* Hairline bezel padding */
+  perspective: 1200px;         /* Depth map for 3D layout */
+  isolation: isolate;          /* Keeps layered blend profiles safe */
 }
 
-@keyframes marquee-scroll-right {
-  0% {
-    transform: translateX(-50%);
-    /* Starts with the second set of logos visible (content shifted left) */
-  }
-
-  100% {
-    transform: translateX(0%);
-    /* Scrolls to show the first set of logos (original position) */
-  }
+/* Ambient reactive lighting backdrop layer */
+.hero-screenshot-frame::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    #4f46e5,
+    #2563eb,
+    #14b8a6,
+    #4f46e5
+  );
+  background-size: 220% 220%;
+  filter: blur(20px);
+  opacity: 0.9;
+  animation:
+    mm-gradient-shift 16s ease-in-out infinite,
+    mm-glow-pulse 5s ease-in-out infinite;
 }
 
-@keyframes flash {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
+/* The dark-canvas terminal layer */
+.hero-screenshot-inner {
+  border-radius: 1.25rem;      
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
+  box-shadow:
+    0 22px 35px rgba(15, 23, 42, 0.41),
+    0 0 0 1px rgba(148, 163, 184, 0.08);
+  transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.5s ease,
+    filter 0.5s ease;
 }
 
-.animate-flash {
-  animation: flash 2s infinite;
+/* High-performance hardware micro-lifts */
+.hero-screenshot-frame.group:hover .hero-screenshot-inner {
+  transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
+  box-shadow:
+    0 32px 40px rgba(15, 23, 42, 0.98),
+    0 0 0 1px rgba(191, 219, 254, 0.26);
+  filter: brightness(1.03);
 }
 
-@keyframes gradient-x {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.hero-screenshot-frame.group:hover::before {
+  opacity: 1;
+  filter: blur(28px);
 }
 
+/* ==========================================================================
+   ⚡ Text Engine, Loops & Animations
+   ========================================================================== */
+
+/* Zero-CPU Gradient Headline Framework */
 .animate-gradient-x {
   background: linear-gradient(
     270deg,
@@ -96,48 +122,27 @@ body {
   animation: gradient-x 10s ease infinite;
 }
 
-
-/* Keyframes for Team Card Hover Effect */
-@keyframes teamCardHoverEffect {
-
-  /* from { transform: translateY(0) scale(1); } /* Optional: define from state if different from base */
-  to {
-    transform: translateY(-0.25rem) scale(1.03);
-    /* -0.25rem is equivalent to -translate-y-1 */
-  }
+/* Hover Scaling System for Team and Service Matrix Containers */
+.team-card-hover-animate,
+.services-card-hover-animate {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
-/* Keyframes for Services Card Hover Effect */
-@keyframes servicesCardHoverEffect {
-
-  /* from { transform: translateY(0) scale(1); } /* Optional: define from state if different from base */
-  to {
-    transform: translateY(-0.25rem) scale(1.03);
-    /* -0.25rem is equivalent to -translate-y-1 */
-  }
+.team-card-hover-animate:hover,
+.services-card-hover-animate:hover {
+  animation: matrixCardHoverEffect 0.3s ease-in-out forwards;
 }
 
-@keyframes marquee-infinite {
-  0% {
-    transform: translateX(0%);
-  }
+/* ==========================================================================
+   🔄 High-End Infinite Logo Telemetry Scrollers
+   ========================================================================== */
 
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee-infinite {
-  animation: marquee-infinite 40s linear infinite;
-}
-
-/* --- Infinite Logo Scroller Styles --- */
 .scrolling-logos-wrapper {
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  /* Optional: Add a mask for fading edges if desired, more complex */
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -145,192 +150,87 @@ body {
 .scrolling-logos-container {
   display: flex;
   width: 80%;
-  /* Crucial for the animation to calculate width based on content */
   animation: marquee-scroll-left 30s linear infinite;
-  /* Adjust 30s for speed (longer = slower) */
   will-change: transform;
-  /* Performance hint for the browser */
 }
 
 .scrolling-logos-container-services {
   display: flex;
   width: 80%;
-  /* Crucial for the animation to calculate width based on content */
   animation: marquee-scroll-right 30s linear infinite;
-  /* Adjust 30s for speed (longer = slower) */
   will-change: transform;
-  /* Performance hint for the browser */
 }
 
-.scrolling-logos-wrapper:hover .scrolling-logos-container {
+.scrolling-logos-wrapper:hover .scrolling-logos-container,
+.scrolling-logos-wrapper:hover .scrolling-logos-container-services {
   animation-play-state: paused;
-  /* Pause animation on hover */
 }
 
-/* --- Team Card Hover Effect Styles --- */
-.team-card-hover-animate {
-  transition: transform 0.3s ease-in-out;
-  /* Match this with your animation duration */
-  will-change: transform;
-  /* Performance hint for the browser */
+/* ==========================================================================
+   🛠️ Keyframe Computations
+   ========================================================================== */
+
+@keyframes marquee-scroll-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-.team-card-hover-animate:hover {
-  animation-name: teamCardHoverEffect;
-  animation-duration: 0.3s;
-  /* Should match your transition duration */
-  animation-timing-function: ease-in-out;
-  /* Should match your transition easing */
-  animation-fill-mode: forwards;
-  /* Keeps the state at the end of the animation */
+@keyframes marquee-scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
 }
 
-
-/* Outer frame: animated gradient + glow */
-.hero-screenshot-frame {
-  position: relative;
-  border-radius: 1.5rem;       /* rounded-2xl */
-  padding: 2px;                /* thin border padding */
-  perspective: 1200px;         /* needed for 3D tilt */
-  isolation: isolate;          /* keeps blend effects clean */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
 }
 
-.hero-screenshot-frame::before {
-  content: "";
-  position: absolute;
-  inset: -14px;
-  border-radius: inherit;
-  z-index: -1;
-
-  /* Indigo → blue → teal gradient */
-  background: linear-gradient(
-    120deg,
-    #4f46e5,
-    #2563eb,
-    #14b8a6,
-    #4f46e5
-  );
-  background-size: 220% 220%;
-
-  filter: blur(20px);
-  opacity: 0.9;
-
-  /* Moving gradient + breathing glow */
-  animation:
-    mm-gradient-shift 16s ease-in-out infinite,
-    mm-glow-pulse 5s ease-in-out infinite;
-}
-
-/* The actual screenshot card */
-.hero-screenshot-inner {
-  border-radius: 1.25rem;      /* rounded-xl/2xl hybrid */
-  overflow: hidden;
-  background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
-  box-shadow:
-    0 22px 35px rgba(15, 23, 42, 0.411),
-    0 0 0 1px rgba(148, 163, 184, 0.075);
-
-  transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
-  transform-style: preserve-3d;
-  transition:
-    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
-    box-shadow 0.5s ease,
-    filter 0.5s ease;
-}
-
-/* 3D tilt + slight lift on hover */
-.hero-screenshot-frame.group:hover .hero-screenshot-inner {
-  transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
-  box-shadow:
-    0 32px 40px rgba(15, 23, 42, 0.98),
-    0 0 0 1px rgba(191, 219, 254, 0.26);
-  filter: brightness(1.03);
-}
-
-/* Intensify glow on hover */
-.hero-screenshot-frame.group:hover::before {
-  opacity: 1;
-  filter: blur(28px);
-}
-
-/* Moving gradient */
 @keyframes mm-gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
 }
 
-/* Breathing glow */
 @keyframes mm-glow-pulse {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(0.87);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(0.95);
-  }
+  0%, 100% { opacity: 0.3; transform: scale(0.87); }
+  50%      { opacity: 1;   transform: scale(0.95); }
 }
 
-
-
-/* --- Services Card Hover Effect Styles --- */
-.services-card-hover-animate {
-  transition: transform 0.3s ease-in-out;
-  /* Match this with your animation duration */
-  will-change: transform;
-  /* Performance hint for the browser */
+@keyframes matrixCardHoverEffect {
+  to { transform: translateY(-0.25rem) scale(1.03); }
 }
 
-.services-card-hover-animate:hover {
-  animation-name: servicesCardHoverEffect;
-  animation-duration: 0.3s;
-  /* Should match your transition duration */
-  animation-timing-function: ease-in-out;
-  /* Should match your transition easing */
-  animation-fill-mode: forwards;
-  /* Keeps the state at the end of the animation */
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
 }
 
-/* --- Custom Scrollbar Styles (from index.html) --- */
+.animate-flash {
+  animation: flash 2s infinite;
+}
+
+/* ==========================================================================
+   🎨 Global Overrides (Scrollbars & Hardware Consoles)
+   ========================================================================== */
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
-  /* bg-slate-800 */
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  /* indigo-600 */
-  border-radius: 4px;
+  background: #94a3b8;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
-  /* indigo-500 */
+  background: #64748b;
 }
 
-/* --- Code Block Styles (from index.html) --- */
 pre code.language-typescript {
-  font-family: 'Noto Sans', Consolas, 'Liberation Mono', Menlo, Courier,
-    monospace;
+  font-family: 'Noto Sans', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
   word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
 }
