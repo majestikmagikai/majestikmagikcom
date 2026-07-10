@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI, GenerateContentResponse } from '@google/genai';
+import { GoogleGenAI, GenerateContentResponse, Chat } from '@google/genai';
 
 // Import custom hook
 import useMediaQuery from './hooks/useMediaQuery';
@@ -35,7 +35,7 @@ const App = () => {
   const [chatInput, setChatInput] = useState<string>('');
   const [isChatLoading, setIsChatLoading] = useState<boolean>(false);
   const [chatError, setChatError] = useState<string | null>(null);
-  const [chatSession, setChatSession] = useState<any>(null); // Kept flexible for session mappings
+  const [chatSession, setChatSession] = useState<Chat | null>(null);
   const chatMessagesEndRef = useRef<HTMLDivElement | null>(null);
 
   // Detect if the screen is 'xl' (desktop) or larger.
