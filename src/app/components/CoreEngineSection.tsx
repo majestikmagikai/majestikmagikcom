@@ -129,7 +129,7 @@ export const CoreEngineSection = () => {
         {/* Left Column: Core Infrastructure Copy */}
         <div 
           className="text-column scroll-animate"
-          style={{ flex: "1", maxWidth: "500px", textAlign: "left", transition: "all 1.5s ease-in-out"}}
+          style={{ flex: "1", maxWidth: "500px", textAlign: "left", transition: "all .5s ease-in-out"}}
         >
           <div style={{ color: "#6366f1", fontSize: "12px", fontWeight: "bold", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>
             The Architecture Engine
