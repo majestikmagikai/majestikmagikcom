@@ -58,14 +58,14 @@ export const CoreEngineSection = () => {
 
   return (
     <section 
-      id="core-engine"      
+      className="core-engine-section" 
       style={{ 
         position: "relative",
         padding: "100px 20px", 
         background: "#070913", 
         display: "flex", 
         justifyContent: "center",
-        overflow: "hidden"        
+        overflow: "hidden"
       }}
     >
       <style dangerouslySetInnerHTML={{__html: `
@@ -79,7 +79,7 @@ export const CoreEngineSection = () => {
         }
       `}} />
 
-      {/* 1. Full-Screen Background Video Frame */}
+      {/* Full-Screen Background Video Frame */}
       <video
         autoPlay
         loop
@@ -93,13 +93,13 @@ export const CoreEngineSection = () => {
           height: "100%",
           objectFit: "cover",
           zIndex: 1,
-          opacity: 0.18 // Low opacity keeps it moody, subtle, and text-readable
+          opacity: 0.18
         }}
       >
         <source src="/videos/bare-metal-hardware.mp4" type="video/mp4" />
       </video>
 
-      {/* 2. Micro Dot Matrix Overlay Pattern Layer */}
+      {/* Micro Dot Matrix Overlay Pattern Layer */}
       <div 
         style={{
           position: "absolute",
@@ -109,11 +109,11 @@ export const CoreEngineSection = () => {
           height: "100%",
           zIndex: 2,
           backgroundImage: "radial-gradient(rgba(30, 38, 79, 0.4) 1px, transparent 1px)",
-          backgroundSize: "24px 24px" // Matches your design's grid dot density
+          backgroundSize: "24px 24px"
         }}
       />
 
-      {/* 3. Interactive Component Layout (Positioned above background) */}
+      {/* Interactive Component Layout */}
       <div 
         className="split-container"
         style={{ 
@@ -123,13 +123,13 @@ export const CoreEngineSection = () => {
           alignItems: "center", 
           justifyContent: "space-between",
           gap: "60px",
-          zIndex: 3 // Ensures inputs, selection text, and buttons stay above backgrounds
+          zIndex: 3
         }}
       >
         {/* Left Column: Core Infrastructure Copy */}
         <div 
           className="text-column scroll-animate"
-          style={{ flex: "1", maxWidth: "500px", textAlign: "left", transition: "0.4s ease-in-out" }}
+          style={{ flex: "1", maxWidth: "500px", textAlign: "left", transition: "all 1.5s ease-in-out"}}
         >
           <div style={{ color: "#6366f1", fontSize: "12px", fontWeight: "bold", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>
             The Architecture Engine
@@ -145,7 +145,7 @@ export const CoreEngineSection = () => {
           </p>
         </div>
 
-        {/* Right Column: Terminal Window Layer with Frosted Glassmorphism */}
+        {/* Right Column: Linux Terminal Window */}
         <div style={{ flex: "1.2", width: "100%", display: "flex", justifyContent: "center" }}>
           <div 
             className="terminal-window scroll-animate" 
@@ -156,34 +156,50 @@ export const CoreEngineSection = () => {
               backdropFilter: "blur(16px)", 
               WebkitBackdropFilter: "blur(16px)",
               border: "1px solid #1e264f", 
-              borderRadius: "8px", 
+              borderRadius: "6px", 
               boxShadow: "0 24px 60px rgba(0, 0, 0, 0.6)", 
               fontFamily: "'Fira Code', 'Courier New', Courier, monospace", 
               overflow: "hidden",
-              transition: "1.0s ease-in-out"
+              transition: "all 0.5s ease-in-out"
             }}
           >
-            {/* Terminal Header Bar */}
+            {/* Linux Terminal Header Bar */}
             <div 
               className="terminal-header" 
               style={{ 
-                background: "rgba(19, 25, 54, 0.9)", 
-                padding: "12px 16px", 
+                background: "rgba(21, 26, 54, 0.95)", 
+                padding: "10px 16px", 
                 display: "flex", 
                 alignItems: "center", 
                 justifyContent: "space-between", 
-                borderBottom: "1px solid #1e264f" 
+                borderBottom: "1px solid #1e264f",
+                userSelect: "none"
               }}
             >
-              <div className="terminal-buttons" style={{ display: "flex", gap: "8px" }}>
-                <span style={{ width: "12px", height: "12px", background: "#ff5f56", borderRadius: "50%", display: "inline-block" }}></span>
-                <span style={{ width: "12px", height: "12px", background: "#ffbd2e", borderRadius: "50%", display: "inline-block" }}></span>
-                <span style={{ width: "12px", height: "12px", background: "#27c93f", borderRadius: "50%", display: "inline-block" }}></span>
+              {/* Left Side: Linux Terminal Prompts & Label */}
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                {/* SVG Prompt Terminal Icon */}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6373b3" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <div className="terminal-title" style={{ color: "#a5b4fc", fontSize: "13px", fontWeight: 500, letterSpacing: "0.3px" }}>
+                  user@majestik-node1: ~
+                </div>
               </div>
-              <div className="terminal-title" style={{ color: "#6373b3", fontSize: "13px", fontWeight: "bold", letterSpacing: "0.5px" }}>
-                majestik-core-engine ~ bash
+
+              {/* Right Side: Standard Linux Windows Control Actions (Min, Max, Close) */}
+              <div className="terminal-controls" style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+                {/* Minimize (Horizontal Dash) */}
+                <span style={{ display: "block", width: "10px", height: "1px", background: "#6373b3" }}></span>
+                {/* Maximize (Square box border) */}
+                <span style={{ display: "block", width: "9px", height: "9px", border: "1px solid #6373b3", borderRadius: "1px" }}></span>
+                {/* Close (X graphic representation) */}
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#6373b3" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
               </div>
-              <div style={{ width: "52px" }}></div>
             </div>
 
             {/* Terminal Body */}
@@ -215,7 +231,7 @@ export const CoreEngineSection = () => {
                     {log.text}
                     {index === logs.length - 1 && showCursor && (
                       <span style={{ animation: "blink 1s infinite", marginLeft: "4px" }}>█</span>
-                    )}
+                )}
                   </p>
                 );
               })}
