@@ -14,8 +14,8 @@ export default function MainLayout({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const navItems = [
     { name: 'Home', url: '/#home' },
-    { name: 'Shop', url: '/#shop' },
-    { name: 'Pricing', url: '/#pricing' },
+    { name: 'Core Engine', url: '/#core-engine' },
+    { name: 'Services', url: '/#services' },
     { name: 'About', url: '/#about' },
     { name: 'Testimonials', url: '/#testimonials' },
     { name: 'Contact', url: '/#contact' },

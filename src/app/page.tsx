@@ -9,7 +9,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import {
   HeroSection,
   PricingSection,
-  ShopSection,
+  CoreEngineSection,
   TeamSection,
   TestimonialsSection,
   Chatbot,
@@ -147,7 +147,7 @@ const App = () => {
           <HeroSection          
             onLearnMore={() => document.getElementById('comparison-chart')?.scrollIntoView({ behavior: 'smooth' })}
           />
-          <ShopSection />
+          <CoreEngineSection />
           <PricingSection pricingPlans={[]} />          
           <TeamSection />
           <TestimonialsSection />

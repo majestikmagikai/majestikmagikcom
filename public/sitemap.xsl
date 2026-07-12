@@ -139,7 +139,7 @@
           </tbody>
         </table>
         <div class="footer">
-            Generated on <script>document.write(new Date().toLocaleDateString());</script> by <a href="https://majestikmagik.com">Majestik Magik</a>.
+            Generated on <script>document.write(new Date().toLocaleDateString());</script> by <a href="https://majestikmagik.dev">Majestik Magik</a>.
         </div>
       </div>
     </body>

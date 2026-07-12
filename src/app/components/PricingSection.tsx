@@ -56,7 +56,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
 }) => {
   return (
     <section
-      id="pricing"
+      id="services"
       aria-labelledby="micro-services-heading"
       className="relative z-0 py-24 md:py-36 overflow-hidden bg-slate-950"
     >

@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
   return (
     <footer id="contact" aria-labelledby="contact-heading" className="relative z-0 bg-slate-950 text-slate-400 border-t border-slate-900 font-sans overflow-hidden">
-      
+
       {/* Dynamic ambient radial core glow - Base layer (z-10) */}
       <div
         className="absolute inset-0 z-10 opacity-30 pointer-events-none"
@@ -43,7 +43,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
       ></div>
 
       {/* High-end hardware processor micro-dot matrix pattern - Stacked safely on top (z-11) */}
-      <div 
+      <div
         className="absolute inset-0 z-11 pointer-events-none opacity-20"
         style={{
           backgroundImage: 'radial-gradient(rgba(241, 245, 249, 0.4) 1.2px, transparent 1.2px)',
@@ -54,8 +54,8 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
       <div className="container relative px-6 py-16 mx-auto w-full max-w-7xl z-20">
 
         {/* Top Contact Bar styled like node routing configurations */}
-        <div className={`mx-auto grid grid-cols-1 gap-8 mb-14 md:grid-cols-2 justify-items-stretch ${isAlwaysVisible ? 'is-visible' : ''}`}>       
-          
+        <div className={`mx-auto grid grid-cols-1 gap-8 mb-14 md:grid-cols-2 justify-items-stretch ${isAlwaysVisible ? 'is-visible' : ''}`}>
+
           <div className="flex items-start space-x-4 p-4 rounded-xl bg-slate-900/40 border border-slate-900/60 backdrop-blur-sm">
             <div className="mt-1"><PhoneIcon /></div>
             <div>
@@ -90,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
               <li><a href="/refund-policy" className="hover:text-indigo-400 transition-colors py-1 block">Refund Policy</a></li>
               <li><a href="/intellectual-property" className="hover:text-indigo-400 transition-colors py-1 block">Intellectual Property</a></li>
               <li><a href="/cyber-security-policy" className="hover:text-indigo-400 transition-colors py-1 block">Cyber Security</a></li>
-              <li><a href="/sitemap.xml" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Sitemap.xml</a></li>
+              <li><a href="/sitemap.xml" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Sitemap</a></li>
               <li><a href="/faq" className="hover:text-indigo-400 transition-colors py-1 block">FAQ Matrix</a></li>
             </ul>
           </div>
@@ -108,10 +108,28 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
             <div className="w-full border-t border-slate-900 pt-6">
               <h3 className="mb-4 text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">Hardware & Platform Partners</h3>
-              <ul className="flex flex-wrap items-center gap-6 opacity-40 hover:opacity-75 transition-opacity duration-300">
-                <Image src="/img/partners/wpengine_member-badge.png" alt="WP Engine Partner" width={90} height={45} className="h-12 w-auto grayscale object-contain" />
-                <Image src="/img/partners/gcp-logo.png" alt="Google Cloud Startup" width={140} height={100} className="h-14 w-auto grayscale object-contain" />
-                <Image src="/img/partners/aws-activate-logo_white.webp" alt="AWS Activate Partner" width={140} height={100} className="h-6 w-auto grayscale object-contain" />
+              <ul className="flex flex-wrap items-center gap-10 opacity-40 hover:opacity-75 transition-opacity duration-300">
+                <Image
+                  src="/img/partners/wpengine_member-badge.png"
+                  alt="WP Engine Partner"
+                  width={160}
+                  height={80}
+                  className="h-20 w-auto grayscale object-contain"
+                />
+                <Image
+                  src="/img/partners/gcp-logo.png"
+                  alt="Google Cloud Startup"
+                  width={220}
+                  height={160}
+                  className="h-24 w-auto grayscale object-contain"
+                />
+                <Image
+                  src="/img/partners/aws-activate-logo_white.webp"
+                  alt="AWS Activate Partner"
+                  width={240}
+                  height={100}
+                  className="h-12 w-auto grayscale object-contain"
+                />
               </ul>
             </div>
           </div>
