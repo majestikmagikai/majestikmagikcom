@@ -58,7 +58,7 @@ export const CoreEngineSection = () => {
 
   return (
     <section 
-      className="core-engine-section" 
+      id="core-engine-section" 
       style={{ 
         position: "relative",
         padding: "100px 20px", 
