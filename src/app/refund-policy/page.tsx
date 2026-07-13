@@ -18,7 +18,7 @@ const RefundPolicyContent = () => {
       <p className="text-sm text-slate-400 mb-4">Last Updated: May 17, 2025</p>
 
       <p>
-        At MajestikMagik.com, we strive to provide high-quality digital products and services. We understand that sometimes things don&apos;t work out as expected. This policy outlines the conditions under which refunds may be issued.
+        At MajestikMagik.dev, we strive to provide high-quality digital products and services. We understand that sometimes things don&apos;t work out as expected. This policy outlines the conditions under which refunds may be issued.
       </p>
 
       <div className="space-y-2">
@@ -51,7 +51,7 @@ const RefundPolicyContent = () => {
         <h2 className="text-2xl font-semibold text-slate-100 mt-8 mb-4">How to Request a Refund</h2>
         <p>To request a refund, please follow these steps:</p>
         <ol className="list-decimal list-inside space-y-2 ml-4">
-          <li><strong>Contact Us:</strong> Send an email to <a href="mailto:jamil.matheny@majestikmagik.com" className="text-indigo-400 hover:text-indigo-300 underline">jamil.matheny@majestikmagik.com</a> with your order number and a detailed explanation of why you are requesting a refund.</li>
+          <li><strong>Contact Us:</strong> Send an email to <a href="mailto:jamil.matheny@majestikmagik.dev" className="text-indigo-400 hover:text-indigo-300 underline">jamil.matheny@majestikmagik.dev</a> with your order number and a detailed explanation of why you are requesting a refund.</li>
           <li><strong>Provide Evidence:</strong> For technical issues or misrepresentation, please provide screenshots, error messages, or other relevant evidence to support your claim.</li>
           <li><strong>Review Process:</strong> We will review your request within 5 business days and may contact you for additional information.</li>
           <li><strong>Refund Issuance:</strong> If your refund request is approved, the refund will be processed to your original method of payment within 7-10 business days.</li>
