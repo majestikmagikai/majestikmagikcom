@@ -14,10 +14,10 @@ const PrivacyPolicyContent: React.FC = () => {
     return (
         <div className="text-slate-300 leading-relaxed space-y-4">
             <h1 className="text-3xl md:text-4xl font-bold text-slate-100 mb-1">Privacy Policy for Majestik Magik</h1>
-            <p className="text-sm text-slate-400 mb-4">Last Updated: June 29, 2025</p>
+            <p className="text-sm text-slate-400 mb-4">Last Updated: July 13, 2026</p>
 
             <p>
-                This Privacy Policy describes how Majestik Magik (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and shares personal information of users (&quot;you&quot; or &quot;users&quot;) of our website, https://www.majestikmagik.com (the &quot;Site&quot;). This policy also outlines your choices regarding your personal information.
+                This Privacy Policy describes how Majestik Magik (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and shares personal information of users (&quot;you&quot; or &quot;users&quot;) of our website, https://www.majestikmagik.dev (the &quot;Site&quot;). This policy also outlines your choices regarding your personal information.
             </p>
 
             {/* Section 1 */}
@@ -125,10 +125,7 @@ const PrivacyPolicyContent: React.FC = () => {
                 <h3 className="text-xl font-semibold text-slate-200 mt-5 mb-1">10. Contact Us</h3>
                 <p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
                 <p>
-                    Majestik Magik<br />
-                    405 E. Laburnum Ave Ste #3<br />
-                    Richmond, VA 23222<br />
-                    jamil.matheny@majestikmagik.com<br />
+                    Majestik Magik<br />                 
                     804.362.7561
                 </p>
                 <p className="mt-4">By using our Site, you consent to the terms of this Privacy Policy.</p>

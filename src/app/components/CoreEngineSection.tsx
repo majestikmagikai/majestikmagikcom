@@ -15,12 +15,12 @@ export const CoreEngineSection = () => {
   const terminalBodyRef = useRef<HTMLDivElement>(null);
 
   const logs: LogLine[] = [
-    { text: "user@majestik-node1:~$ ./launch_core.sh", color: "#6366f1", delay: 300 },
+    { text: "user@majestik-node1:~$ ./launch_core.py", color: "#6366f1", delay: 300 },
     { text: "[INFO] Initializing Majestik Core Engine v1.0...", color: "#a5b4fc", delay: 800 },
     { text: "[SYSTEM] Booting secure local machine execution layers...", color: "#a5b4fc", delay: 600 },
-    { text: "[DATABASE] Connecting to localized PostgreSQL Vector Instance...", color: "#38bdf8", delay: 700 },
+    { text: "[DATABASE] Connecting to localized Vector Instance...", color: "#38bdf8", delay: 700 },
     { text: "[DATABASE] pgvector extension found. Mapping high-dimensional embeddings...", color: "#34d399", delay: 500 },
-    { text: "[CACHE] Initializing Redis context-window memory cache...", color: "#f43f5e", delay: 600 },
+    { text: "[CACHE] Initializing context-window memory cache...", color: "#f43f5e", delay: 600 },
     { text: "[CACHE] Volatile state memory pipeline: ACTIVE (Latency: 0.8ms)", color: "#34d399", delay: 400 },
     { text: "[ENGINE] Fetching secure localized model graph fragments...", color: "#a5b4fc", delay: 800 },
     { text: "[ENGINE] Custom contextual guardrails applied successfully.", color: "#34d399", delay: 400 },
