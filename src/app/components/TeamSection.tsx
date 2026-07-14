@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,7 +36,7 @@ const TeamSection: React.FC = () => {
     <section 
       id="about" 
       aria-labelledby="team-heading" 
-      className="relative z-0 py-24 md:py-36 overflow-hidden bg-slate-950"
+      className="relative z-0 py-8 md:py-15 overflow-hidden bg-slate-950"
     >
       {/* Dynamic ambient radial core glow - Base layer (z-10) */}
       <div

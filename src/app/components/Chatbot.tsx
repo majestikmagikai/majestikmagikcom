@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { XMarkIcon, MagicWandIcon } from './Icons'; // Assuming Icons.tsx exists and exports these
@@ -35,109 +37,136 @@ const Chatbot: React.FC<ChatbotProps> = ({
 }) => {
   return (
     <>
+      {/* Floating Chat Trigger with Pulsing Aurora Ring */}
       <button
         onClick={handleToggleChat}
-        className="fixed bottom-6 right-6 bg-gradient-to-br from-indigo-600 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white p-4 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 cursor-pointer z-50 focus:outline-none focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-50"
+        className="fixed bottom-6 right-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 hover:from-indigo-500 hover:to-purple-700 text-white p-4 rounded-full shadow-[0_0_25px_rgba(99,102,241,0.4)] hover:shadow-[0_0_35px_rgba(99,102,241,0.6)] transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#07080e]"
         aria-label={isChatOpen ? "Close chat" : "Open chat assistant"}
         disabled={!isGeminiInitialized && chatMessages.length === 0}
         type="button"
       >
-        {isChatOpen ? <XMarkIcon className="w-8 h-8" /> : <Image src="/img/headphones-with-microphone.svg" alt="Support icon" className="w-8 h-8 filter brightness-0 invert" loading="lazy"
-          width={10}
-          height={12} />}
+        <div className="relative w-8 h-8 flex items-center justify-center">
+          {isChatOpen ? (
+            <XMarkIcon className="w-7 h-7 transform rotate-0 hover:rotate-90 transition-transform duration-300" />
+          ) : (
+            <Image 
+              src="/img/headphones-with-microphone.svg" 
+              alt="Support icon" 
+              className="w-7 h-7 filter brightness-0 invert" 
+              loading="lazy"
+              width={28}
+              height={28} 
+            />
+          )}
+        </div>
       </button>
 
+      {/* Main Chat Assistant Dialog */}
       <div
-        className={`fixed bottom-20 right-6 w-[300px] max-w-sm h-[70vh] max-h-[500px] bg-slate-800 rounded-xl shadow-2xl flex flex-col z-50 overflow-hidden border border-slate-700 transition-all duration-300 ease-out transform origin-bottom-right 
-        ${isChatOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-24 right-6 w-[340px] max-w-[calc(100vw-3rem)] h-[70vh] max-h-[550px] bg-[#0d0f1a]/95 backdrop-blur-md rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col z-50 overflow-hidden border border-indigo-500/15 transition-all duration-300 ease-out transform origin-bottom-right 
+        ${isChatOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-4 pointer-events-none'}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="chat-assistant-heading"
       >
-        <div className="flex items-center justify-between p-4 border-b bg-slate-900 border-slate-700">
-          <h3 id="chat-assistant-heading" className="flex items-center text-md font-semibold text-indigo-400">
-            <MagicWandIcon className="w-5 h-5 mr-2 text-pink-500" />
-            Majestik Magik AI Agent
+        {/* Chat Header */}
+        <div className="flex items-center justify-between p-4 border-b bg-[#07080e]/80 border-indigo-500/10">
+          <h3 id="chat-assistant-heading" className="flex items-center text-sm font-bold tracking-wide text-slate-100 uppercase font-mono">
+            <MagicWandIcon className="w-5 h-5 mr-2 text-indigo-400 animate-pulse" />
+            MM AI Assistant
           </h3>
           <button
             onClick={handleToggleChat}
-            className="transition-colors text-slate-400 hover:text-slate-200"
+            className="transition-colors text-slate-400 hover:text-slate-100 p-1 rounded-lg hover:bg-white/5"
             aria-label="Close chat window"
             type="button"
           >
-            <XMarkIcon className="cursor-pointer w-6 h-6" />
+            <XMarkIcon className="cursor-pointer w-5 h-5" />
           </button>
         </div>
 
-        <div className="flex-grow p-4 overflow-y-auto space-y-3 bg-slate-800/50" id="chat-messages-container" aria-live="polite">
+        {/* Chat Feed */}
+        <div className="flex-grow p-4 overflow-y-auto space-y-4 bg-gradient-to-b from-[#0d0f1a]/20 to-[#07080e]/40 scrollbar-thin scrollbar-thumb-indigo-500/20" id="chat-messages-container" aria-live="polite">
           {chatMessages.map((msg) => (
             <div
               key={msg.id}
               className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[80%] p-3 rounded-xl text-sm leading-relaxed whitespace-pre-wrap
+                className={`max-w-[85%] p-3 rounded-2xl text-xs md:text-sm leading-relaxed tracking-wide shadow-sm
                     ${msg.sender === 'user'
-                    ? 'bg-indigo-600 text-white rounded-br-none'
-                    : 'bg-slate-700 text-slate-200 rounded-bl-none'
+                    ? 'bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-br-none border border-indigo-500/20'
+                    : 'bg-[#07080e]/90 text-slate-300 rounded-bl-none border border-indigo-500/10'
                   }`}
               >
                 {msg.text}
               </div>
             </div>
           ))}
+          
+          {/* Typings / Thinking Indicator */}
           {isChatLoading && (
             <div className="flex justify-start">
-              <div className="max-w-[80%] p-3 rounded-xl text-sm bg-slate-700 text-slate-200 rounded-bl-none animate-pulse" aria-label="AI is typing">
-                <span className="inline-block w-2 h-2 mr-1 rounded-full bg-slate-400 animate-bounce delay-0"></span>
-                <span className="inline-block w-2 h-2 mr-1 rounded-full bg-slate-400 animate-bounce delay-150"></span>
-                <span className="inline-block w-2 h-2 rounded-full bg-slate-400 animate-bounce delay-300"></span>
+              <div className="max-w-[80%] px-4 py-3 rounded-2xl bg-[#07080e]/90 border border-indigo-500/10 rounded-bl-none flex items-center space-x-1" aria-label="AI is typing">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce [animation-delay:-0.3s]"></span>
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce [animation-delay:-0.15s]"></span>
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce"></span>
               </div>
             </div>
           )}
           <div ref={chatMessagesEndRef} />
         </div>
 
+        {/* Warning / Notification Panels */}
         {chatError && !isChatLoading && (
-          <p className="px-4 pb-2 text-xs text-center text-red-400" role="alert">
+          <p className="px-4 py-2 text-[10px] text-center text-red-400 bg-red-950/20 border-t border-red-500/10" role="alert">
             {chatError}
           </p>
         )}
         {!isGeminiInitialized && !chatError && chatMessages.length > 0 && chatMessages[0].text && chatMessages[0].text.includes("unavailable") && (
-          <p className="px-4 pb-2 text-xs text-center text-yellow-400" role="status">
-            Chatbot functionality requires Gemini AI to be initialized.
+          <p className="px-4 py-2 text-[10px] text-center text-yellow-400 bg-yellow-950/10 border-t border-yellow-500/10" role="status">
+            Chatbot requires Gemini AI initialization.
           </p>
         )}
 
-        <div className="px-3 pt-2 text-xs text-center text-slate-500">
-          By using chat, you agree to our{' '}
+        {/* Privacy Notice */}
+        <div className="px-4 py-2 text-[10px] text-center text-slate-500 bg-[#07080e]/40 border-t border-indigo-500/5">
+          By utilizing chat, you consent to our{' '}
           <button
             onClick={() => window.open('/privacy-policy', '_blank')}
-            className="underline transition-colors cursor-pointer hover:text-indigo-400"
+            className="underline transition-colors cursor-pointer hover:text-indigo-400 font-semibold"
             aria-label="View Privacy Policy"
             type="button"
           >
             Privacy Policy
           </button>
-          . AI conversations may be reviewed.
+          .
         </div>
-        <form onSubmit={handleSendChatMessage} className="flex items-center p-3 space-x-2 border-t bg-slate-900 border-slate-700">
+
+        {/* Input Form */}
+        <form onSubmit={handleSendChatMessage} className="flex items-center p-3 space-x-2 border-t bg-[#07080e] border-indigo-500/10">
           <input
             type="text"
             value={chatInput}
             onChange={handleChatInputChange}
             placeholder={isGeminiInitialized ? "Ask about Majestik Magik..." : "Chat unavailable..."}
-            className="flex-grow p-2.5 text-sm transition-colors duration-300 border rounded-md bg-slate-700 text-slate-200 border-slate-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 placeholder-slate-500"
+            className="flex-grow px-3.5 py-2.5 text-xs transition-all duration-300 border rounded-xl bg-[#0d0f1a] text-slate-200 border-indigo-500/10 focus:border-indigo-500/40 focus:ring-1 focus:ring-indigo-500/40 placeholder-slate-600 outline-none"
             aria-label="Chat message input"
             disabled={isChatLoading || !isGeminiInitialized}
           />
           <button
             type="submit"
             disabled={isChatLoading || !chatInput.trim() || !isGeminiInitialized}
-            className="cursor-pointer p-2.5 text-white transition-colors duration-300 rounded-md shadow-md bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-600 disabled:cursor-not-allowed"
+            className="cursor-pointer p-2.5 text-white transition-all duration-300 rounded-xl shadow-md bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-800/80 disabled:text-slate-600 disabled:cursor-not-allowed flex items-center justify-center border border-indigo-500/10"
             aria-label="Send chat message"
           >
-            <Image src="/img/paperplane.svg" className="w-5 h-5 filter brightness-0 invert" alt="Send message" width={10} height={10} />
+            <Image 
+              src="/img/paperplane.svg" 
+              className="w-4 h-4 filter brightness-0 invert" 
+              alt="Send message" 
+              width={16} 
+              height={16} 
+            />
           </button>
         </form>
       </div>

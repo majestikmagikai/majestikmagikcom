@@ -13,22 +13,22 @@ const ArrowLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-// FAQ questions
+// FAQ questions (Updated to majestikmagik.dev)
 const faqs = [
   {
     question: 'What services does Majestik Magik offer?',
     answer:
-      'Custom web design & development (React/Next.js/WordPress), eCommerce, SEO, analytics, CRM tools, AI integrations, and ongoing support/maintenance for professional services, e-commerce, and small businesses. We work with industries such as manufacturing, healthcare, professional services, HVAC, plumbing, roofing, etc to deliver high-quality digital and AI solutions.',
+      'Custom web design & development (React/Next.js/WordPress), eCommerce, SEO, analytics, CRM tools, AI integrations, and ongoing support/maintenance for professional services, e-commerce, and small businesses. We work with industries such as manufacturing, professional services, HVAC, plumbing, roofing, etc to deliver high-quality digital and AI solutions.',
   },
   {
     question: 'How do I request a quote?',
     answer:
-      'Email contact@majestikmagik.com or use the contact form on our site. We’ll schedule a 15–20 min discovery call and send a proposal within 2–3 business days.',
+      'Email contact@majestikmagik.dev or use the contact form on our site. We’ll schedule a 15–20 min discovery call and send a proposal within 2–3 business days.',
   },
   {
     question: 'What industries do you specialize in?',
     answer:
-      'Local service businesses, startups/SaaS, healthcare/medical (HIPAA-aware builds), and eCommerce. We tailor deliverables to your industry’s workflow.',
+      'Local service businesses, startups/SaaS, and eCommerce. We tailor deliverables to your industry’s workflow.',
   },
   {
     question: 'How long does a typical website project take?',
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: 'Do you provide WordPress training?',
     answer:
-      'Yes—video tutorials and live walkthroughs. Start here: https://majestikmagik.com/training/wordpress',
+      'Yes—video tutorials and live walkthroughs. Start here: https://majestikmagik.dev/training/wordpress',
   },
   {
     question: 'Who owns my website and content after launch?',
@@ -146,11 +146,6 @@ const faqs = [
       'Yes—brand discovery, logo kits, typography/color systems, and usage guidelines to keep your brand consistent across channels.',
   },
   {
-    question: 'Do you work with healthcare and HIPAA considerations?',
-    answer:
-      'Yes. We build HIPAA-aware systems on eligible services and maintain strict data handling rules. For PHI, we guide you on BAAs and architecture.',
-  },
-  {
     question: 'How do I send files and credentials securely?',
     answer:
       'We’ll share a secure upload link or password manager request. Avoid emailing passwords; we use least-privilege access and revoke when finished.',
@@ -189,23 +184,30 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-900 text-slate-300">
+    <div className="flex flex-col min-h-screen bg-[#07080e] text-slate-300 selection:bg-indigo-500/30 selection:text-white">
       <main className="flex-grow py-16 md:py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-4xl">
           <Link
             href="/"
-            className="mb-8 inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors group text-sm"
+            className="mb-8 inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors group text-sm font-semibold tracking-wide uppercase"
             aria-label="Back to home"
           >
             <ArrowLeftIcon className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
 
-          <div className="bg-slate-800 p-6 md:p-10 rounded-xl shadow-2xl">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-slate-100">Frequently Asked Questions</h1>
+          <div className="bg-[#0d0f1a] border border-indigo-500/15 p-8 md:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+            <div className="mb-8">
+              <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent mb-2">
+                Frequently Asked Questions
+              </h1>
+              <p className="text-xs md:text-sm font-semibold tracking-widest text-indigo-400 uppercase">
+                Got questions? We have answers.
+              </p>
+            </div>
 
             {/* Search Bar */}
-            <div className="mb-6">
+            <div className="mb-8 p-1.5 bg-[#07080e]/60 border border-indigo-500/10 rounded-xl">
               <label htmlFor="faq-search" className="sr-only">Search FAQs</label>
               <div className="relative">
                 <input
@@ -214,7 +216,7 @@ const FAQPage = () => {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search FAQs (e.g., SEO, refunds, WordPress)…"
-                  className="w-full rounded-md bg-slate-700/40 border border-slate-600 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/30 outline-none px-4 py-3 text-slate-200 placeholder-slate-400"
+                  className="w-full rounded-lg bg-transparent border-0 focus:ring-0 outline-none px-4 py-3 text-slate-200 placeholder-slate-500"
                   aria-describedby="faq-search-help"
                 />
                 {query && (
@@ -222,48 +224,62 @@ const FAQPage = () => {
                     type="button"
                     onClick={() => setQuery('')}
                     aria-label="Clear search"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-200 text-lg transition-colors"
                   >
                     ×
                   </button>
                 )}
               </div>
-              <div id="faq-search-help" className="mt-2 text-sm text-slate-400">
-                {filteredFaqs.length} result{filteredFaqs.length === 1 ? '' : 's'}
-                {query ? ` for “${query}”` : ''}
-              </div>
+            </div>
+            
+            <div id="faq-search-help" className="mb-6 text-sm text-slate-400 pl-1">
+              {filteredFaqs.length} result{filteredFaqs.length === 1 ? '' : 's'}
+              {query ? ` found for “${query}”` : ''}
             </div>
 
             {/* FAQ List */}
-            <div className="space-y-4">
+            <div className="space-y-4 pt-4 border-t border-indigo-500/10">
               {filteredFaqs.length === 0 ? (
-                <div className="rounded-lg border border-slate-700 bg-slate-800 p-5 text-slate-400">
-                  No results. Try different keywords like <em>SEO</em>, <em>refund</em>, <em>training</em>, or <em>hosting</em>.
+                <div className="rounded-xl border border-indigo-500/10 bg-[#07080e]/40 p-6 text-slate-400 text-center">
+                  No results found. Try searching for keywords like <span className="text-indigo-400 font-semibold">SEO</span>, <span className="text-indigo-400 font-semibold">refund</span>, <span className="text-indigo-400 font-semibold">training</span>, or <span className="text-indigo-400 font-semibold">hosting</span>.
                 </div>
               ) : (
-                filteredFaqs.map((faq, index) => (
-                  <div key={`${faq.question}-${index}`} className="border border-slate-700 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => toggle(index)}
-                      className="w-full text-left px-5 py-4 bg-slate-700/30 hover:bg-slate-700/50 text-lg font-medium flex justify-between items-center"
-                      aria-expanded={openIndex === index}
-                      aria-controls={`faq-panel-${index}`}
+                filteredFaqs.map((faq, index) => {
+                  const isOpen = openIndex === index;
+                  return (
+                    <div 
+                      key={`${faq.question}-${index}`} 
+                      className={`border rounded-xl transition-all duration-300 overflow-hidden ${
+                        isOpen 
+                          ? 'border-indigo-500/20 bg-indigo-500/5 shadow-md' 
+                          : 'border-indigo-500/5 bg-[#07080e]/20 hover:border-indigo-500/10 hover:bg-[#07080e]/40'
+                      }`}
                     >
-                      {faq.question}
-                      <span className={`ml-4 transform transition-transform ${openIndex === index ? 'rotate-90' : ''}`}>
-                        ▶
-                      </span>
-                    </button>
-                    {openIndex === index && (
+                      <button
+                        onClick={() => toggle(index)}
+                        className="w-full text-left px-5 py-4 text-slate-100 text-base md:text-lg font-medium flex justify-between items-center gap-4 transition-colors duration-300 cursor-pointer"
+                        aria-expanded={isOpen}
+                        aria-controls={`faq-panel-${index}`}
+                      >
+                        <span>{faq.question}</span>
+                        <span className={`text-xs text-indigo-400 transform transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-90' : ''}`}>
+                          ▶
+                        </span>
+                      </button>
+                      
                       <div
                         id={`faq-panel-${index}`}
-                        className="px-5 py-4 bg-slate-800 text-slate-400 border-t border-slate-700"
+                        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                          isOpen ? 'max-h-[1000px] border-t border-indigo-500/10' : 'max-h-0'
+                        }`}
                       >
-                        {faq.answer}
+                        <div className="px-5 py-4 text-slate-300 text-sm md:text-base leading-relaxed">
+                          {faq.answer}
+                        </div>
                       </div>
-                    )}
-                  </div>
-                ))
+                    </div>
+                  );
+                })
               )}
             </div>
           </div>

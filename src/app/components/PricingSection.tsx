@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 
 interface PricingPlan {
   name: string;
@@ -54,8 +56,30 @@ const DEFAULT_MICRO_SERVICES: MicroService[] = [
 const PricingSection: React.FC<PricingSectionProps> = ({
   microServices = DEFAULT_MICRO_SERVICES,
 }) => {
+  const [isIntersected, setIsIntersected] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersected(true);
+          observer.unobserve(entry.target); // Trigger reveal only once
+        }
+      },
+      { threshold: 0.1 } // Fires when 10% of the section is in view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="services"
       aria-labelledby="micro-services-heading"
       className="relative z-0 py-24 md:py-36 overflow-hidden bg-slate-950"
@@ -84,14 +108,22 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           aria-labelledby="micro-services-heading"
           className="mt-auto md:mt-auto"
         >
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          {/* Header block with progressive fade-in */}
+          <div 
+            className="text-center max-w-3xl mx-auto mb-16"
+            style={{
+              opacity: isIntersected ? 1 : 0,
+              transform: isIntersected ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
+            }}
+          >
             <span className="inline-block text-xs font-mono font-bold tracking-widest text-indigo-400 uppercase mb-4 bg-slate-900/90 px-3 py-1 rounded border border-slate-800">
               On-Demand Core Execution V1.0
             </span>
             
             <h2
               id="micro-services-heading"
-              className="mb-6 text-4xl md:text-5xl lg:text-6xl text-slate-100 font-bold tracking-tight scroll-animate"
+              className="mb-6 text-4xl md:text-5xl lg:text-6xl text-slate-100 font-bold tracking-tight"
             >
               Quick Fix <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-200 to-white">
@@ -99,17 +131,27 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               </span>
             </h2>
             
-            <p className="mt-4 text-base md:text-lg text-slate-400 font-sans leading-relaxed scroll-animate">
+            <p className="mt-4 text-base md:text-lg text-slate-400 font-sans leading-relaxed">
               High-impact engineering tasks delivered remotely — prioritized inside a 24-72 hour turnaround timeline.
             </p>
           </div>
 
-          {/* Core Hardware Cards Matrix */}
+          {/* Core Hardware Cards Matrix with Staggered Transition */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {microServices.map((m) => (
+            {microServices.map((m, idx) => (
               <div
                 key={m.service}
                 className="services-card-hover-animate flex flex-col justify-between rounded-xl bg-slate-900/40 border border-slate-900/80 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.3)] backdrop-blur-sm hover:border-slate-700/80 transition duration-300"
+                style={{
+                  opacity: isIntersected ? 1 : 0,
+                  transform: isIntersected ? 'translateY(0)' : 'translateY(40px)',
+                  transition: `
+                    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 150}ms, 
+                    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 150}ms,
+                    border-color 0.3s ease,
+                    box-shadow 0.3s ease
+                  `
+                }}
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
@@ -136,7 +178,13 @@ const PricingSection: React.FC<PricingSectionProps> = ({
           </div>
 
           {/* Custom Network Link */}
-          <p className="mt-12 text-center font-mono text-xs text-slate-500 tracking-wide">
+          <p 
+            className="mt-12 text-center font-mono text-xs text-slate-500 tracking-wide"
+            style={{
+              opacity: isIntersected ? 1 : 0,
+              transition: 'opacity 1.5s ease-in 1.2s'
+            }}
+          >
             Need an operational script not listed? <a href="#contact" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4 font-bold transition-colors">Request a custom micro-service matrix</a>.
           </p>
         </div>

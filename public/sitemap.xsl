@@ -8,69 +8,102 @@
       <title>Majestik Magik - XML Sitemap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/img/logo_majestikmagik.png" type="image/png" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
       <style type="text/css">
         body {
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          background-color: #718096;
-          color: #343a40;
+          font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background-color: #07080e; /* Deep rich dark navy background */
+          color: #f3f4f6;
           margin: 0;
-          font-family: 'Montserrat', sans-serif;
           line-height: 1.6;
-          padding: 1rem;
+          padding: 2.5rem 1rem;
         }
         .container {
-          max-width: 960px;
+          max-width: 1100px;
           margin: 0 auto;
-          background-color:rgb(199, 212, 219);
-          padding: 2rem;
-          border-radius: 12px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          background-color: #0d0f1a; /* Elevated card background */
+          padding: 2.5rem;
+          border-radius: 16px;
+          border: 1px solid rgba(99, 102, 241, 0.15); /* Faint neon-purple border line */
+          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
         h1 {
-          color:rgb(46, 46, 46);
-          border-bottom: 2px solid #dee2e6;
-          padding-bottom: 0.5rem;
+          font-size: 2.2rem;
+          font-weight: 800;
+          letter-spacing: -0.025em;
+          margin: 0;
+          background: linear-gradient(135deg, #ffffff 40%, #6366f1 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        h3 {
+          color: #6366f1; /* Pivot violet signature color */
+          font-size: 1.1rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-top: 0.25rem;
           margin-bottom: 1rem;
+        }
+        p {
+          color: #94a3b8;
+          font-size: 0.95rem;
+          margin-bottom: 2.5rem;
+          max-width: 700px;
         }
         table {
           width: 100%;
           border-collapse: collapse;
           margin-top: 1rem;
         }
-        th, td {
-          padding: 0.75rem;
-          text-align: left;
-          border-bottom: 1px solid #dee2e6;
-        }
         th {
-          background-color: #e9ecef;
+          background-color: #111322;
+          color: #94a3b8;
           font-weight: 600;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          letter-spacing: 0.05em;
+          padding: 1rem;
+          border-bottom: 2px solid #1e2238;
+          text-align: left;
         }
-        tr:hover {
-          background-color: #f1f3f5;
+        td {
+          padding: 1rem;
+          border-bottom: 1px solid #1e2238;
+          color: #cbd5e1;
+          font-size: 0.9rem;
+          transition: background-color 0.15s ease;
+        }
+        tr:hover td {
+          background-color: #161a2e; /* Sleek highlighted background on hover */
+          color: #ffffff;
         }
         a {
-          color: #007bff;
+          color: #818cf8; /* Soft indigo-violet link */
           text-decoration: none;
           word-break: break-all;
+          transition: color 0.2s ease;
         }
         a:hover {
+          color: #a5b4fc;
           text-decoration: underline;
         }
         .footer {
-            margin-top: 2rem;
+            margin-top: 3rem;
             text-align: center;
-            font-size: 0.9em;
-            color: #6c757d;
+            font-size: 0.85em;
+            color: #64748b;
+            border-top: 1px solid #1e2238;
+            padding-top: 1.5rem;
         }
 
         /* --- Mobile View Media Query --- */
         @media screen and (max-width: 768px) {
           body {
-            padding: 0.5rem;
+            padding: 1rem 0.5rem;
           }
           .container {
-            padding: 1rem;
+            padding: 1.5rem;
           }
           table, thead, tbody, th, td, tr {
             display: block;
@@ -81,27 +114,32 @@
             left: -9999px;
           }
           tr {
-            border: 1px solid #dee2e6;
-            margin-bottom: 1rem;
-            border-radius: 8px;
+            border: 1px solid #1e2238;
+            margin-bottom: 1.25rem;
+            border-radius: 12px;
             overflow: hidden;
+            background-color: #111322;
           }
           td {
             border: none;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #161a2e;
             position: relative;
-            padding-left: 50%;
+            padding-left: 45%;
             text-align: right;
           }
           td:before {
             position: absolute;
-            top: 0.75rem;
-            left: 0.75rem;
-            width: 45%;
+            top: 1rem;
+            left: 1rem;
+            width: 40%;
             padding-right: 10px;
             white-space: nowrap;
             text-align: left;
             font-weight: 600;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
           }
           td:nth-of-type(1):before { content: "URL"; }
           td:nth-of-type(2):before { content: "Last Modified"; }
@@ -112,9 +150,9 @@
     </head>
     <body>
       <div class="container">
-        <h1>Majestik Magik</h1>
+        <h1>MAJESTIK MAGIK</h1>
         <h3>XML Sitemap</h3>
-        <p>This is an XML sitemap, intended for consumption by search engines. For more information about sitemaps, please see <a href="http://www.sitemaps.org/">sitemaps.org</a>.</p>
+        <p>This is an XML sitemap designed to guide search engines safely through our core application index. For more information, please visit <a href="http://www.sitemaps.org/" target="_blank">sitemaps.org</a>.</p>
         <table>
           <thead>
             <tr>

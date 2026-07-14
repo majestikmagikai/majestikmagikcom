@@ -7,11 +7,9 @@ import Script from 'next/script';
 import MainLayout from './components/MainLayout'; // Import the new client layout
 import './globals.css';
 
-
-
 // The metadata export now works correctly because this is a Server Component.
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.majestikmagik.com'),
+  metadataBase: new URL('https://majestikmagik.dev'),
   title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
   description:
     'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
     title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
       'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
-    url: 'https://www.majestikmagik.com',
+    url: 'https://majestikmagik.dev',
     siteName: 'Majestik Magik',
     images: [
       {
@@ -48,21 +46,20 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-transparent text-slate-200 overflow-x-hidden">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
         {/* Use the MainLayout Client Component to wrap the children and handle interactive elements */}
         <MainLayout>
           {children}
         </MainLayout>
-        {/* Global scripts can remain here */}
+
+        {/* Global scripts */}
         <Script
           strategy="afterInteractive"
           type="text/javascript"
@@ -81,21 +78,20 @@ export default function RootLayout({
           `}
         </Script>  
 
-
         {/* Facebook Pixel Code */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '2550379602025185');
-          fbq('track', 'PageView');
-        `}
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+              n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2550379602025185');
+            fbq('track', 'PageView');
+          `}
         </Script>
 
         <noscript
@@ -110,28 +106,30 @@ export default function RootLayout({
           }}
         />
 
+        {/* Website Search Schema */}
         <Script type="application/ld+json" id="structured-data">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Majestik Magik",
-            "url": "https://www.majestikmagik.com",
+            "url": "https://majestikmagik.dev",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://www.majestikmagik.com/search?q={search_term_string}",
+              "target": "https://majestikmagik.dev/search?q={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })}
         </Script>
         
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+        {/* Professional Services Local SEO Schema */}
+        <Script type="application/ld+json" id="local-services-structured-data">
+          {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Majestik Magik",
-            "image": "https://majestikmagik.com/img/og-hero.jpg",
-            "@id": "https://majestikmagik.com/quick-fixes",
-            "url": "https://majestikmagik.com",
+            "image": "https://majestikmagik.dev/img/og-hero.jpg",
+            "@id": "https://majestikmagik.dev/quick-fixes",
+            "url": "https://majestikmagik.dev",
             "telephone": "+1-804-362-7561",
             "address": {
               "@type": "PostalAddress",
@@ -154,11 +152,8 @@ export default function RootLayout({
               "Business Operations",
               "Business Strategy"
             ]
-          })
-        }} />
-
-
-
+          })}
+        </Script>
       </body>
     </html>
   );

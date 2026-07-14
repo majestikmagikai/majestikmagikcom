@@ -12,6 +12,8 @@ interface LogLine {
 export const CoreEngineSection = () => {
   const [visibleLogs, setVisibleLogs] = useState<LogLine[]>([]);
   const [showCursor, setShowCursor] = useState(false);
+  const [isIntersected, setIsIntersected] = useState(false); // Tracks scroll entry state
+  const sectionRef = useRef<HTMLDivElement>(null);
   const terminalBodyRef = useRef<HTMLDivElement>(null);
 
   const logs: LogLine[] = [
@@ -28,7 +30,29 @@ export const CoreEngineSection = () => {
     { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 400 }
   ];
 
+  // Intersection Observer to handle on-scroll trigger
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersected(true);
+          observer.unobserve(entry.target); // Trigger only once
+        }
+      },
+      { threshold: 0.15 } // Trigger when 15% of section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Terminal Line Typing simulation
+  useEffect(() => {
+    if (!isIntersected) return; // Wait to type logs until scrolled into view
+
     let currentLine = 0;
     let timeoutId: NodeJS.Timeout;
 
@@ -48,7 +72,7 @@ export const CoreEngineSection = () => {
     timeoutId = setTimeout(typeLog, 1000);
 
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [isIntersected]);
 
   useEffect(() => {
     if (terminalBodyRef.current) {
@@ -58,6 +82,7 @@ export const CoreEngineSection = () => {
 
   return (
     <section 
+      ref={sectionRef}
       id="core-engine" 
       style={{ 
         position: "relative",
@@ -126,10 +151,17 @@ export const CoreEngineSection = () => {
           zIndex: 3
         }}
       >
-        {/* Left Column: Core Infrastructure Copy */}
+        {/* Left Column: Core Infrastructure Copy with Slide-In from Left */}
         <div 
-          className="text-column scroll-animate"
-          style={{ flex: "1", maxWidth: "500px", textAlign: "left", transition: "all .5s ease-in-out"}}
+          className="text-column"
+          style={{ 
+            flex: "1", 
+            maxWidth: "500px", 
+            textAlign: "left", 
+            opacity: isIntersected ? 1 : 0,
+            transform: isIntersected ? "translateX(0)" : "translateX(-120px)",
+            transition: "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 4.5s cubic-bezier(0.16, 1, 0.3, 1)"
+          }}
         >
           <div style={{ color: "#6366f1", fontSize: "12px", fontWeight: "bold", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>
             The Architecture Engine
@@ -145,10 +177,20 @@ export const CoreEngineSection = () => {
           </p>
         </div>
 
-        {/* Right Column: Linux Terminal Window */}
-        <div style={{ flex: "1.2", width: "100%", display: "flex", justifyContent: "center" }}>
+        {/* Right Column: Linux Terminal Window with Slide-In from Right */}
+        <div 
+          style={{ 
+            flex: "1.2", 
+            width: "100%", 
+            display: "flex", 
+            justifyContent: "center",
+            opacity: isIntersected ? 1 : 0,
+            transform: isIntersected ? "translateX(0)" : "translateX(120px)",
+            transition: "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 4.5s cubic-bezier(0.16, 1, 0.3, 1)"
+          }}
+        >
           <div 
-            className="terminal-window scroll-animate" 
+            className="terminal-window" 
             style={{ 
               width: "100%", 
               maxWidth: "600px", 
@@ -159,8 +201,7 @@ export const CoreEngineSection = () => {
               borderRadius: "6px", 
               boxShadow: "0 24px 60px rgba(0, 0, 0, 0.6)", 
               fontFamily: "'Fira Code', 'Courier New', Courier, monospace", 
-              overflow: "hidden",
-              transition: "all 0.5s ease-in-out"
+              overflow: "hidden"
             }}
           >
             {/* Linux Terminal Header Bar */}
