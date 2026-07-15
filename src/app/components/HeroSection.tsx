@@ -39,9 +39,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
 
         {/* Massive Apple-Inspired Header Stack */}
-        <h1 className="mb-8 text-5xl md:text-7xl lg:text-8xl text-slate-100 font-bold tracking-tight leading-none scroll-animate opacity-90 ease-in-out duration-500">
+        <h1 className="mb-8 text-5xl md:text-7xl lg:text-8xl text-slate-100 font-bold tracking-tight leading-none scroll-animate opacity-90 ease-in-out duration-1000">
           Introducing <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-indigo-300 via-indigo-400 to-white scroll-animate opacity-90 ease-in-out duration-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-indigo-300 via-indigo-400 to-white scroll-animate opacity-90 ease-in-out duration-1500">
             Pivot Quest
           </span>
         </h1>
@@ -49,20 +49,19 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Elegant Centered Description */}
         <p
           className="max-w-3xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500"
-          style={{ transitionDelay: "0.5s" }}
+          style={{ transitionDelay: "1s" }}
         >
-          High-performance, context-aware workspaces built for rapid execution. Stop wrestling with generic prompts and lost context. Pivot Quest deploys a guardrailed strategic engine fine-tuned to keep your business scaling on the main trail.
+          A gamified AI business engine and workspace for entrepreneurs and founders. Stop wrestling with generic prompts and lost context. Pivot Quest deploys a guardrailed strategic engine fine-tuned to keep your business scaling on the main trail.
         </p>
 
         {/* Clean Call To Action Layer */}
-        <div className="mb-20 md:mb-28 scroll-animate opacity-90 ease-in-out duration-500" style={{ transitionDelay: "1.2s" }}>
+        <div className="mb-20 md:mb-28 scroll-animate opacity-90 ease-in-out duration-500" style={{ transitionDelay: "1.5s" }}>
           <a
             href="https://app.majestikmagik.dev/sign-up"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:shadow-[0_0_45px_rgba(99,102,241,0.8)] border border-indigo-400/20"
-          >
-            Start Today!
+          >Start Your Quest
           </a>
         </div>
 

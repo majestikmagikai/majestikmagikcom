@@ -42,7 +42,6 @@ const Header: React.FC<HeaderProps> = ({
     if (!isMobileMenuOpen) return;
 
     const handleClickOutside = (event: MouseEvent) => {
-      // If the clicked target is NOT within the header container, close the menu
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
         setIsMobileMenuOpen(false);
       }
@@ -107,15 +106,22 @@ const Header: React.FC<HeaderProps> = ({
           ref={navRef} 
           className="hidden xl:flex items-center space-x-8 relative py-2"
         >
-          {/* Animated Hover Line Tracker */}
+          {/* Animated Hover Line Tracker with dynamic stretching */}
           <div
-            className="absolute bottom-0 h-[2px] bg-indigo-500 transition-all duration-300 ease-out pointer-events-none rounded-full"
+            className="absolute bottom-0 h-[2px] transition-all duration-300 ease-out pointer-events-none flex justify-center"
             style={{
               transform: `translateX(${hoveredRect.left}px)`,
               width: `${hoveredRect.width}px`,
               opacity: hoveredRect.opacity,
             }}
-          />
+          >
+            {/* The actual line that scales outwards upon active hover state */}
+            <div 
+              className={`h-full bg-indigo-500 rounded-full transition-all duration-300 ease-out origin-center ${
+                hoveredRect.opacity > 0 ? 'w-full scale-x-100' : 'w-1/3 scale-x-50'
+              }`}
+            />
+          </div>
 
           {navItems.map((item) => (
             item.external ? (

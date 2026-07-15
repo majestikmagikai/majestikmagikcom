@@ -114,7 +114,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             style={{
               opacity: isIntersected ? 1 : 0,
               transform: isIntersected ? 'translateY(0)' : 'translateY(30px)',
-              transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
+              transition: 'opacity 2s ease-in, transform 2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
             }}
           >
             <span className="inline-block text-xs font-mono font-bold tracking-widest text-indigo-400 uppercase mb-4 bg-slate-900/90 px-3 py-1 rounded border border-slate-800">
@@ -147,7 +147,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                   transform: isIntersected ? 'translateY(0)' : 'translateY(40px)',
                   transition: `
                     opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 150}ms, 
-                    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 150}ms,
+                    transform 2.2s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 150}ms,
                     border-color 0.3s ease,
                     box-shadow 0.3s ease
                   `
@@ -182,7 +182,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
             className="mt-12 text-center font-mono text-xs text-slate-500 tracking-wide"
             style={{
               opacity: isIntersected ? 1 : 0,
-              transition: 'opacity 1.5s ease-in 1.2s'
+              transition: 'opacity 2s ease-in'
             }}
           >
             Need an operational script not listed? <a href="#contact" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4 font-bold transition-colors">Request a custom micro-service matrix</a>.
