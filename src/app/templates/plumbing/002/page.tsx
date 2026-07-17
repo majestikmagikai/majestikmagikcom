@@ -80,7 +80,7 @@ export default function App() {
         location: "Richmond, VA & Surrounding Areas",
         tagline: "Call The Best, Flush The Rest",
         about: "Thomas & Son Plumbing in Wilkinson Terrace is your trusted partner for all your plumbing needs. We specialize in water heater installation, ensuring you have reliable and efficient hot water year-round. As expert bathroom renovators, we transform your space into a modern, functional oasis.",
-        logoUrl: "../../img/438711483_10115845521844682_8945219802901792421_n.png",
+        logoUrl: "../../img/438711483_10115845521844682_8945219802901792421_n.webp",
     };
 
     const navLinks = [

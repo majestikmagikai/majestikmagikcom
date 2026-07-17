@@ -6,11 +6,11 @@ import Image from 'next/image';
 // UPDATE: Now features interactive grab-and-scroll functionality.
 const ImageMarquee = () => {
   const templates = [
-    { name: 'Roofing Template', imgSrc: '/img/roofing_template_001.png', url: '/templates/roofing/001' },
-    { name: 'Plumbing Template', imgSrc: '/img/plumbing_template_001.png', url: '/templates/plumbing/001' },
-    { name: 'HVAC Template', imgSrc: '/img/hvac_template_001.png', url: '/templates/hvac/001' },
-    { name: 'Electrical Template', imgSrc: '/img/electrical_template_001.png', url: '/templates/electrical/001' },
-    { name: 'Restaurant Template', imgSrc: '/img/restaurant_template_001.png', url: '/templates/restaurant/001' },
+    { name: 'Roofing Template', imgSrc: '/img/roofing_template_001.webp', url: '/templates/roofing/001' },
+    { name: 'Plumbing Template', imgSrc: '/img/plumbing_template_001.webp', url: '/templates/plumbing/001' },
+    { name: 'HVAC Template', imgSrc: '/img/hvac_template_001.webp', url: '/templates/hvac/001' },
+    { name: 'Electrical Template', imgSrc: '/img/electrical_template_001.webp', url: '/templates/electrical/001' },
+    { name: 'Restaurant Template', imgSrc: '/img/restaurant_template_001.webp', url: '/templates/restaurant/001' },
   ];
 
   const marqueeItems = [...templates, ...templates];

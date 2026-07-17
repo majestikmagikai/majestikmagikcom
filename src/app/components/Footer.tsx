@@ -110,14 +110,14 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
               <h3 className="mb-4 text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">Hardware & Platform Partners</h3>
               <ul className="flex flex-wrap items-center gap-10 opacity-40 hover:opacity-75 transition-opacity duration-300">
                 <Image
-                  src="/img/partners/wpengine_member-badge.png"
+                  src="/img/partners/wpengine_member-badge.webp"
                   alt="WP Engine Partner"
                   width={160}
                   height={80}
                   className="h-20 w-auto grayscale object-contain"
                 />
                 <Image
-                  src="/img/partners/gcp-logo.png"
+                  src="/img/partners/gcp-logo.webp"
                   alt="Google Cloud Startup"
                   width={220}
                   height={160}

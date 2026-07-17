@@ -93,8 +93,8 @@ const LabsContent = () => {
             <div>
                 <h2 className="text-3xl font-bold text-center text-slate-100 mb-10">From Vision to Reality</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Link href="/img/insightmd_03.png"> <Image src="/img/insightmd_03.png" alt="Prototype 3" width={1000} height={1000} className="w-full h-auto rounded-lg shadow-lg border border-indigo-400" /></Link>
-                    <Link href="/img/insightmd_02.png"> <Image src="/img/insightmd_02.png" alt="Prototype 2" width={1000} height={1000} className="w-full h-auto rounded-lg shadow-lg border border-indigo-400" /></Link>
+                    <Link href="/img/insightmd_03.webp"> <Image src="/img/insightmd_03.webp" alt="Prototype 3" width={1000} height={1000} className="w-full h-auto rounded-lg shadow-lg border border-indigo-400" /></Link>
+                    <Link href="/img/insightmd_02.webp"> <Image src="/img/insightmd_02.webp" alt="Prototype 2" width={1000} height={1000} className="w-full h-auto rounded-lg shadow-lg border border-indigo-400" /></Link>
                 </div>
                 <p className="text-center text-xs text-slate-500 mt-2 font-bold">Disclaimer: All medical imaging data displayed in this demonstration is sourced from <a href="https://www.cancerimagingarchive.net/" className="hover:text-indigo-400 duration-300 ease-in-out" aria-label="The Cancer Imaging Archive" target="_blank">The Cancer Imaging Archive (TCIA)</a>, which provides de-identified datasets in the public domain for research and educational purposes. The MRI scan shown here is fictitious and contains no protected health information (PHI).
                     The dataset was processed using 3D Slicer to prepare a realistic presentation of a prostate MRI in a PACS-style viewer for demonstration purposes only. Any patient details visible in the images are synthetic and do not correspond to any real individual. This demo is intended solely to illustrate software functionality and is not intended for clinical use. The Insight MD platform is still in development and is not yet ready for clinical use.</p>
@@ -147,7 +147,7 @@ const LabsContent = () => {
                 <h2 className="text-center text-2xl font-bold text-slate-100 mb-6">Cloud Infrastructure Partners</h2>
                 <div className="flex flex-wrap justify-center items-center gap-8">
 
-                    <a href="https://cloud.google.com/startup" target="_blank"><Image src="/img/partners/gcp-logo.png" alt="Google Cloud" width={258} height={159} /></a>
+                    <a href="https://cloud.google.com/startup" target="_blank"><Image src="/img/partners/gcp-logo.webp" alt="Google Cloud" width={258} height={159} /></a>
                     <a href="https://aws.amazon.com/startups" target="_blank"><Image src="/img/partners/aws-activate-logo_white.webp" alt="AWS Activate Startup" width={258} height={159} /></a>
                 </div>
                 <p className="text-center text-sm text-slate-400 mt-4">Insight MD is powered by world-class compute partnerships for scalable and secure HIPAA compliant cloud-based AI development.</p>

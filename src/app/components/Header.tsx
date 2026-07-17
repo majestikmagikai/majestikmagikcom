@@ -89,7 +89,7 @@ const Header: React.FC<HeaderProps> = ({
           type="button"
         >
           <Image
-            src="/img/majestikmagik_logo_indigo-64x64.png"
+            src="/img/majestikmagik_logo_indigo-64x64.webp"
             className="w-8 h-8 opacity-90 rounded-md"
             alt="Majestik Magik Logo"
             loading="lazy"

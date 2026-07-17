@@ -7,7 +7,7 @@
     <head>
       <title>Majestik Magik - XML Sitemap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href="/img/logo_majestikmagik.png" type="image/png" />
+      <link rel="icon" href="/img/logo_majestikmagik.webp" type="image/webp" />
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
       <style type="text/css">
         body {

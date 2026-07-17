@@ -111,7 +111,7 @@ const TeamSection: React.FC = () => {
               
               {/* Ink Identity Signature Asset */}
               <div className="relative mb-6 opacity-80 filter brightness-115 contrast-125">
-                <Image src="/img/my_signature.png" alt="Jamil Matheny Signature" width={160} height={106} className="h-16 invert w-auto object-contain" />
+                <Image src="/img/my_signature.webp" alt="Jamil Matheny Signature" width={160} height={106} className="h-16 invert w-auto object-contain" />
               </div>
 
               {/* Bio Block */}

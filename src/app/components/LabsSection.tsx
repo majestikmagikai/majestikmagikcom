@@ -49,7 +49,7 @@ export const LabsSection = () => {
                     <div className="order-1 md:order-2">
                         <div className="p-1 rounded-2xl border border-slate-800/80 bg-slate-900/30 backdrop-blur-sm shadow-2xl">
                             <Image 
-                                src="/img/insightmd_03.png"
+                                src="/img/insightmd_03.webp"
                                 alt="Insight MD Viewer Prototype"
                                 className="rounded-xl w-full h-auto object-cover opacity-85 border border-slate-950"
                                 width={1200}

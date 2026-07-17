@@ -81,7 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-indigo-500/10 to-white/5 pointer-events-none z-30" />
 
               <Image
-                src="/img/screenshot_mm_ai.png"
+                src="/img/screenshot_mm_ai.webp"
                 alt="Pivot Quest Screenshot"
                 width={1600} // Set higher base width for crisp quality
                 height={1000}

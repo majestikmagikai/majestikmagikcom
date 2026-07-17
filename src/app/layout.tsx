@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Majestik Magik' }],
   manifest: '/site.webmanifest',
   icons: {
-    icon: '/img/majestikmagik_logo_indigo.png',
-    shortcut: '/img/majestikmagik_logo_indigo.png',
-    apple: '/img/majestikmagik_logo_indigo.png',
+    icon: '/img/majestikmagik_logo_indigo.webp',
+    shortcut: '/img/majestikmagik_logo_indigo.webp',
+    apple: '/img/majestikmagik_logo_indigo.webp',
   },
   openGraph: {
     title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'Majestik Magik',
     images: [
       {
-        url: '/img/screenshot_mm.png',
+        url: '/img/screenshot_mm.webp',
         width: 1200,
         height: 630,
         alt: 'Majestik Magik AI website screenshot',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
       'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
-    images: ['/img/screenshot_mm.png'],
+    images: ['/img/screenshot_mm.webp'],
   },
 };
 
