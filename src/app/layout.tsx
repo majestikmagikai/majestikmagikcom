@@ -10,7 +10,7 @@ import './globals.css';
 // The metadata export now works correctly because this is a Server Component.
 export const metadata: Metadata = {
   metadataBase: new URL('https://majestikmagik.dev'),
-  title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
+  title: 'Majestik Magik | Powering digital systems for the next generation of builders',
   description:
     'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
   authors: [{ name: 'Majestik Magik' }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     apple: '/img/majestikmagik_logo_indigo-64x64.webp',
   },
   openGraph: {
-    title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
+    title: 'Majestik Magik | Powering digital systems for the next generation of builders',
     description:
       'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     url: 'https://majestikmagik.dev',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
+    title: 'Majestik Magik | Powering digital systems for the next generation of builders',
     description:
       'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     images: ['/img/screenshot_mm.webp'],

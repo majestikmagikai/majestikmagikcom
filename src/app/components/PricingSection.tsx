@@ -125,14 +125,14 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               id="micro-services-heading"
               className="mb-6 text-4xl md:text-5xl lg:text-6xl text-slate-100 font-bold tracking-tight"
             >
-              Quick Fix <br />
+              On-Demand <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-200 to-white">
-                Micro-Services
+                Performance Tuning
               </span>
             </h2>
             
             <p className="mt-4 text-base md:text-lg text-slate-400 font-sans leading-relaxed">
-              High-impact engineering tasks delivered remotely — prioritized inside a 24-72 hour turnaround timeline.
+              High-impact performance upgrades and critical codebase patches—prioritized and shipped within a 24-72 hour window.
             </p>
           </div>
 
@@ -185,7 +185,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               transition: 'opacity 2s ease-in'
             }}
           >
-            Need an operational script not listed? <a href="#contact" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4 font-bold transition-colors">Request a custom micro-service matrix</a>.
+            Need an operational script not listed? <a href="#contact" className="text-indigo-400 hover:text-indigo-300 underline underline-offset-4 font-bold transition-colors">Request a custom micro-service</a>.
           </p>
         </div>
       </div>
