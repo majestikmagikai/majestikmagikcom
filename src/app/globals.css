@@ -10,7 +10,8 @@
 html,
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fbfbfb; /* Tenstorrent Clean Off-White Base */
+  background-color: #fbfbfb;
+  /* Tenstorrent Clean Off-White Base */
 }
 
 /* ==========================================================================
@@ -44,10 +45,14 @@ body {
 /* Outer structural bounding frame */
 .hero-screenshot-frame {
   position: relative;
-  border-radius: 1.5rem;       /* rounded-2xl */
-  padding: 2px;                /* Hairline bezel padding */
-  perspective: 1200px;         /* Depth map for 3D layout */
-  isolation: isolate;          /* Keeps layered blend profiles safe */
+  border-radius: 1.5rem;
+  /* rounded-2xl */
+  padding: 2px;
+  /* Hairline bezel padding */
+  perspective: 1200px;
+  /* Depth map for 3D layout */
+  isolation: isolate;
+  /* Keeps layered blend profiles safe */
 }
 
 /* Ambient reactive lighting backdrop layer */
@@ -57,13 +62,11 @@ body {
   inset: -14px;
   border-radius: inherit;
   z-index: -1;
-  background: linear-gradient(
-    120deg,
-    #4f46e5,
-    #2563eb,
-    #14b8a6,
-    #4f46e5
-  );
+  background: linear-gradient(120deg,
+      #4f46e5,
+      #2563eb,
+      #14b8a6,
+      #4f46e5);
   background-size: 220% 220%;
   filter: blur(20px);
   opacity: 0.9;
@@ -74,7 +77,7 @@ body {
 
 /* The dark-canvas terminal layer */
 .hero-screenshot-inner {
-  border-radius: 1.25rem;      
+  border-radius: 1.25rem;
   overflow: hidden;
   background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
   box-shadow:
@@ -108,12 +111,14 @@ body {
 
 /* Zero-CPU Gradient Headline Framework */
 .animate-gradient-x {
-  background: linear-gradient(
-    270deg,
-    #fbbf24, /* yellow-600 */
-    #9333ea, /* purple-600 */
-    #0eac99  /* teal-600 */
-  );
+  background: linear-gradient(270deg,
+      #fbbf24,
+      /* yellow-600 */
+      #9333ea,
+      /* purple-600 */
+      #0eac99
+      /* teal-600 */
+    );
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,37 +176,79 @@ body {
    ========================================================================== */
 
 @keyframes marquee-scroll-left {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-scroll-right {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes gradient-x {
-  0%, 100% { background-position: 0% 50%; }
-  50%      { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes mm-gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50%      { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes mm-glow-pulse {
-  0%, 100% { opacity: 0.3; transform: scale(0.87); }
-  50%      { opacity: 1;   transform: scale(0.95); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.87);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.95);
+  }
 }
 
 @keyframes matrixCardHoverEffect {
-  to { transform: translateY(-0.25rem) scale(1.03); }
+  to {
+    transform: translateY(-0.25rem) scale(1.03);
+  }
 }
 
 @keyframes flash {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.4; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
 }
 
 @keyframes fadeInDown {
@@ -209,6 +256,7 @@ body {
     opacity: 0;
     transform: translateY(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -217,6 +265,22 @@ body {
 
 .animate-flash {
   animation: flash 2s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor-blink {
+  animation: blink 1s infinite;
 }
 
 /* ==========================================================================

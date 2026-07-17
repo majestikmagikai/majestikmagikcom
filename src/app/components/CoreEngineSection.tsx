@@ -15,7 +15,7 @@ export const CoreEngineSection = () => {
   const [isIntersected, setIsIntersected] = useState(false); // Tracks scroll entry state
   const sectionRef = useRef<HTMLDivElement>(null);
   const terminalBodyRef = useRef<HTMLDivElement>(null);
-  
+
   // NEW: Ref to target the background video directly
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -40,7 +40,7 @@ export const CoreEngineSection = () => {
         if (entry.isIntersecting) {
           setIsIntersected(true);
           // Play only when visible to save CPU cycles
-          videoRef.current?.play().catch(() => {});
+          videoRef.current?.play().catch(() => { });
         } else {
           // Pause immediately when scrolled away
           videoRef.current?.pause();
@@ -88,28 +88,18 @@ export const CoreEngineSection = () => {
   }, [visibleLogs]);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      id="core-engine" 
-      style={{ 
+      id="core-engine"
+      style={{
         position: "relative",
-        padding: "100px 20px", 
-        background: "#070913", 
-        display: "flex", 
+        padding: "100px 20px",
+        background: "#070913",
+        display: "flex",
         justifyContent: "center",
         overflow: "hidden"
       }}
     >
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes blink { 
-          0%, 100% { opacity: 1; } 
-          50% { opacity: 0; } 
-        }
-        @media (max-width: 900px) {
-          .split-container { flex-direction: column !important; gap: 50px !important; }
-          .text-column { max-width: 100% !important; text-align: center !important; }
-        }
-      `}} />
 
       {/* Optimized Background Video Frame */}
       <video
@@ -129,7 +119,7 @@ export const CoreEngineSection = () => {
           zIndex: 1,
           opacity: 0.18,
           // CSS Hardware Acceleration Hacks:
-          transform: "translateZ(0)", 
+          transform: "translateZ(0)",
           willChange: "transform",
           backfaceVisibility: "hidden"
         }}
@@ -140,7 +130,7 @@ export const CoreEngineSection = () => {
       </video>
 
       {/* Micro Dot Matrix Overlay Pattern Layer */}
-      <div 
+      <div
         style={{
           position: "absolute",
           top: 0,
@@ -154,25 +144,16 @@ export const CoreEngineSection = () => {
       />
 
       {/* Interactive Component Layout */}
-      <div 
-        className="split-container"
-        style={{ 
-          display: "flex", 
-          width: "100%", 
-          maxWidth: "1200px", 
-          alignItems: "center", 
-          justifyContent: "space-between",
-          gap: "60px",
+      <div
+        className="split-container flex flex-col md:flex-row items-center justify-between w-full max-w-[1200px] gap-[50px] md:gap-[60px]"
+        style={{
           zIndex: 3
         }}
       >
         {/* Left Column: Core Infrastructure Copy */}
-        <div 
-          className="text-column"
-          style={{ 
-            flex: "1", 
-            maxWidth: "500px", 
-            textAlign: "left", 
+        <div
+          className="text-column w-full md:flex-1 max-w-full md:max-w-[500px] text-center md:text-left"
+          style={{
             opacity: isIntersected ? 1 : 0,
             transform: isIntersected ? "translateX(0)" : "translateX(-120px)",
             transition: "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 4.5s cubic-bezier(0.16, 1, 0.3, 1)"
@@ -185,7 +166,7 @@ export const CoreEngineSection = () => {
             Meet Majestik Core
           </h2>
           <p style={{ color: "#94a3b8", fontSize: "16px", lineHeight: "1.7", marginBottom: "24px" }}>
-            A proprietary, hybrid Local AI and cloud API domain-specific model architected precisely for entrepreneurs and business owners. 
+            A proprietary, hybrid Local AI and cloud API domain-specific model architected precisely for entrepreneurs and business owners.
           </p>
           <p style={{ color: "#64748b", fontSize: "14px", lineHeight: "1.6" }}>
             Stop burning resources renting generic cloud-agent models. Majestik Core combines localized security protocols with precision contextual memory buffers—delivering secure data execution right on your physical machine.
@@ -193,41 +174,41 @@ export const CoreEngineSection = () => {
         </div>
 
         {/* Right Column: Linux Terminal Window */}
-        <div 
-          style={{ 
-            flex: "1.2", 
-            width: "100%", 
-            display: "flex", 
+        <div
+          style={{
+            flex: "1.2",
+            width: "100%",
+            display: "flex",
             justifyContent: "center",
             opacity: isIntersected ? 1 : 0,
             transform: isIntersected ? "translateX(0)" : "translateX(120px)",
             transition: "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 4.5s cubic-bezier(0.16, 1, 0.3, 1)"
           }}
         >
-          <div 
-            className="terminal-window" 
-            style={{ 
-              width: "100%", 
-              maxWidth: "600px", 
-              background: "rgba(12, 15, 36, 0.85)", 
-              backdropFilter: "blur(16px)", 
+          <div
+            className="terminal-window"
+            style={{
+              width: "100%",
+              maxWidth: "600px",
+              background: "rgba(12, 15, 36, 0.85)",
+              backdropFilter: "blur(16px)",
               WebkitBackdropFilter: "blur(16px)",
-              border: "1px solid #1e264f", 
-              borderRadius: "6px", 
-              boxShadow: "0 24px 60px rgba(0, 0, 0, 0.6)", 
-              fontFamily: "'Fira Code', 'Courier New', Courier, monospace", 
+              border: "1px solid #1e264f",
+              borderRadius: "6px",
+              boxShadow: "0 24px 60px rgba(0, 0, 0, 0.6)",
+              fontFamily: "'Fira Code', 'Courier New', Courier, monospace",
               overflow: "hidden"
             }}
           >
             {/* Linux Terminal Header Bar */}
-            <div 
-              className="terminal-header" 
-              style={{ 
-                background: "rgba(21, 26, 54, 0.95)", 
-                padding: "10px 16px", 
-                display: "flex", 
-                alignItems: "center", 
-                justifyContent: "space-between", 
+            <div
+              className="terminal-header"
+              style={{
+                background: "rgba(21, 26, 54, 0.95)",
+                padding: "10px 16px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
                 borderBottom: "1px solid #1e264f",
                 userSelect: "none"
               }}
@@ -253,34 +234,34 @@ export const CoreEngineSection = () => {
             </div>
 
             {/* Terminal Body */}
-            <div 
+            <div
               ref={terminalBodyRef}
-              className="terminal-body" 
-              style={{ 
-                padding: "24px", 
-                color: "#a5b4fc", 
-                fontSize: "13px", 
-                lineHeight: "1.6", 
-                height: "280px", 
+              className="terminal-body"
+              style={{
+                padding: "24px",
+                color: "#a5b4fc",
+                fontSize: "13px",
+                lineHeight: "1.6",
+                height: "280px",
                 overflowY: "auto",
-                textAlign: "left" 
+                textAlign: "left"
               }}
             >
               {visibleLogs.map((log, index) => {
                 if (!log) return null;
 
                 return (
-                  <p 
-                    key={index} 
-                    style={{ 
-                      color: log.color || "#a5b4fc", 
-                      margin: "0 0 8px 0", 
-                      fontWeight: log.fontWeight || 'normal' 
+                  <p
+                    key={index}
+                    style={{
+                      color: log.color || "#a5b4fc",
+                      margin: "0 0 8px 0",
+                      fontWeight: log.fontWeight || 'normal'
                     }}
                   >
                     {log.text}
                     {index === logs.length - 1 && showCursor && (
-                      <span style={{ animation: "blink 1s infinite", marginLeft: "4px" }}>█</span>
+                      <span className="terminal-cursor-blink" style={{ marginLeft: "4px" }}>█</span>
                     )}
                   </p>
                 );
