@@ -59,17 +59,17 @@ export default function RootLayout({
           {children}
         </MainLayout>
 
-        {/* Global scripts */}
+        {/* Global scripts - Pushed to lazyOnload to save mobile CPU boot cycles */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           type="text/javascript"
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         />
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=AW-16649126006"
         />
-        <Script id="google-tag-config" strategy="afterInteractive">
+        <Script id="google-tag-config" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -78,8 +78,8 @@ export default function RootLayout({
           `}
         </Script>  
 
-        {/* Facebook Pixel Code */}
-        <Script id="fb-pixel" strategy="afterInteractive">
+        {/* Facebook Pixel Code - Safely delayed until main rendering tasks finish */}
+        <Script id="fb-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
