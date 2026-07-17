@@ -99,6 +99,7 @@ const TeamSection: React.FC = () => {
                   width={160}
                   height={160}
                   loading="lazy"
+                  quality={75}
                 />
               </div>
 
