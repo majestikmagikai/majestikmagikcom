@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({
           <Image
             src="/img/majestikmagik_logo_indigo-64x64.png"
             className="w-8 h-8 opacity-90 rounded-md"
-            alt="Majestik Magik icon"
+            alt="Majestik Magik Logo"
             loading="lazy"
             width={32}
             height={32}
@@ -155,6 +155,7 @@ const Header: React.FC<HeaderProps> = ({
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-controls="mobile-menu"
             className="text-slate-400 hover:text-indigo-400 focus:outline-none p-1 rounded-md cursor-pointer"
+            aria-expanded={isMobileMenuOpen}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             type="button"
           >

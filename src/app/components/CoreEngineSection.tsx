@@ -15,6 +15,9 @@ export const CoreEngineSection = () => {
   const [isIntersected, setIsIntersected] = useState(false); // Tracks scroll entry state
   const sectionRef = useRef<HTMLDivElement>(null);
   const terminalBodyRef = useRef<HTMLDivElement>(null);
+  
+  // NEW: Ref to target the background video directly
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const logs: LogLine[] = [
     { text: "user@majestik-node1:~$ ./launch_core.py", color: "#6366f1", delay: 300 },
@@ -30,13 +33,17 @@ export const CoreEngineSection = () => {
     { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 400 }
   ];
 
-  // Intersection Observer to handle on-scroll trigger
+  // Intersection Observer to handle on-scroll trigger & video playback control
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsIntersected(true);
-          observer.unobserve(entry.target); // Trigger only once
+          // Play only when visible to save CPU cycles
+          videoRef.current?.play().catch(() => {});
+        } else {
+          // Pause immediately when scrolled away
+          videoRef.current?.pause();
         }
       },
       { threshold: 0.15 } // Trigger when 15% of section is visible
@@ -104,12 +111,13 @@ export const CoreEngineSection = () => {
         }
       `}} />
 
-      {/* Full-Screen Background Video Frame */}
+      {/* Optimized Background Video Frame */}
       <video
-        autoPlay
+        ref={videoRef}
         loop
         muted
         playsInline
+        preload="none" // Don't download/decode until needed
         style={{
           position: "absolute",
           top: 0,
@@ -118,9 +126,14 @@ export const CoreEngineSection = () => {
           height: "100%",
           objectFit: "cover",
           zIndex: 1,
-          opacity: 0.18
+          opacity: 0.18,
+          // CSS Hardware Acceleration Hacks:
+          transform: "translateZ(0)", 
+          willChange: "transform",
+          backfaceVisibility: "hidden"
         }}
       >
+        {/* WebM is vastly more hardware-efficient. Use it as primary if available! */}
         <source src="/videos/bare-metal-hardware.mp4" type="video/mp4" />
       </video>
 
@@ -151,7 +164,7 @@ export const CoreEngineSection = () => {
           zIndex: 3
         }}
       >
-        {/* Left Column: Core Infrastructure Copy with Slide-In from Left */}
+        {/* Left Column: Core Infrastructure Copy */}
         <div 
           className="text-column"
           style={{ 
@@ -177,7 +190,7 @@ export const CoreEngineSection = () => {
           </p>
         </div>
 
-        {/* Right Column: Linux Terminal Window with Slide-In from Right */}
+        {/* Right Column: Linux Terminal Window */}
         <div 
           style={{ 
             flex: "1.2", 
@@ -217,9 +230,7 @@ export const CoreEngineSection = () => {
                 userSelect: "none"
               }}
             >
-              {/* Left Side: Linux Terminal Prompts & Label */}
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                {/* SVG Prompt Terminal Icon */}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6373b3" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="4 17 10 11 4 5"></polyline>
                   <line x1="12" y1="19" x2="20" y2="19"></line>
@@ -229,13 +240,9 @@ export const CoreEngineSection = () => {
                 </div>
               </div>
 
-              {/* Right Side: Standard Linux Windows Control Actions (Min, Max, Close) */}
               <div className="terminal-controls" style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-                {/* Minimize (Horizontal Dash) */}
                 <span style={{ display: "block", width: "10px", height: "1px", background: "#6373b3" }}></span>
-                {/* Maximize (Square box border) */}
                 <span style={{ display: "block", width: "9px", height: "9px", border: "1px solid #6373b3", borderRadius: "1px" }}></span>
-                {/* Close (X graphic representation) */}
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#6373b3" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -272,14 +279,13 @@ export const CoreEngineSection = () => {
                     {log.text}
                     {index === logs.length - 1 && showCursor && (
                       <span style={{ animation: "blink 1s infinite", marginLeft: "4px" }}>█</span>
-                )}
+                    )}
                   </p>
                 );
               })}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

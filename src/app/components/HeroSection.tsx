@@ -83,8 +83,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               <Image
                 src="/img/screenshot_mm_ai.png"
                 alt="Pivot Quest Screenshot"
-                width={1200}
-                height={800}
+                width={1600} // Set higher base width for crisp quality
+                height={1000}
                 priority
                 className="w-full h-auto rounded-xl border border-indigo-950/50 opacity-95 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.01]"
               />
