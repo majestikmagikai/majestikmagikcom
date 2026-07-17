@@ -22,7 +22,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
       {/* High-end hardware processor micro-dot matrix pattern */}
       <div
-        className="absolute inset-0 z-11 pointer-events-none opacity-20"
+        className="absolute inset-0 z-[11] pointer-events-none opacity-20"
         style={{
           backgroundImage: 'radial-gradient(rgba(247, 248, 248, 0.3) 1.2px, transparent 1.2px)',
           backgroundSize: '24px 24px',
@@ -48,14 +48,12 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
         {/* Elegant Centered Description */}
         <p
-          className="max-w-6xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500"
-          style={{ transitionDelay: "0.6s" }}
-        >
+          className="max-w-6xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500"        >
           A gamified AI business engine and workspace for entrepreneurs and founders. Stop wrestling with generic prompts and lost context. Pivot Quest deploys a guardrailed strategic engine fine-tuned to keep your business scaling on the main trail.
         </p>
 
         {/* Clean Call To Action Layer */}
-        <div className="mb-20 md:mb-28 scroll-animate opacity-90 ease-in-out duration-500" style={{ transitionDelay: "1s" }}>
+        <div className="mb-20 md:mb-28 scroll-animate opacity-90 ease-in-out duration-500">
           <a
             href="https://app.majestikmagik.dev/sign-up"
             target="_blank"
@@ -68,11 +66,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Centerpiece Hardware Device / Interface Frame */}
         <div
           className="w-full xl:max-w-7xl mx-auto scroll-animate relative" // Added xl:max-w-7xl to let the container expand wider on desktop
-          style={{ transitionDelay: "1.2s ease-in-out" }}
+          style={{ animationDelay: "1.2s" }}
         >
           {/* Dynamic Aurora Ambient Glow Wrapper (Fades in/out behind the mockup) */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/30 via-purple-600/20 to-indigo-500/30 rounded-3xl blur-3xl opacity-75 animate-[pulse_6s_ease-in-out_infinite] pointer-events-none z-0" />
-          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50 animate-[pulse_4s_ease-in-out_infinite] pointer-events-none z-0 delay-1000" />
+          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/30 via-purple-600/20 to-indigo-500/30 rounded-3xl blur-3xl opacity-75 animate-[pulse_6s_ease-in-out_infinite] delay-[1000ms] pointer-events-none z-0" />
+          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50 animate-[pulse_4s_ease-in-out_infinite] delay-[1000ms] pointer-events-none z-0" />
 
           {/* Actual Frame markup with a slow fade-in and slide-down animation */}
           <div className="group relative z-10 border border-indigo-500/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] bg-indigo-950/20 p-2.5 backdrop-blur-md transition-all duration-500 hover:border-indigo-400/60 hover:shadow-[0_0_60px_rgba(99,102,241,0.35)] animate-[fadeInDown_2.8s_cubic-bezier(0.16,1,0.3,1)_both]">
