@@ -59,38 +59,61 @@ export default function RootLayout({
           {children}
         </MainLayout>
 
-        {/* Global scripts - Pushed to lazyOnload to save mobile CPU boot cycles */}
+        {/* Global Trustpilot Widget - Safe to load after page interaction */}
         <Script
           strategy="lazyOnload"
           type="text/javascript"
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         />
-        <Script
-          strategy="lazyOnload"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16649126006"
-        />
-        <Script id="google-tag-config" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16649126006');
-          `}
-        </Script>  
 
-        {/* Facebook Pixel Code - Safely delayed until main rendering tasks finish */}
-        <Script id="fb-pixel" strategy="lazyOnload">
+        {/* High-Performance Analytics Deferral Engine */}
+        <Script id="deferred-analytics" strategy="afterInteractive">
           {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
-              n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '2550379602025185');
-            fbq('track', 'PageView');
+            (function() {
+              var analyticsLoaded = false;
+              
+              function loadAnalytics() {
+                if (analyticsLoaded) return;
+                analyticsLoaded = true;
+                
+                // 1. Inject Google Tag Manager / Google Ads
+                var gtmScript = document.createElement('script');
+                gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16649126006';
+                gtmScript.async = true;
+                document.head.appendChild(gtmScript);
+                
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-16649126006');
+                
+                // 2. Inject Facebook Pixel
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '2550379602025185');
+                fbq('track', 'PageView');
+                
+                // Clean up event listeners once loaded
+                removeListeners();
+              }
+              
+              function removeListeners() {
+                window.removeEventListener('touchstart', loadAnalytics);
+                window.removeEventListener('scroll', loadAnalytics);
+                window.removeEventListener('mousemove', loadAnalytics);
+              }
+              
+              // Trigger script load only when a real human interacts with the site
+              window.addEventListener('touchstart', loadAnalytics, { passive: true });
+              window.addEventListener('scroll', loadAnalytics, { passive: true });
+              window.addEventListener('mousemove', loadAnalytics, { passive: true });
+            })();
           `}
         </Script>
 
