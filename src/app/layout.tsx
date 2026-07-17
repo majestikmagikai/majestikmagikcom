@@ -12,18 +12,18 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://majestikmagik.dev'),
   title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
   description:
-    'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
+    'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
   authors: [{ name: 'Majestik Magik' }],
   manifest: '/site.webmanifest',
   icons: {
-    icon: '/img/majestikmagik_logo_indigo.webp',
-    shortcut: '/img/majestikmagik_logo_indigo.webp',
-    apple: '/img/majestikmagik_logo_indigo.webp',
+    icon: '/img/majestikmagik_logo_indigo-64x64.webp',
+    shortcut: '/img/majestikmagik_logo_indigo-64x64.webp',
+    apple: '/img/majestikmagik_logo_indigo-64x64.webp',
   },
   openGraph: {
     title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
-      'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
+      'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     url: 'https://majestikmagik.dev',
     siteName: 'Majestik Magik',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Majestik Magik | Building powerful digital systems for the next generation of builders',
     description:
-      'Entrepreneurship is a journey with twists, turns, and constant pivots. Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
+      'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution. Welcome to your ultimate business quest.',
     images: ['/img/screenshot_mm.webp'],
   },
 };
@@ -127,8 +127,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Majestik Magik",
-            "image": "https://majestikmagik.dev/img/og-hero.jpg",
-            "@id": "https://majestikmagik.dev/quick-fixes",
+            "image": "https://majestikmagik.dev/img/majestikmagik_logo_indigo-64x64.webp",
+            "@id": "https://majestikmagik.dev/",
             "url": "https://majestikmagik.dev",
             "telephone": "+1-804-362-7561",
             "address": {
@@ -150,7 +150,11 @@ export default function RootLayout({
               "Website speed optimization",
               "Technical SEO fixes",
               "Business Operations",
-              "Business Strategy"
+              "Business Strategy",
+              "Pivot Quest",
+              "AI Business Assistant",
+              "AI Marketing",
+              "AI Sales"              
             ]
           })}
         </Script>
