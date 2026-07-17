@@ -118,6 +118,7 @@ export const CoreEngineSection = () => {
         muted
         playsInline
         preload="none" // Don't download/decode until needed
+        aria-label="Decorative background network visual"
         style={{
           position: "absolute",
           top: 0,
@@ -135,6 +136,7 @@ export const CoreEngineSection = () => {
       >
         {/* WebM is vastly more hardware-efficient. Use it as primary if available! */}
         <source src="/videos/bare-metal-hardware.mp4" type="video/mp4" />
+        <track kind="captions" src="data:text/vtt," label="No audio captions" default />
       </video>
 
       {/* Micro Dot Matrix Overlay Pattern Layer */}

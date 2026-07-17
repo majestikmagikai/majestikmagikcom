@@ -113,7 +113,7 @@ const TestimonialsSection = () => {
                 </div>
                 <div>
                   <h3 className="text-sm font-mono font-bold tracking-wide text-slate-200">{t.name}</h3>
-                  <div className="flex items-center gap-0.5 mt-1" aria-label={`${t.stars} out of 5 stars`}>
+                  <div className="flex items-center gap-0.5 mt-1" role="img" aria-label={`${t.stars} out of 5 stars`}>
                     {[1, 2, 3, 4, 5].map((n) => (
                       <Star key={n} filled={n <= t.stars} />
                     ))}

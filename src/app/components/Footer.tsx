@@ -99,37 +99,43 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
             <div>
               <h3 className="mb-3 text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">Ecosystem Protocols</h3>
               <ul className="space-x-5 flex items-center text-lg text-slate-500">
-                <li><a href="https://www.facebook.com/majestikmagik/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faFacebook} /></a></li>
-                <li><a href="https://www.instagram.com/majestikmagik/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faInstagram} /></a></li>
-                <li><a href="https://github.com/majestikmagik" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faGithub} /></a></li>
-                <li><a href="https://www.linkedin.com/company/majestikmagik/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                <li><a href="https://www.facebook.com/majestikmagik/" target="_blank" rel="noopener noreferrer" aria-label="Visit Majestik Magik on Facebook" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faFacebook} /></a></li>
+                <li><a href="https://www.instagram.com/majestikmagik/" target="_blank" rel="noopener noreferrer" aria-label="Visit Majestik Magik on Instagram" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                <li><a href="https://github.com/majestikmagik" target="_blank" rel="noopener noreferrer" aria-label="Visit Majestik Magik on Github" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faGithub} /></a></li>
+                <li><a href="https://www.linkedin.com/company/majestikmagik/" target="_blank" rel="noopener noreferrer" aria-label="Visit Majestik Magik on LinkedIn" className="hover:text-indigo-400 transition-colors"><FontAwesomeIcon icon={faLinkedin} /></a></li>
               </ul>
             </div>
 
             <div className="w-full border-t border-slate-900 pt-6">
               <h3 className="mb-4 text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">Hardware & Platform Partners</h3>
               <ul className="flex flex-wrap items-center gap-10 opacity-40 hover:opacity-75 transition-opacity duration-300">
-                <Image
-                  src="/img/partners/wpengine_member-badge.webp"
-                  alt="WP Engine Partner"
-                  width={160}
-                  height={80}
-                  className="h-20 w-auto grayscale object-contain"
-                />
-                <Image
-                  src="/img/partners/gcp-logo.webp"
-                  alt="Google Cloud Startup"
-                  width={220}
-                  height={160}
-                  className="h-24 w-auto grayscale object-contain"
-                />
-                <Image
-                  src="/img/partners/aws-activate-logo_white.webp"
-                  alt="AWS Activate Partner"
-                  width={240}
-                  height={100}
-                  className="h-12 w-auto grayscale object-contain"
-                />
+                <li>
+                  <Image
+                    src="/img/partners/wpengine_member-badge.webp"
+                    alt="WP Engine Partner"
+                    width={160}
+                    height={80}
+                    className="h-20 w-auto grayscale object-contain"
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="/img/partners/gcp-logo.webp"
+                    alt="Google Cloud Startup"
+                    width={220}
+                    height={160}
+                    className="h-24 w-auto grayscale object-contain"
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="/img/partners/aws-activate-logo_white.webp"
+                    alt="AWS Activate Partner"
+                    width={240}
+                    height={100}
+                    className="h-12 w-auto grayscale object-contain"
+                  />
+                </li>
               </ul>
             </div>
           </div>
