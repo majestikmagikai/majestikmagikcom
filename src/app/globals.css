@@ -15,7 +15,7 @@ body {
 }
 
 /* ==========================================================================
-   🎯 Structural Design System & Canvas Framework
+    Structural Design System & Canvas Framework
    ========================================================================== */
 
 /* Tenstorrent Blueprint Canvas Grid (Light Context) */
@@ -39,7 +39,7 @@ body {
 }
 
 /* ==========================================================================
-   🖥️ 3D Fan-Friendly Screenshot Component
+    3D Fan-Friendly Screenshot Component
    ========================================================================== */
 
 /* Outer structural bounding frame */
@@ -106,7 +106,7 @@ body {
 }
 
 /* ==========================================================================
-   ⚡ Text Engine, Loops & Animations
+    Text Engine, Loops & Animations
    ========================================================================== */
 
 /* Zero-CPU Gradient Headline Framework */
@@ -140,7 +140,7 @@ body {
 }
 
 /* ==========================================================================
-   🔄 High-End Infinite Logo Telemetry Scrollers
+    High-End Infinite Logo Telemetry Scrollers
    ========================================================================== */
 
 .scrolling-logos-wrapper {
@@ -172,7 +172,7 @@ body {
 }
 
 /* ==========================================================================
-   🛠️ Keyframe Computations
+    Keyframe Computations
    ========================================================================== */
 
 @keyframes marquee-scroll-left {
@@ -284,7 +284,7 @@ body {
 }
 
 /* ==========================================================================
-   🎨 Global Overrides (Scrollbars & Hardware Consoles)
+    Global Overrides (Scrollbars & Hardware Consoles)
    ========================================================================== */
 
 ::-webkit-scrollbar {
