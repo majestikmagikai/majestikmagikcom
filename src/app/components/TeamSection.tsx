@@ -100,6 +100,7 @@ const TeamSection: React.FC = () => {
                   height={160}
                   loading="lazy"
                   quality={75}
+                  sizes="(max-width: 767px) 128px, 160px"
                 />
               </div>
 

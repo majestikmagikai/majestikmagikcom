@@ -95,6 +95,7 @@ const Header: React.FC<HeaderProps> = ({
             loading="lazy"
             width={32}
             height={32}
+            quality={75}
           />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
             Majestik Magik
