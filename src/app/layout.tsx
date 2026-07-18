@@ -66,68 +66,34 @@ export default function RootLayout({
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         />
 
-        {/* High-Performance Analytics Deferral Engine */}
-        <Script id="deferred-analytics" strategy="afterInteractive">
+        {/* --- Move Third Party Handshakes Out of the Main Thread --- */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16649126006"
+          strategy="lazyOnload"
+        />
+        <Script id="google-ads-init" strategy="lazyOnload">
           {`
-            (function() {
-              var analyticsLoaded = false;
-              
-              function loadAnalytics() {
-                if (analyticsLoaded) return;
-                analyticsLoaded = true;
-                
-                // 1. Inject Google Tag Manager / Google Ads
-                var gtmScript = document.createElement('script');
-                gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16649126006';
-                gtmScript.async = true;
-                document.head.appendChild(gtmScript);
-                
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'AW-16649126006');
-                
-                // 2. Inject Facebook Pixel
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '2550379602025185');
-                fbq('track', 'PageView');
-                
-                // Clean up event listeners once loaded
-                removeListeners();
-              }
-              
-              function removeListeners() {
-                window.removeEventListener('touchstart', loadAnalytics);
-                window.removeEventListener('scroll', loadAnalytics);
-                window.removeEventListener('mousemove', loadAnalytics);
-              }
-              
-              // Trigger script load only when a real human interacts with the site
-              window.addEventListener('touchstart', loadAnalytics, { passive: true });
-              window.addEventListener('scroll', loadAnalytics, { passive: true });
-              window.addEventListener('mousemove', loadAnalytics, { passive: true });
-            })();
-          `}
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-16649126006');
+  `}
         </Script>
 
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<img 
-                height="1" 
-                width="1" 
-                style="display:none" 
-                src="https://www.facebook.com/tr?id=2550379602025185&ev=PageView&noscript=1"
-                alt="Facebook Pixel"
-          />`
-          }}
-        />
+        <Script id="fb-pixel" strategy="lazyOnload">
+          {`
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2550379602025185');
+    fbq('track', 'PageView');
+  `}
+        </Script>
 
         {/* Website Search Schema */}
         <Script type="application/ld+json" id="structured-data">
@@ -143,7 +109,7 @@ export default function RootLayout({
             }
           })}
         </Script>
-        
+
         {/* Professional Services Local SEO Schema */}
         <Script type="application/ld+json" id="local-services-structured-data">
           {JSON.stringify({
@@ -177,7 +143,7 @@ export default function RootLayout({
               "Pivot Quest",
               "AI Business Assistant",
               "AI Marketing",
-              "AI Sales"              
+              "AI Sales"
             ]
           })}
         </Script>
