@@ -50,103 +50,68 @@ body {
 }
 
 /* ==========================================================================
-    3D Fan-Friendly Screenshot Component
+    3D Fan-Friendly Screenshot Component (Optimized for Mobile CPU)
    ========================================================================== */
 
 .hero-screenshot-frame {
   position: relative;
   border-radius: 1.5rem;
   padding: 2px;
-  perspective: 1200px;
   isolation: isolate;
+  /* Remove perspective on mobile */
 }
 
+/* Base mobile gradient background: Flat, no blur, no heavy keyframes */
 .hero-screenshot-frame::before {
   content: "";
   position: absolute;
-  inset: -14px;
+  inset: -2px; /* Tighter bounds for cleaner presentation on mobile */
   border-radius: inherit;
   z-index: -1;
-  background: linear-gradient(120deg, #4f46e5, #2563eb, #14b8a6, #4f46e5);
-  background-size: 220% 220%;
-  filter: blur(20px);
+  background: linear-gradient(120deg, #4f46e5, #2563eb);
   opacity: 0.9;
-  /* Keyframe associations are now handled asynchronously if animations.css is loaded */
-  animation: mm-gradient-shift 16s ease-in-out infinite, mm-glow-pulse 5s ease-in-out infinite;
 }
 
 .hero-screenshot-inner {
   border-radius: 1.25rem;
   overflow: hidden;
   background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
-  box-shadow: 0 22px 35px rgba(15, 23, 42, 0.41), 0 0 0 1px rgba(148, 163, 184, 0.08);
-  transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
-  transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.5s ease, filter 0.5s ease;
-}
-
-.hero-screenshot-frame.group:hover .hero-screenshot-inner {
-  transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
-  box-shadow: 0 32px 40px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(191, 219, 254, 0.26);
-  filter: brightness(1.03);
-}
-
-.hero-screenshot-frame.group:hover::before {
-  opacity: 1;
-  filter: blur(28px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.3);
+  /* No heavy transitions or 3D transforms on mobile */
 }
 
 /* ==========================================================================
-    Text Engine, Loops & Framework Classes
+    🖥️ Desktop-Only Enhancements (Fired via Media Query)
    ========================================================================== */
+@media (min-width: 1024px) {
+  .hero-screenshot-frame {
+    perspective: 1200px;
+  }
 
-.animate-gradient-x {
-  background: linear-gradient(270deg, #fbbf24, #9333ea, #0eac99);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
+  .hero-screenshot-frame::before {
+    inset: -14px;
+    background: linear-gradient(120deg, #4f46e5, #2563eb, #14b8a6, #4f46e5);
+    background-size: 220% 220%;
+    filter: blur(20px);
+    animation: mm-gradient-shift 16s ease-in-out infinite, mm-glow-pulse 5s ease-in-out infinite;
+  }
 
-.team-card-hover-animate,
-.services-card-hover-animate {
-  transition: transform 0.3s ease-in-out;
-  will-change: transform;
-}
+  .hero-screenshot-inner {
+    box-shadow: 0 22px 35px rgba(15, 23, 42, 0.41), 0 0 0 1px rgba(148, 163, 184, 0.08);
+    transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.5s ease, filter 0.5s ease;
+  }
 
-.scrolling-logos-wrapper {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
+  /* Only run interactive hover tracking on desktop viewports */
+  .hero-screenshot-frame.group:hover .hero-screenshot-inner {
+    transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
+    box-shadow: 0 32px 40px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(191, 219, 254, 0.26);
+    filter: brightness(1.03);
+  }
 
-.scrolling-logos-container,
-.scrolling-logos-container-services {
-  display: flex;
-  width: 80%;
-  will-change: transform;
-}
-
-.scrolling-logos-wrapper:hover .scrolling-logos-container,
-.scrolling-logos-wrapper:hover .scrolling-logos-container-services {
-  animation-play-state: paused;
-}
-
-/* ==========================================================================
-    Global Overrides (Scrollbars & Hardware Consoles)
-   ========================================================================== */
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #020617; }
-::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #6b648b; }
-
-pre code.language-typescript {
-  font-family: 'Noto Sans', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  .hero-screenshot-frame.group:hover::before {
+    opacity: 1;
+    filter: blur(28px);
+  }
 }
