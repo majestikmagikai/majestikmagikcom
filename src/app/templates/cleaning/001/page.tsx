@@ -229,7 +229,7 @@ export default function CleaningServicesTemplatePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
               {SERVICES.map((s) => (
                 <article key={s.key} className="group bg-white rounded-2xl shadow ring-1 ring-slate-200 overflow-hidden hover:shadow-lg transition">
-                  <Image src={s.image} alt={s.name} width={800} height={600} className="h-44 w-full object-cover" />
+                  <Image src={s.image} alt={s.name} width={800} height={600} className="h-44 w-full object-cover" loading="lazy" priority/>
                   <div className="p-5">
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700">{s.name}</h3>
                     <p className="text-sm text-slate-600 mt-1">{s.description}</p>

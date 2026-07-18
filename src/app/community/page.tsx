@@ -71,6 +71,7 @@ const DirectoryContent: React.FC = () => {
                             className="w-full h-48 object-cover"
                             width={600}
                             height={400}
+                            loading="lazy"
                         />
                         <div className="p-6 flex flex-col flex-grow">
                             <h2 className="text-xl font-bold text-slate-100 mb-2">{business.name}</h2>

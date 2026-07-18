@@ -115,6 +115,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
                     alt="WP Engine Partner"
                     width={160}
                     height={80}
+                    loading="lazy"
                     className="h-20 w-auto grayscale object-contain"
                   />
                 </li>
@@ -124,6 +125,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
                     alt="Google Cloud Startup"
                     width={220}
                     height={160}
+                    loading="lazy"
                     className="h-24 w-auto grayscale object-contain"
                   />
                 </li>
@@ -133,6 +135,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
                     alt="AWS Activate Partner"
                     width={240}
                     height={100}
+                    loading="lazy"
                     className="h-12 w-auto grayscale object-contain"
                   />
                 </li>

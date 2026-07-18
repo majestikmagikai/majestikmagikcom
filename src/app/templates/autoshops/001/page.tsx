@@ -213,7 +213,7 @@ export default function AutoDetailingTemplatePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
               {PACKAGES.map((p) => (
                 <article key={p.key} className="group bg-white rounded-2xl shadow ring-1 ring-slate-200 overflow-hidden hover:shadow-lg transition">
-                  <Image src={p.image} alt={p.name} width={800} height={600} className="h-44 w-full object-cover" />
+                  <Image src={p.image} alt={p.name} width={800} height={600} className="h-44 w-full object-cover" loading="lazy" />
                   <div className="p-5">
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-700">{p.name}</h3>
                     <p className="text-sm text-slate-600 mt-1">{p.description}</p>

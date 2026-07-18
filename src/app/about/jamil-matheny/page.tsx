@@ -25,6 +25,7 @@ const JamilMathenyContent: React.FC = () => {
                     width={180} 
                     height={180} 
                     className="relative rounded-xl border border-indigo-500/20 object-cover shadow-2xl md:w-[180px]" 
+                    loading="lazy"
                 />
             </div>
 
@@ -46,6 +47,7 @@ const JamilMathenyContent: React.FC = () => {
                             width={180}
                             height={270}
                             className="relative rounded-xl border border-indigo-500/20 object-cover shadow-2xl md:w-[200px]"
+                            loading="lazy"
                         />
                     </Link>
                 </div>

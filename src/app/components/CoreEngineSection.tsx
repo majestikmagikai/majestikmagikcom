@@ -122,7 +122,7 @@ export const CoreEngineSection = () => {
           transform: "translateZ(0)",
           willChange: "transform",
           backfaceVisibility: "hidden"
-        }}
+        }}        
       >
         {/* WebM is vastly more hardware-efficient. Use it as primary if available! */}
         <source src="/videos/bare-metal-hardware.mp4" type="video/mp4" />

@@ -76,6 +76,7 @@ const ImageMarquee = () => {
                 height={180}
                 src={template.imgSrc}
                 alt={`${template.name} Website Template`}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 pointer-events-none"
               />
             </div>
