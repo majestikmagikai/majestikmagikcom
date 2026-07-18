@@ -82,8 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               src="/img/screenshot_mm_ai.webp"
               alt="Pivot Quest Screenshot"
               width={1400} // Bumped up for crisp max-width sharpness
-              height={875}  // Kept aspect ratio identical (~1.6)
-              priority
+              height={875}  // Kept aspect ratio identical (~1.6)              
               loading="lazy"
               sizes="(max-width: 768px) 100vw, (max-width: 1400px) 100vw, 1400px" // Tells browser to fetch the full resolution container asset
               className="w-full h-auto rounded-xl border border-indigo-950/50 opacity-95 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.01]"
