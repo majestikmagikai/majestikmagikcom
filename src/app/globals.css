@@ -25,21 +25,18 @@ html,
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fbfbfb;
-  /* Tenstorrent Clean Off-White Base */
 }
 
 /* ==========================================================================
     Structural Design System & Canvas Framework
    ========================================================================== */
 
-/* Tenstorrent Blueprint Canvas Grid (Light Context) */
 .tenstorrent-canvas {
   background-color: #fbfbfb;
   background-image: radial-gradient(#dbe1e6 1.1px, transparent 1.1px);
   background-size: 24px 24px;
 }
 
-/* Scroll Performance Engine */
 .scroll-animate {
   opacity: 0;
   transform: translateY(20px);
@@ -56,61 +53,41 @@ body {
     3D Fan-Friendly Screenshot Component
    ========================================================================== */
 
-/* Outer structural bounding frame */
 .hero-screenshot-frame {
   position: relative;
   border-radius: 1.5rem;
-  /* rounded-2xl */
   padding: 2px;
-  /* Hairline bezel padding */
   perspective: 1200px;
-  /* Depth map for 3D layout */
   isolation: isolate;
-  /* Keeps layered blend profiles safe */
 }
 
-/* Ambient reactive lighting backdrop layer */
 .hero-screenshot-frame::before {
   content: "";
   position: absolute;
   inset: -14px;
   border-radius: inherit;
   z-index: -1;
-  background: linear-gradient(120deg,
-      #4f46e5,
-      #2563eb,
-      #14b8a6,
-      #4f46e5);
+  background: linear-gradient(120deg, #4f46e5, #2563eb, #14b8a6, #4f46e5);
   background-size: 220% 220%;
   filter: blur(20px);
   opacity: 0.9;
-  animation:
-    mm-gradient-shift 16s ease-in-out infinite,
-    mm-glow-pulse 5s ease-in-out infinite;
+  /* Keyframe associations are now handled asynchronously if animations.css is loaded */
+  animation: mm-gradient-shift 16s ease-in-out infinite, mm-glow-pulse 5s ease-in-out infinite;
 }
 
-/* The dark-canvas terminal layer */
 .hero-screenshot-inner {
   border-radius: 1.25rem;
   overflow: hidden;
   background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
-  box-shadow:
-    0 22px 35px rgba(15, 23, 42, 0.41),
-    0 0 0 1px rgba(148, 163, 184, 0.08);
+  box-shadow: 0 22px 35px rgba(15, 23, 42, 0.41), 0 0 0 1px rgba(148, 163, 184, 0.08);
   transform: rotateX(0deg) rotateY(0deg) translateY(0) scale(1);
   transform-style: preserve-3d;
-  transition:
-    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
-    box-shadow 0.5s ease,
-    filter 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.5s ease, filter 0.5s ease;
 }
 
-/* High-performance hardware micro-lifts */
 .hero-screenshot-frame.group:hover .hero-screenshot-inner {
   transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
-  box-shadow:
-    0 32px 40px rgba(15, 23, 42, 0.98),
-    0 0 0 1px rgba(191, 219, 254, 0.26);
+  box-shadow: 0 32px 40px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(191, 219, 254, 0.26);
   filter: brightness(1.03);
 }
 
@@ -120,42 +97,23 @@ body {
 }
 
 /* ==========================================================================
-    Text Engine, Loops & Animations
+    Text Engine, Loops & Framework Classes
    ========================================================================== */
 
-/* Zero-CPU Gradient Headline Framework */
 .animate-gradient-x {
-  background: linear-gradient(270deg,
-      #fbbf24,
-      /* yellow-600 */
-      #9333ea,
-      /* purple-600 */
-      #0eac99
-      /* teal-600 */
-    );
+  background: linear-gradient(270deg, #fbbf24, #9333ea, #0eac99);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  animation: gradient-x 10s ease infinite;
 }
 
-/* Hover Scaling System for Team and Service Matrix Containers */
 .team-card-hover-animate,
 .services-card-hover-animate {
   transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
-
-.team-card-hover-animate:hover,
-.services-card-hover-animate:hover {
-  animation: matrixCardHoverEffect 0.3s ease-in-out forwards;
-}
-
-/* ==========================================================================
-    High-End Infinite Logo Telemetry Scrollers
-   ========================================================================== */
 
 .scrolling-logos-wrapper {
   width: 100%;
@@ -166,17 +124,10 @@ body {
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.scrolling-logos-container {
-  display: flex;
-  width: 80%;
-  animation: marquee-scroll-left 30s linear infinite;
-  will-change: transform;
-}
-
+.scrolling-logos-container,
 .scrolling-logos-container-services {
   display: flex;
   width: 80%;
-  animation: marquee-scroll-right 30s linear infinite;
   will-change: transform;
 }
 
@@ -186,137 +137,13 @@ body {
 }
 
 /* ==========================================================================
-    Keyframe Computations
-   ========================================================================== */
-
-@keyframes marquee-scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes marquee-scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes gradient-x {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes mm-gradient-shift {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes mm-glow-pulse {
-
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(0.87);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(0.95);
-  }
-}
-
-@keyframes matrixCardHoverEffect {
-  to {
-    transform: translateY(-0.25rem) scale(1.03);
-  }
-}
-
-@keyframes flash {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-flash {
-  animation: flash 2s infinite;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-.terminal-cursor-blink {
-  animation: blink 1s infinite;
-}
-
-/* ==========================================================================
     Global Overrides (Scrollbars & Hardware Consoles)
    ========================================================================== */
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #020617;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #6b648b;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6b648b; }
 
 pre code.language-typescript {
   font-family: 'Noto Sans', Consolas, 'Liberation Mono', Menlo, Courier, monospace;

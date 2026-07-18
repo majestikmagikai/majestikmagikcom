@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
 import CookieBanner from './CookieBanner';
+
+// Structural CSS stays upfront
 
 export default function MainLayout({
   children,
@@ -12,6 +14,15 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  
+  // Non-blocking asynchronous loading of keyframes and logo animations
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/animations.css'; // Must be saved inside your /public directory
+    document.head.appendChild(link);
+  }, []);
+
   const navItems = [
     { name: 'Home', url: '/#home' },
     { name: 'Core Engine', url: '/#core-engine' },
@@ -22,10 +33,8 @@ export default function MainLayout({
     { name: 'Login', url: 'https://app.majestikmagik.dev/dashboard', external: true }
   ];
 
-  // Get the current URL path
   const pathname = usePathname();
 
-  // Check if the current path is one of the policy pages
   const isPolicyPage = [
     '/privacy-policy',
     '/terms-of-service',
@@ -37,7 +46,6 @@ export default function MainLayout({
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: { name: string, url: string, external?: boolean }) => {
     if (item.external) {
-      // For external links, open in a new tab and prevent default navigation
       window.open(item.url, '_blank', 'noopener,noreferrer');
       e.preventDefault();
       return;
@@ -49,7 +57,6 @@ export default function MainLayout({
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // If no anchor on the page, navigate to the URL (useful when on a different route)
       if (item.url.startsWith('/')) {
         window.location.href = item.url;
       }
@@ -69,7 +76,6 @@ export default function MainLayout({
         {children}
       </main>
 
-      {/* The 'isPolicyPage' variable is passed as the 'isAlwaysVisible' prop */}
       <Footer isAlwaysVisible={isPolicyPage} />
 
       <CookieBanner />

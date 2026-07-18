@@ -1,0 +1,128 @@
+/* Animation keyframes and classes, loaded asynchronously */
+
+/* Link to animations that are defined below */
+.scrolling-logos-container {
+    animation: marquee-scroll-left 30s linear infinite;
+}
+
+.scrolling-logos-container-services {
+    animation: marquee-scroll-right 30s linear infinite;
+}
+
+.team-card-hover-animate:hover,
+.services-card-hover-animate:hover {
+  animation: matrixCardHoverEffect 0.3s ease-in-out forwards;
+}
+
+.animate-gradient-x {
+    animation: gradient-x 10s ease infinite;
+}
+
+.animate-flash {
+  animation: flash 2s infinite;
+}
+
+.terminal-cursor-blink {
+  animation: blink 1s infinite;
+}
+
+/* Keyframe definitions */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes gradient-x {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes mm-gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes mm-glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.87);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes matrixCardHoverEffect {
+  to {
+    transform: translateY(-0.25rem) scale(1.03);
+  }
+}
+
+@keyframes flash {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
