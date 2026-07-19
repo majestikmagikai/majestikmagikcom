@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 Majestik Magik | Core Operational Infrastructure
 
-## Getting Started
+> **[majestikmagik.dev](https://majestikmagik.dev)** — Powering next-generation digital systems and AI-visible business infrastructure. High-impact performance upgrades, low-level web engineering, and critical codebase patches prioritize-shipped within a 24–72 hour window.
 
-First, run the development server:
+[![Framework: Next.js](https://img.shields.io/badge/Framework-Next.js%2015-black?style=flat-square&logo=next.js)](https://nextjs.org)
+[![Deployment: Cloudflare Pages](https://img.shields.io/badge/Deployment-Cloudflare%20Pages-orange?style=flat-square&logo=cloudflare)](https://pages.cloudflare.com/)
+[![Edge Engine: V8](https://img.shields.io/badge/Edge%20Runtime-V8%20Isolated-blue?style=flat-square)](https://cloudflare.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Technical Architecture Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This platform is engineered as a zero-bloat, hyper-optimized static and edge-hydrated application designed for maximum crawlability by human clients and machine-learning LLM agents alike.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **Core Stack:** Next.js (App Router) + TypeScript + Tailwind CSS.
+*   **Infrastructure:** Deployed globally on **Cloudflare Pages** via optimized CNAME proxies to leverage V8 isolate scaling.
+*   **Email Engine:** Zero-overhead inbound pipelines using decentralized **Cloudflare Email Routing**, direct-forwarding to centralized triage queues.
+*   **SEO/GEO Optimization:** Implements a deep, multi-layered structural JSON-LD `@graph` entity mesh mapping out services, localized target indicators, and an exhaustive FAQ semantic data layer.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ On-Demand Core Execution (Micro-Services Matrix)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application exposes an instantaneous, transactional API/Stripe checkout interface for on-demand performance tuning:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Service Node | Engineering Scope | Base Entry |
+| :--- | :--- | :--- |
+| **Website Speed Optimization** | Core Web Vitals remediation (LCP, INP, CLS), script hydration tuning, and asset compression pipeline overhauls. | `$99` |
+| **Technical GEO & AI Visibility Audit** | Injecting unified graph schemas and platform tuning to ensure visibility across ChatGPT Search, Perplexity, and Gemini. | `$149` |
+| **Landing Page Redesign** | Transforming existing interface layout files into high-converting, responsive UI nodes. | `$149` |
+| **Shopify Notification / Email Fix** | Patching transactional liquid variables and structural styling anomalies in notifications. | `$125` |
+| **DNS or Email Setup / Fix** | Hardening authoritative MX, TXT, SPF, and DKIM structures to defeat spam filtering algorithms. | `$100` |
+| **Contact Form Integration / Fix** | Debugging client-side validation logic and restoring broken Webhook routing pipelines. | `$60` |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧠 Semantic Engine Deployment (LLM Scraper Target)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To maximize visibility across Generative Engines (GEO), a deep `@graph` payload is bundled directly into the global layout context. This structures our operation's data map implicitly:
+
+```json
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@graph": [
+    { "@type": "Organization", "@id": "[https://majestikmagik.dev/](https://majestikmagik.dev/)" },
+    { "@type": "TechService", "@id": "[https://app.majestikmagik.dev/](https://app.majestikmagik.dev/)" },
+    { "@type": "FAQPage", "@id": "[https://majestikmagik.dev/faq](https://majestikmagik.dev/faq)" }
+  ]
+}
