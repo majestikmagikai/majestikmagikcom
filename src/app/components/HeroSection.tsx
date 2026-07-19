@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Elegant Centered Description */}
         <p
           className="max-w-6xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500"        >
-          A gamified AI business engine and workspace for entrepreneurs and founders. Stop wrestling with generic prompts and lost context. Pivot Quest deploys a guardrailed strategic engine fine-tuned to keep your business scaling on the main trail.
+          From chaos to clarity, Pivot Quest is a gamified AI engine that keeps your business decisions sharp, your team aligned, and your execution on track.
         </p>
 
         {/* Clean Call To Action Layer */}
