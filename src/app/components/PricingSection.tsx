@@ -185,11 +185,11 @@ const PricingSection: React.FC<PricingSectionProps> = ({
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-slate-200 font-mono text-sm font-semibold tracking-wide leading-snug">{m.service}</h3>
+                    <h3 className="text-slate-200 font-mono text-lg font-semibold tracking-wide leading-snug">{m.service}</h3>
                     <span className="text-indigo-400 font-mono font-bold text-lg whitespace-nowrap bg-indigo-950/50 px-2 py-0.5 rounded border border-indigo-900/50">{m.price}</span>
                   </div>
                   {m.blurb ? (
-                    <p className="mt-3 text-xs font-sans text-slate-400 leading-relaxed">{m.blurb}</p>
+                    <p className="mt-3 text-md font-sans text-slate-400 leading-relaxed">{m.blurb}</p>
                   ) : null}
                 </div>
                 
