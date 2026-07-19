@@ -92,7 +92,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
 
         <p className="sr-only">
-          We engineer high-performance, context-aware workspaces built for rapid execution. No generic prompts. No lost context. Just guardrailed strategic engines with permanent memory to keep your business on the main trail.
+          From chaos to clarity, Pivot Quest is a gamified AI engine that keeps your business decisions sharp, your team aligned, and your execution on track.
         </p>
 
       </div>
