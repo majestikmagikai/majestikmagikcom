@@ -45,12 +45,42 @@ interface PricingSectionProps {
 }
 
 const DEFAULT_MICRO_SERVICES: MicroService[] = [
-  { service: 'Shopify Notification or Email Template Fix', price: '$125', url: 'https://book.stripe.com/bJefZh2tU7SK2lw6lxdEs03' },
-  { service: 'DNS or Email Setup / Fix', price: '$100', url: 'https://book.stripe.com/14AaEX1pQeh82lw39ldEs04' },
-  { service: 'Website Speed Optimization', price: '$99', url: 'https://book.stripe.com/28E5kDfgGflcd0abFRdEs05' },
-  { service: 'Landing Page Redesign', price: '$149', url: 'https://book.stripe.com/7sY9AT6Ka6OG9NYdNZdEs06' },
-  { service: 'SEO Keyword Audit', price: '$75', url: 'https://book.stripe.com/eVq00j5G66OGaS2bFRdEs07' },
-  { service: 'Contact Form Integration / Fix', price: '$60', url: 'https://book.stripe.com/8x228r8Si0qi2lw8tFdEs08' },
+  { 
+    service: 'Shopify Notification / Email Template', 
+    blurb: 'Fix broken layout logic, patch dynamic variables, and optimize transaction notifications or marketing email templates.', 
+    price: '$125', 
+    url: 'https://book.stripe.com/bJefZh2tU7SK2lw6lxdEs03' 
+  },
+  { 
+    service: 'DNS or Email Setup', 
+    blurb: 'Resolve MX, TXT, SPF, and DKIM configuration issues to eliminate email spam flagging and repair domain mapping failures.', 
+    price: '$100', 
+    url: 'https://book.stripe.com/14AaEX1pQeh82lw39ldEs04' 
+  },
+  { 
+    service: 'Website Speed Optimization', 
+    blurb: 'Maximize Core Web Vitals (LCP, INP, CLS) and crush mobile latency by purging rendering bloat and optimizing script hydration.', 
+    price: '$99', 
+    url: 'https://book.stripe.com/28E5kDfgGflcd0abFRdEs05' 
+  },
+  { 
+    service: 'Landing Page Redesign', 
+    blurb: 'Transform existing static pages into high-fidelity, high-converting interfaces packed with modern responsive UI and seamless web animations.', 
+    price: '$149', 
+    url: 'https://book.stripe.com/7sY9AT6Ka6OG9NYdNZdEs06' 
+  },
+  { 
+    service: 'Technical GEO & AI Visibility Audit', 
+    blurb: 'Audit platform performance and inject optimized graph schema to ensure real-time AI engines like ChatGPT Search and Perplexity crawl, cite, and recommend your site.', 
+    price: '$149', 
+    url: 'https://book.stripe.com/eVq00j5G66OGaS2bFRdEs07' 
+  },
+  { 
+    service: 'Contact Form Integration', 
+    blurb: 'Debug client-side input validation, fix broken Webhook routing pipelines, and restore secure lead-capture form deliveries.', 
+    price: '$60', 
+    url: 'https://book.stripe.com/8x228r8Si0qi2lw8tFdEs08' 
+  },
 ];
 
 const PricingSection: React.FC<PricingSectionProps> = ({
@@ -170,7 +200,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                     rel="noopener noreferrer"
                     className="inline-flex w-full items-center justify-center rounded-lg px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider bg-slate-800 text-slate-300 border border-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-500 transition-all duration-200"
                   >
-                    Request Service
+                    Buy Now
                   </a>
                 </div>
               </div>
