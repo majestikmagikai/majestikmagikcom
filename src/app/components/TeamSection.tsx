@@ -20,8 +20,8 @@ const teamMembers: TeamMember[] = [
   {
     name: "Jamil Matheny",
     title: "Founder & CEO",
-    email: "jamil.matheny@majestikmagik.com",
-    emailUrl: "mailto:jamil.matheny@majestikmagik.com",
+    email: "contact@majestikmagik.dev",
+    emailUrl: "mailto:contact@majestikmagik.dev",
     bio: "Jamil Matheny is the Founder & CEO of Majestik Magik, Inc., a digital solutions agency born from a lifelong passion for technology and a deep-seated desire to help businesses achieve their goals. He leads the company with a core mission: to create effective, purpose-driven software solutions that solve real-world business challenges.",
     imageUrl: "/img/0-jamil.jpg",
     url: "/about/jamil-matheny",
@@ -117,7 +117,7 @@ const TeamSection: React.FC = () => {
               </div>
 
               {/* Bio Block */}
-              <p className="flex-grow px-2 mb-6 text-sm text-slate-400 leading-relaxed font-sans max-w-xl">
+              <p className="flex-grow px-2 mb-6 text-md text-slate-400 leading-relaxed font-sans max-w-xl">
                 {member.bio}
                 <Link href={member.url} className="transition-colors duration-300 font-mono font-bold text-xs text-indigo-400 hover:text-indigo-300 ml-2 whitespace-nowrap">
                   [Read Full Protocol]
