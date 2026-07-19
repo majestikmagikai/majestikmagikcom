@@ -47,10 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
-      </head>
+    <html lang="en" suppressHydrationWarning>     
       <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
         <MainLayout>
           {children}
