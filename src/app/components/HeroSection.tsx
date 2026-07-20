@@ -70,8 +70,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/30 via-purple-600/20 to-indigo-500/30 rounded-3xl blur-3xl opacity-75 animate-[pulse_6s_ease-in-out_infinite] pointer-events-none z-0" />
           <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50 animate-[pulse_4s_ease-in-out_infinite] pointer-events-none z-0" />
 
-          {/* Actual Frame markup - Render immediately for instant LCP */}
-          <div className="group relative z-10 border border-indigo-500/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] bg-indigo-950/20 p-2.5 backdrop-blur-md transition-all duration-300 hover:border-indigo-400/60 hover:shadow-[0_0_60px_rgba(99,102,241,0.35)]">
+          {/* Mobile: Hidden for instant LCP / Desktop: Rendered frame */}
+          <div className="hidden md:block group relative z-10 border border-indigo-500/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] bg-indigo-950/20 p-2.5 backdrop-blur-md transition-all duration-300 hover:border-indigo-400/60 hover:shadow-[0_0_60px_rgba(99,102,241,0.35)]">
 
             {/* Top glass reflection highlight with an indigo-tinted gradient across the hardware frame */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-indigo-300/10 to-white/5 pointer-events-none z-30" />
@@ -83,8 +83,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               height={875}
               priority
               fetchPriority="high"
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
-              quality={75}
+              sizes="(max-width: 1024px) 80vw, 1200px"
               className="w-full h-auto rounded-xl border border-indigo-950/50 transition-transform duration-500 group-hover:scale-[1.01]"
             />
           </div>

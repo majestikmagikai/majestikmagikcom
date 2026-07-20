@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({
   handleNavClick,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   // State to track the active hovered element's bounds for the directional sliding line
   const [hoveredRect, setHoveredRect] = useState<{ left: number; width: number; opacity: number }>({
     left: 0,
@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({
     if (navRef.current) {
       const navBounds = navRef.current.getBoundingClientRect();
       const targetBounds = target.getBoundingClientRect();
-      
+
       setHoveredRect({
         left: targetBounds.left - navBounds.left,
         width: targetBounds.width,
@@ -75,11 +75,10 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        isScrolled || isMobileMenuOpen
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isMobileMenuOpen
           ? 'bg-[#07080e]/90 backdrop-blur-md border-b border-indigo-500/10 shadow-xl'
           : 'bg-transparent border-b border-transparent shadow-none'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
         <button
@@ -90,12 +89,11 @@ const Header: React.FC<HeaderProps> = ({
         >
           <Image
             src="/img/majestikmagik_logo_indigo-64x64.webp"
-            className="w-8 h-8 opacity-90 rounded-md"
             alt="Majestik Magik Logo"
-            loading="lazy"
             width={32}
             height={32}
-            quality={75}
+            sizes="32px"
+            className="w-8 h-8 opacity-90 rounded-md"
           />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
             Majestik Magik
@@ -103,8 +101,8 @@ const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Desktop Navigation */}
-        <nav 
-          ref={navRef} 
+        <nav
+          ref={navRef}
           className="hidden xl:flex items-center space-x-8 relative py-2"
         >
           {/* Animated Hover Line Tracker with dynamic stretching */}
@@ -117,10 +115,9 @@ const Header: React.FC<HeaderProps> = ({
             }}
           >
             {/* The actual line that scales outwards upon active hover state */}
-            <div 
-              className={`h-full bg-indigo-500 rounded-full transition-all duration-300 ease-out origin-center ${
-                hoveredRect.opacity > 0 ? 'w-full scale-x-100' : 'w-1/3 scale-x-50'
-              }`}
+            <div
+              className={`h-full bg-indigo-500 rounded-full transition-all duration-300 ease-out origin-center ${hoveredRect.opacity > 0 ? 'w-full scale-x-100' : 'w-1/3 scale-x-50'
+                }`}
             />
           </div>
 
