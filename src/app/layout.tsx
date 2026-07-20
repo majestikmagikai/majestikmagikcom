@@ -57,12 +57,13 @@ export default function RootLayout({
           type="font/truetype"
           crossOrigin="anonymous"
         />
-        {/* Preload hero image to eliminate LCP delay */}
+        {/* Preload Next.js Hero Image with camelCase React props */}
         <link
           rel="preload"
-          href="/img/screenshot_mm_ai.webp"
           as="image"
-          type="image/webp"
+          href="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75"
+          imageSrcSet="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75 1280w"
+          imageSizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
         />
       </head>
       <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
