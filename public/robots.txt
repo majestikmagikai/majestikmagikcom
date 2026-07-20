@@ -1,0 +1,51 @@
+# =============================================================
+# Robots.txt for majestikmagik.dev
+# =============================================================
+
+# 1. Standard search engines and public crawlers
+User-agent: *
+Allow: /
+Disallow: /api/             # Protect back-end api endpoints
+Disallow: /_next/           # Protect Next.js build artifacts
+Disallow: /private/         # Protect internal or staging routes
+
+# 2. Allow major AI engines for GEO & Generative Search indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Protect sensitive internal routes from AI crawlers while keeping public marketing open
+User-agent: GPTBot
+Disallow: /api/
+Disallow: /private/
+
+User-agent: PerplexityBot
+Disallow: /api/
+Disallow: /private/
+
+User-agent: Claude-Web
+Disallow: /api/
+Disallow: /private/
+
+# 3. Sitemap
+Sitemap: https://majestikmagik.dev/sitemap.xml
