@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  
+  // Experimental optimization features
+  experimental: {
+    // Tree-shakes unused component CSS/code overhead from common libraries
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'],
+  },
+
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'seeklogo.com' },

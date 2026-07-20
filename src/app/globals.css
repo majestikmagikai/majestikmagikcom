@@ -24,8 +24,9 @@
 /* --- 🏛️ Global Base Styling --- */
 html,
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fbfbfb;
+  background-color: #07080e !important;
+  color: #e2e8f0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* ==========================================================================

@@ -49,6 +49,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Instant critical background render to eliminate CSS render-blocking white frames */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              html, body { background-color: #07080e !important; color: #e2e8f0; margin: 0; padding: 0; }
+            `,
+          }}
+        />
+
         {/* Preload primary variable font */}
         <link
           rel="preload"
@@ -57,16 +66,18 @@ export default function RootLayout({
           type="font/truetype"
           crossOrigin="anonymous"
         />
-        {/* Next.js Optimized Image Preload */}
+
+        {/* Desktop Hero Image Preload (Matches Option B breakpoint) */}
         <link
           rel="preload"
           as="image"
           href="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75"
-          imageSrcSet="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75 1280w"
-          imageSizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
+          media="(min-width: 768px)"
+          imageSrcSet="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75 1280w"
+          imageSizes="(max-width: 1280px) 80vw, 1200px"
         />
       </head>
-      <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
+      <body className="bg-[#07080e] text-slate-200 overflow-x-hidden antialiased">
         <MainLayout>{children}</MainLayout>
 
         {/* Global Trustpilot Widget */}
