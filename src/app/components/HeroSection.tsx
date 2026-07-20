@@ -64,16 +64,14 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
 
         {/* Centerpiece Hardware Device / Interface Frame */}
-        <div
-          className="w-full xl:max-w-7xl mx-auto scroll-animate relative" // Added xl:max-w-7xl to let the container expand wider on desktop
-          style={{ animationDelay: "1.2s" }}
-        >
-          {/* Dynamic Aurora Ambient Glow Wrapper (Fades in/out behind the mockup) */}
-          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/30 via-purple-600/20 to-indigo-500/30 rounded-3xl blur-3xl opacity-75 animate-[pulse_6s_ease-in-out_infinite] delay-[1000ms] pointer-events-none z-0" />
-          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50 animate-[pulse_4s_ease-in-out_infinite] delay-[1000ms] pointer-events-none z-0" />
+        <div className="w-full xl:max-w-7xl mx-auto relative z-10">
 
-          {/* Actual Frame markup with a slow fade-in and slide-down animation */}
-          <div className="group relative z-10 border border-indigo-500/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] bg-indigo-950/20 p-2.5 backdrop-blur-md transition-all duration-500 hover:border-indigo-400/60 hover:shadow-[0_0_60px_rgba(99,102,241,0.35)] animate-[fadeInDown_2.8s_cubic-bezier(0.16,1,0.3,1)_both]">
+          {/* Dynamic Aurora Ambient Glow Wrapper (Fades in/out behind the mockup) */}
+          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500/30 via-purple-600/20 to-indigo-500/30 rounded-3xl blur-3xl opacity-75 animate-[pulse_6s_ease-in-out_infinite] pointer-events-none z-0" />
+          <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-2xl opacity-50 animate-[pulse_4s_ease-in-out_infinite] pointer-events-none z-0" />
+
+          {/* Actual Frame markup - Render immediately for instant LCP */}
+          <div className="group relative z-10 border border-indigo-500/30 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] bg-indigo-950/20 p-2.5 backdrop-blur-md transition-all duration-300 hover:border-indigo-400/60 hover:shadow-[0_0_60px_rgba(99,102,241,0.35)]">
 
             {/* Top glass reflection highlight with an indigo-tinted gradient across the hardware frame */}
             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-indigo-300/10 to-white/5 pointer-events-none z-30" />
@@ -84,9 +82,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               width={1400}
               height={875}
               priority
+              fetchPriority="high"
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
               quality={75}
-              className="w-full h-auto rounded-xl border border-indigo-950/50 opacity-95 transition-all duration-500 group-hover:opacity-100 group-hover:scale-[1.01]"
+              className="w-full h-auto rounded-xl border border-indigo-950/50 transition-transform duration-500 group-hover:scale-[1.01]"
             />
           </div>
         </div>

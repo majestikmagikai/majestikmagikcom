@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Majestik Magik', 
     images: [
       {
-        url: '/img/screenshot_mm.webp', 
+        url: '/img/screenshot_mm_main.webp', 
         width: 1200, 
         height: 630, 
         alt: 'Majestik Magik website screenshot', 
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Majestik Magik | Powering digital systems for the next generation of builders', 
     description:
       'Our systems are built to stabilize your infrastructure, gamify your daily workflows, and reward real-world execution.', 
-    images: ['/img/screenshot_mm.webp'], 
+    images: ['/img/screenshot_mm_main.webp'], 
   },
 };
 
@@ -61,8 +61,11 @@ export default function RootLayout({
         />
 
         {/* Website Search Schema */}
-        <Script type="application/ld+json" id="structured-data">
-          {JSON.stringify({
+        <script
+          type="application/ld+json"
+          id="structured-data"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
             "@context": "https://schema.org", 
             "@type": "WebSite", 
             "name": "Majestik Magik", 
@@ -72,12 +75,15 @@ export default function RootLayout({
               "target": "https://majestikmagik.dev/search?q={search_term_string}", 
               "query-input": "required name=search_term_string" 
             }
-          })}
-        </Script>
+          })}}
+        />
 
         {/* Deep GEO & AI Engine Semantic Schema */}
-        <Script type="application/ld+json" id="geo-ai-structured-data">
-          {JSON.stringify({
+        <script
+          type="application/ld+json"
+          id="geo-ai-structured-data"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
@@ -402,8 +408,8 @@ export default function RootLayout({
                 ]
               }
             ]
-          })}
-        </Script>
+          })}}
+        />
       </body>
     </html>
   );
