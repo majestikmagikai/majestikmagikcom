@@ -2,14 +2,12 @@
 # Robots.txt for majestikmagik.dev
 # =============================================================
 
-# 1. Global Default
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
-# 2. Explicit AI Engine Permissions
 User-agent: GPTBot
 Allow: /
 Disallow: /api/
@@ -40,5 +38,4 @@ Allow: /
 Disallow: /api/
 Disallow: /private/
 
-# 3. Sitemap
 Sitemap: https://majestikmagik.dev/sitemap.xml

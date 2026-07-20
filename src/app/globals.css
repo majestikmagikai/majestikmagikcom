@@ -21,7 +21,6 @@
   font-display: swap;
 }
 
-
 /* --- 🏛️ Global Base Styling --- */
 html,
 body {
@@ -39,6 +38,7 @@ body {
   background-size: 24px 24px;
 }
 
+/* Default visible to ensure instant FCP on mobile without waiting for JS scroll triggers */
 .scroll-animate {
   opacity: 1;
   transform: translateY(0);
@@ -50,7 +50,7 @@ body {
 }
 
 /* ==========================================================================
-    3D Fan-Friendly Screenshot Component (Optimized for Mobile CPU)
+    3D Screenshot Component
    ========================================================================== */
 
 .hero-screenshot-frame {
@@ -58,14 +58,13 @@ body {
   border-radius: 1.5rem;
   padding: 2px;
   isolation: isolate;
-  /* Remove perspective on mobile */
 }
 
 /* Base mobile gradient background: Flat, no blur, no heavy keyframes */
 .hero-screenshot-frame::before {
   content: "";
   position: absolute;
-  inset: -2px; /* Tighter bounds for cleaner presentation on mobile */
+  inset: -2px;
   border-radius: inherit;
   z-index: -1;
   background: linear-gradient(120deg, #4f46e5, #2563eb);
@@ -77,11 +76,10 @@ body {
   overflow: hidden;
   background: radial-gradient(circle at 10% 0%, #020617 0%, #020617 40%, #020617 100%);
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.3);
-  /* No heavy transitions or 3D transforms on mobile */
 }
 
 /* ==========================================================================
-    🖥️ Desktop-Only Enhancements (Fired via Media Query)
+    🖥️ Desktop-Only Enhancements
    ========================================================================== */
 @media (min-width: 1024px) {
   .hero-screenshot-frame {
@@ -103,7 +101,6 @@ body {
     transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.5s ease, filter 0.5s ease;
   }
 
-  /* Only run interactive hover tracking on desktop viewports */
   .hero-screenshot-frame.group:hover .hero-screenshot-inner {
     transform: rotateX(10deg) rotateY(-10deg) translateY(-6px) scale(1.03);
     box-shadow: 0 32px 40px rgba(15, 23, 42, 0.98), 0 0 0 1px rgba(191, 219, 254, 0.26);

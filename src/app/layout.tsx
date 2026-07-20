@@ -57,7 +57,7 @@ export default function RootLayout({
           type="font/truetype"
           crossOrigin="anonymous"
         />
-        {/* Preload Next.js Hero Image with camelCase React props */}
+        {/* Next.js Optimized Image Preload */}
         <link
           rel="preload"
           as="image"
@@ -69,8 +69,7 @@ export default function RootLayout({
       <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
         <MainLayout>{children}</MainLayout>
 
-
-        {/* Global Trustpilot Widget - Safe to load after page interaction */}
+        {/* Global Trustpilot Widget */}
         <Script
           strategy="lazyOnload"
           type="text/javascript"
