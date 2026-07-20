@@ -47,11 +47,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>     
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preload primary variable font to fix FCP render-blocking */}
+        <link
+          rel="preload"
+          href="/fonts/Inter-VariableFont_opsz,wght.ttf"
+          as="font"
+          type="font/truetype"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="bg-[#07080e] text-slate-200 overflow-x-hidden">
-        <MainLayout>
-          {children}
-        </MainLayout>
+        <MainLayout>{children}</MainLayout>
+
 
         {/* Global Trustpilot Widget - Safe to load after page interaction */}
         <Script

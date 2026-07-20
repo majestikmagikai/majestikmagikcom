@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 /* ==========================================================================
    Majestik Core Engine - Refactored Configuration
    ========================================================================== */
@@ -18,7 +20,7 @@
   font-style: italic;
   font-display: swap;
 }
-@import 'tailwindcss';
+
 
 /* --- 🏛️ Global Base Styling --- */
 html,
