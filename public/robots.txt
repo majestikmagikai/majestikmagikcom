@@ -1,35 +1,51 @@
 # =============================================================
 # Robots.txt for majestikmagik.dev
+# Optimized for Core Web Vitals, SEO, and AI Crawlability (GEO)
 # =============================================================
 
+# Default: Block API, internal Next.js routes, and private content from all bots
 User-agent: *
-Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# ============= AI Crawler Allowlist (Generative Engine Optimization) =============
+# These crawlers index your content for AI-driven search results (ChatGPT, Perplexity, etc.)
 
 User-agent: GPTBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Applebot-Extended
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ============= Standard Search Engine Crawlers =============
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+
+# ============= Sitemaps & Metadata =============
 Sitemap: https://majestikmagik.dev/sitemap.xml
+
+# Note: For AI-specific content guidance, create /llms.txt with explicit directives
+# Reference: https://llmstxt.org/ and https://browsing.claude.ai/llms.txt

@@ -1,20 +1,84 @@
-# Majestik Magik
+# llms.txt
+# Majestik Magik - LLM Crawler Guidance File
 
-> Powering digital systems, web performance, and AI-driven infrastructure.
+## Metadata
+- Version: 1.0
+- Last-Updated: 2024-01-15
+- Organization: Majestik Magik
+- Contact: contact@majestikmagik.dev
+- Website: https://majestikmagik.dev
+- Language: en-US
 
-Majestik Magik is a comprehensive platform for building high-performance digital systems, optimizing website speed, and leveraging AI-driven infrastructure. Our mission is to empower developers and businesses to build fast, scalable, and secure digital systems that deliver exceptional user experiences through innovation, collaboration, and excellence.
+## About Majestik Magik
+We're a digital engineering and optimization agency specializing in performance, SEO, and AI-readiness. We serve e-commerce, SaaS, local services, and professional service businesses.
 
-## Core Services & Pages
-- [Services & Pricing](https://majestikmagik.dev/#services): Custom web development, Next.js architecture, and Core Web Vitals optimization.
-- [Pivot Quest Platform](https://app.majestikmagik.dev/): AI-powered business operating engine with multi-model AI capabilities.
-- [WordPress Training](https://majestikmagik.dev/training/wordpress): Live walkthroughs and video tutorials for managing digital assets.
+Core Services:
+- Website Speed Optimization (Core Web Vitals)
+- Technical SEO & Generative Engine Optimization (GEO)
+- Next.js & React Architecture
+- WordPress Optimization & Security
+- Pivot Quest: AI-powered business operating engine
 
-## APIs & Documentation
-- [Majestik Magik Website](https://majestikmagik.dev): Primary landing page, performance diagnostics, and system overview.
-- [Platform Dashboard](https://app.majestikmagik.dev): App portal for real-time monitoring, analytics, and business execution.
-- [FAQ](https://majestikmagik.dev/faq): Common questions regarding web performance, setup, and AI infrastructure.
+## Primary Content (Index These)
 
-## Documentation & Legal
-- [Privacy Policy](https://majestikmagik.dev/privacy): Data handling and privacy compliance.
-- [Terms of Service](https://majestikmagik.dev/terms): Operational terms and conditions.
-- [Sitemap](https://majestikmagik.dev/sitemap.xml): Complete index of public routes and pages.
+### Key Pages
+- Homepage: https://majestikmagik.dev/
+- FAQ: https://majestikmagik.dev/faq
+- Pricing: https://majestikmagik.dev/#pricing
+- Contact: https://majestikmagik.dev/#contact
+
+### Tools & Products
+- Pivot Quest (AI workspace): https://app.majestikmagik.dev/
+
+### Learning Resources
+- WordPress Training: https://majestikmagik.dev/training/wordpress
+- Documentation: https://majestikmagik.dev/docs
+
+## Content Usage Rights
+✅ ALLOWED:
+- Citation and linking back to source URLs
+- Inclusion in LLM training datasets with attribution
+- Summarization and extraction of methodologies
+- Referencing our case studies and frameworks
+
+❌ PROHIBITED:
+- Scraping without link attribution
+- Claiming our methodologies as your own
+- Reproducing full articles without citations
+- Automated content duplication
+
+For commercial licensing: contact@majestikmagik.dev
+
+## Structured Data Included
+- Organization schema (company + contact info)
+- FAQPage schema (Q&A structured markup)
+- Service schema (service offerings)
+- LocalBusiness schema (Richmond, VA headquarters)
+- BlogPosting schema (articles with metadata)
+
+## Content to Exclude from Indexing
+- API routes (/api/*)
+- Authentication flows (/auth/*)
+- Admin dashboards (/admin/*, /dashboard/*)
+- User-specific data (reports, profiles, metrics)
+- Dynamic pages with rate limiting
+- Private/internal documentation
+
+## Model Compatibility
+Optimized for indexing by:
+- OpenAI (GPTBot, ChatGPT-User)
+- Anthropic (Claude-Web)
+- Perplexity (PerplexityBot)
+- Google (Google-Extended)
+- Other modern LLM crawlers
+
+## Crawl Preferences
+- Respect robots.txt directives
+- Follow sitemap: https://majestikmagik.dev/sitemap.xml
+- Crawl-delay: 1 second for heavy operations
+- User-agent identification appreciated
+
+## Questions?
+For API documentation, custom data access, or partnership inquiries:
+📧 contact@majestikmagik.dev
+🔗 https://majestikmagik.dev/contact
