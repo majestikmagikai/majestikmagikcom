@@ -79,12 +79,14 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             <Image
               src="/img/screenshot_mm_ai.webp"
               alt="Pivot Quest Screenshot"
-              width={1920}  // Matches natural width
-              height={1080} // Matches natural height
+              width={1920}
+              height={1080}
               priority
+              fetchPriority="high" // Force browser to prioritize this request immediately
               className="w-full h-auto rounded-xl border border-indigo-950/50 transition-transform"
-              sizes="(max-width: 1024px) 80vw, 1200px"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 1200px"
             />
+
           </div>
         </div>
 

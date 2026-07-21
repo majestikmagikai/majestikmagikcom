@@ -56,6 +56,20 @@ export const CoreEngineSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    // Delay video initialization so LCP image finishes downloading first
+    const timer = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {
+          // Autoplay policy fallback for browsers that block it
+        });
+      }
+    }, 2500); // Wait 2.5s until critical initial render is complete
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
   // Terminal Line Typing simulation
   useEffect(() => {
     if (!isIntersected) return; // Wait to type logs until scrolled into view
@@ -122,7 +136,7 @@ export const CoreEngineSection = () => {
           transform: "translateZ(0)",
           willChange: "transform",
           backfaceVisibility: "hidden"
-        }}        
+        }}
       >
         {/* WebM is vastly more hardware-efficient. Use it as primary if available! */}
         <source src="/videos/bare-metal-hardware.webm" type="video/webm" />

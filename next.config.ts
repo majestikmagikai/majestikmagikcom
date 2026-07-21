@@ -2,11 +2,12 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://widget.trustpilot.com;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' data: seeklogo.com upload.wikimedia.org www.svgrepo.com avatars.githubusercontent.com placehold.co images.pexels.com;
-    font-src 'self';
-    connect-src 'self';
+    img-src 'self' data: seeklogo.com upload.wikimedia.org www.svgrepo.com avatars.githubusercontent.com placehold.co images.pexels.com https://widget.trustpilot.com;
+    font-src 'self' data:;
+    connect-src 'self' https://widget.trustpilot.com;
+    frame-src 'self' https://widget.trustpilot.com;
     object-src 'none';
     frame-ancestors 'none';
     base-uri 'self';
@@ -44,8 +45,7 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   
   experimental: {
-    // Inlines critical CSS, eliminating a render-blocking request.
-    inlineCss: true,
+    // REMOVED: inlineCss (Conflicts with strict CSP rules)
     optimizePackageImports: ['lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'],
   },
 
@@ -58,8 +58,8 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'upload.wikimedia.org' },
       { protocol: 'https', hostname: 'www.svgrepo.com' },
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
-      { protocol: "https", hostname: "placehold.co" },
-      { protocol: "https", hostname: "images.pexels.com" },    
+      { protocol: 'https', hostname: 'placehold.co' },
+      { protocol: 'https', hostname: 'images.pexels.com' },    
     ],
   },
 
