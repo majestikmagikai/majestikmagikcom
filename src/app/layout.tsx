@@ -1,7 +1,15 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import localFont from 'next/font/local';
 import MainLayout from './components/MainLayout';
 import './globals.css';
+
+// Load Inter font with built-in Next.js optimization (Zero layout shift)
+const inter = localFont({
+  src: '../../public/fonts/Inter-VariableFont_opsz,wght.ttf',
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://majestikmagik.dev'),
@@ -47,44 +55,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Instant critical background render to eliminate CSS render-blocking white frames */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              html, body { background-color: #07080e !important; color: #e2e8f0; margin: 0; padding: 0; }
-            `,
-          }}
-        />
-
-        {/* Preload primary variable font */}
-        <link
-          rel="preload"
-          href="/fonts/Inter-VariableFont_opsz,wght.ttf"
-          as="font"
-          type="font/truetype"
-          crossOrigin="anonymous"
-        />
-
-        {/* Desktop Hero Image Preload (Matches Option B breakpoint) */}
-        <link
-          rel="preload"
-          as="image"
-          href="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75"
-          media="(min-width: 768px)"
-          imageSrcSet="/_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fscreenshot_mm_ai.webp&w=1280&q=75 1280w"
-          imageSizes="(max-width: 1280px) 80vw, 1200px"
-        />
-      </head>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="bg-[#07080e] text-slate-200 overflow-x-hidden antialiased">
         <MainLayout>{children}</MainLayout>
 
-        {/* Global Trustpilot Widget */}
+        {/* Global Trustpilot Widget - Loaded lazily */}
         <Script
           strategy="lazyOnload"
-          type="text/javascript"
-          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         />
 
         {/* Website Search Schema */}
