@@ -44,7 +44,8 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   
   experimental: {
-    // REMOVED: inlineCss (Conflicts with strict CSP rules)
+    // Inlines critical CSS, eliminating a render-blocking request.
+    inlineCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'],
   },
 
