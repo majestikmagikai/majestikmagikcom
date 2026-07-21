@@ -1,8 +1,5 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
-// Base CSP: More permissive for development to allow for 'unsafe-eval' and 'unsafe-inline'
 const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
@@ -19,7 +16,11 @@ const cspHeader = `
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
-    value: isProd ? cspHeader.replace("'unsafe-eval'", "").replace("'unsafe-inline'", "") : cspHeader
+    // In production, keep 'unsafe-inline' so Next.js hydration scripts & styles render properly.
+    // 'unsafe-eval' is only removed in production for security.
+    value: process.env.NODE_ENV === 'production' 
+      ? cspHeader.replace("'unsafe-eval'", "") 
+      : cspHeader
   },
   {
     key: 'Strict-Transport-Security',
@@ -39,23 +40,17 @@ const securityHeaders = [
   },
 ];
 
-
 const nextConfig: NextConfig = {
   output: 'standalone',
   
-  // Experimental optimization features
   experimental: {
-    inlineCss: true,
-    // Tree-shakes unused component CSS/code overhead from common libraries
+    // REMOVED: inlineCss (Conflicts with strict CSP rules)
     optimizePackageImports: ['lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'],
   },
 
   images: {
-    // Add common device widths to generate more optimal image sizes.
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    // Add image sizes for smaller images like icons or avatars.
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Enable AVIF support, which is often smaller than WebP.
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       { protocol: 'https', hostname: 'seeklogo.com' },
