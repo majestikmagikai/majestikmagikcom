@@ -10,8 +10,6 @@ Disallow: /private/
 
 User-agent: GPTBot
 Allow: /
-Disallow: /api/
-Disallow: /private/
 
 User-agent: ChatGPT-User
 Allow: /
@@ -19,23 +17,19 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: CCBot
+Allow: /
+
 User-agent: Anthropic-AI
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
-Disallow: /api/
-Disallow: /private/
 
 User-agent: Applebot-Extended
 Allow: /
 
-User-agent: CCBot
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
-Disallow: /api/
-Disallow: /private/
 
 Sitemap: https://majestikmagik.dev/sitemap.xml
