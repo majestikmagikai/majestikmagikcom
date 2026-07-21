@@ -125,7 +125,7 @@ export const CoreEngineSection = () => {
         }}        
       >
         {/* WebM is vastly more hardware-efficient. Use it as primary if available! */}
-        <source src="/videos/bare-metal-hardware.mp4" type="video/mp4" />
+        <source src="/videos/bare-metal-hardware.webm" type="video/webm" />
         <track kind="captions" src="data:text/vtt," label="No audio captions" default />
       </video>
 
