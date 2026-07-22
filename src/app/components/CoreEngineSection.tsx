@@ -13,6 +13,7 @@ export const CoreEngineSection = () => {
   const [visibleLogs, setVisibleLogs] = useState<LogLine[]>([]);
   const [showCursor, setShowCursor] = useState(false);
   const [isIntersected, setIsIntersected] = useState(false); // Tracks scroll entry state
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const terminalBodyRef = useRef<HTMLDivElement>(null);
 
@@ -20,18 +21,24 @@ export const CoreEngineSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const logs: LogLine[] = [
-    { text: "user@majestik-node1:~$ ./launch_core.py", color: "#6366f1", delay: 300 },
-    { text: "[INFO] Initializing Majestik Core Engine v1.0...", color: "#a5b4fc", delay: 800 },
-    { text: "[SYSTEM] Booting secure local machine execution layers...", color: "#a5b4fc", delay: 600 },
-    { text: "[DATABASE] Connecting to localized Vector Instance...", color: "#38bdf8", delay: 700 },
-    { text: "[DATABASE] pgvector extension found. Mapping high-dimensional embeddings...", color: "#34d399", delay: 500 },
-    { text: "[CACHE] Initializing context-window memory cache...", color: "#f43f5e", delay: 600 },
-    { text: "[CACHE] Volatile state memory pipeline: ACTIVE (Latency: 0.8ms)", color: "#34d399", delay: 400 },
-    { text: "[ENGINE] Fetching secure localized model graph fragments...", color: "#a5b4fc", delay: 800 },
-    { text: "[ENGINE] Custom contextual guardrails applied successfully.", color: "#34d399", delay: 400 },
-    { text: "[SUCCESS] Majestik Core RAG Engine is fully operational.", color: "#c084fc", fontWeight: "bold", delay: 500 },
-    { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 400 }
-  ];
+  { text: "user@majestik-node1:~$ ./launch_core.py --env=production", color: "#6366f1", delay: 300 },
+  { text: "[INFO] Initializing Majestik Core Engine v1.0...", color: "#a5b4fc", delay: 600 },
+  { text: "[SYSTEM] Verifying host hardware environment... CPU: OK | RAM: OK", color: "#a5b4fc", delay: 400 },
+  { text: "[SYSTEM] Booting secure local machine execution layers...", color: "#a5b4fc", delay: 500 },
+  { text: "[DATABASE] Connecting to localized Vector Instance...", color: "#38bdf8", delay: 600 },
+  { text: "[DATABASE] pgvector extension found. Mapping 1536-dim embeddings...", color: "#34d399", delay: 400 },
+  { text: "[MODULE] Loading external microservice registry...", color: "#38bdf8", delay: 500 },
+  { text: "[API] Registering module: Pivot Quest GEO & Core Web Vitals Audit...", color: "#c084fc", fontWeight: "bold", delay: 500 },
+  { text: "[API] External endpoint attached: RapidAPI Gateway [ACTIVE]", color: "#34d399", delay: 400 },
+  { text: "[CACHE] Initializing context-window memory cache (Redis pipeline)...", color: "#f43f5e", delay: 500 },
+  { text: "[CACHE] Volatile state memory: ACTIVE (Target latency: 0.8ms)", color: "#34d399", delay: 400 },
+  { text: "[SECURITY] Applying zero-trust local isolation protocols...", color: "#fbbf24", delay: 500 },
+  { text: "[ENGINE] Fetching localized model graph fragments...", color: "#a5b4fc", delay: 600 },
+  { text: "[ENGINE] Custom contextual guardrails applied successfully.", color: "#34d399", delay: 400 },
+  { text: "[SUCCESS] Majestik Core RAG Engine is fully operational.", color: "#c084fc", fontWeight: "bold", delay: 500 },
+  { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 300 },
+  { text: "user@majestik-node1:~$ listening on http://localhost:8080...", color: "#38bdf8", delay: 200 }
+];
 
   // Intersection Observer to handle on-scroll trigger & video playback control
   useEffect(() => {
@@ -173,18 +180,79 @@ export const CoreEngineSection = () => {
             transition: "opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), transform 4.5s cubic-bezier(0.16, 1, 0.3, 1)"
           }}
         >
-          <div style={{ color: "#6366f1", fontSize: "12px", fontWeight: "bold", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>
-            The Architecture Engine
+          {/* Status Tag */}
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px", justifyContent: "inherit" }}>
+            <span style={{ color: "#6366f1", fontSize: "12px", fontWeight: "bold", letterSpacing: "2px", textTransform: "uppercase" }}>
+              The Architecture Engine
+            </span>
+            <span style={{ background: "rgba(99, 102, 241, 0.15)", color: "#a5b4fc", border: "1px solid rgba(99, 102, 241, 0.3)", padding: "2px 8px", borderRadius: "12px", fontSize: "10px", fontWeight: 600 }}>
+              CURRENTLY IN DEVELOPMENT
+            </span>
           </div>
+
           <h2 style={{ color: "#ffffff", fontSize: "36px", fontWeight: "bold", lineHeight: "1.2", marginBottom: "20px" }}>
             Meet Majestik Core
           </h2>
-          <p style={{ color: "#94a3b8", fontSize: "16px", lineHeight: "1.7", marginBottom: "24px" }}>
-            A proprietary, hybrid Local AI and cloud API domain-specific model architected precisely for entrepreneurs and business owners.
+
+          <p style={{ color: "#94a3b8", fontSize: "16px", lineHeight: "1.7", marginBottom: "16px" }}>
+            A proprietary, hybrid Local AI and cloud API domain-specific model architected precisely for high-performance automation and enterprise data security.
           </p>
-          <p style={{ color: "#64748b", fontSize: "14px", lineHeight: "1.6" }}>
-            Stop burning resources renting generic cloud-agent models. Majestik Core combines localized security protocols with precision contextual memory buffers—delivering secure data execution right on your physical machine.
+
+          <p style={{ color: "#64748b", fontSize: "14px", lineHeight: "1.6", marginBottom: "28px" }}>
+            While the full Majestik Core AI engine framework is being built, our specialized microservices are rolling out today—starting with specialized SEO & Performance audit endpoints on RapidAPI.
           </p>
+
+          {/* Live Feature API Card */}
+          <div style={{
+            background: "rgba(18, 24, 54, 0.6)",
+            border: "1px solid #1e264f",
+            borderRadius: "8px",
+            padding: "16px",
+            textAlign: "left"
+          }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
+              <span style={{ fontSize: "11px", fontWeight: 700, color: "#34d399", letterSpacing: "1px", textTransform: "uppercase" }}>
+                ● Live API Endpoint
+              </span>
+              <span style={{ fontSize: "11px", color: "#64748b" }}>RapidAPI</span>
+            </div>
+            <div style={{ color: "#ffffff", fontWeight: 600, fontSize: "15px", marginBottom: "4px" }}>
+              Pivot Quest: GEO & Web Vitals Audit
+            </div>
+            <p style={{ color: "#94a3b8", fontSize: "13px", lineHeight: "1.5", marginBottom: "12px" }}>
+              The Pivot Quest API delivers fast, full-spectrum Web Vitals metrics, technical diagnostics, and Generative Engine Optimization (GEO) insights in a single, unified JSON payload.
+            </p>
+            <p style={{ color: "#94a3b8", fontSize: "13px", lineHeight: "1.5", marginBottom: "12px" }}>
+              Designed for SEO platforms, performance dashboards, agency site-audit tools, and automated site monitors, this API inspects actual loading/responsiveness metrics alongside AI-crawler readiness (GPTBot, ClaudeBot, Perplexity, etc.).
+            </p>
+            <a
+              href="https://rapidapi.com/jamilmatheny-OvPZsHzjBUA/api/pivot-quest-geo-core-web-vitals-audit-api"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => setIsButtonHovered(true)}
+              onMouseLeave={() => setIsButtonHovered(false)}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '10px 16px',
+                borderRadius: '6px',
+                background: isButtonHovered ? 'rgba(99, 102, 241, 0.2)' : 'rgba(99, 102, 241, 0.1)',
+                border: '1px solid rgba(99, 102, 241, 0.3)',
+                color: '#a5b4fc',
+                fontSize: '13px',
+                fontWeight: 600,
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <span>Test endpoint on RapidAPI</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
 
         {/* Right Column: Linux Terminal Window */}
@@ -256,7 +324,7 @@ export const CoreEngineSection = () => {
                 color: "#a5b4fc",
                 fontSize: "13px",
                 lineHeight: "1.6",
-                height: "280px",
+                height: "520px",
                 overflowY: "auto",
                 textAlign: "left"
               }}
