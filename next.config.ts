@@ -2,11 +2,12 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://widget.trustpilot.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://widget.trustpilot.com https://static.cloudflareinsights.com;
     style-src 'self' 'unsafe-inline';
     img-src 'self' data: seeklogo.com upload.wikimedia.org www.svgrepo.com avatars.githubusercontent.com placehold.co images.pexels.com https://widget.trustpilot.com;
     font-src 'self' data:;
-    connect-src 'self' https://widget.trustpilot.com;
+    connect-src 'self' https://widget.trustpilot.com https://static.cloudflareinsights.com https://generativelanguage.googleapis.com;
+    media-src 'self' data:;
     frame-src 'self' https://widget.trustpilot.com;
     object-src 'none';
     frame-ancestors 'none';
