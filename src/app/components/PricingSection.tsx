@@ -46,39 +46,39 @@ interface PricingSectionProps {
 
 const DEFAULT_MICRO_SERVICES: MicroService[] = [
   { 
-    service: 'Shopify Notification / Email Template', 
+    service: 'Shopify Email & Notification Engine', 
     blurb: 'Fix broken layout logic, patch dynamic variables, and optimize transaction notifications or marketing email templates.', 
-    price: '$125', 
+    price: '$200', 
     url: 'https://book.stripe.com/bJefZh2tU7SK2lw6lxdEs03' 
   },
   { 
-    service: 'DNS or Email Setup', 
+    service: 'DNS, SPF, DKIM & Deliverability Setup', 
     blurb: 'Resolve MX, TXT, SPF, and DKIM configuration issues to eliminate email spam flagging and repair domain mapping failures.', 
-    price: '$100', 
+    price: '$250', 
     url: 'https://book.stripe.com/14AaEX1pQeh82lw39ldEs04' 
   },
   { 
-    service: 'Website Speed Optimization', 
+    service: 'Core Web Vitals & Speed Overhaul', 
     blurb: 'Maximize Core Web Vitals (LCP, INP, CLS) and crush mobile latency by purging rendering bloat and optimizing script hydration.', 
-    price: '$99', 
+    price: '$400', 
     url: 'https://book.stripe.com/28E5kDfgGflcd0abFRdEs05' 
   },
   { 
-    service: 'Landing Page Redesign', 
+    service: 'Landing Page Redesign & Engineering', 
     blurb: 'Transform existing static pages into high-fidelity, high-converting interfaces packed with modern responsive UI and seamless web animations.', 
-    price: '$149', 
+    price: '$550', 
     url: 'https://book.stripe.com/7sY9AT6Ka6OG9NYdNZdEs06' 
   },
   { 
     service: 'Technical GEO & AI Visibility Audit', 
     blurb: 'Audit platform performance and inject optimized graph schema to ensure real-time AI engines like ChatGPT Search and Perplexity crawl, cite, and recommend your site.', 
-    price: '$149', 
+    price: '$300', 
     url: 'https://book.stripe.com/eVq00j5G66OGaS2bFRdEs07' 
   },
   { 
-    service: 'Contact Form Integration', 
+    service: 'Contact Form & Webhook Debugging', 
     blurb: 'Debug client-side input validation, fix broken Webhook routing pipelines, and restore secure lead-capture form deliveries.', 
-    price: '$60', 
+    price: '$150', 
     url: 'https://book.stripe.com/8x228r8Si0qi2lw8tFdEs08' 
   },
 ];
