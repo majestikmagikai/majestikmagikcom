@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import portfolioData from '@/data/portfolio-links.json';
-import { ExternalLink, Github, Youtube, Zap, ShieldCheck } from 'lucide-react';
+import { ExternalLink, Github, Youtube, Zap } from 'lucide-react';
 
 export default function Portfolio() {
   return (

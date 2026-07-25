@@ -20,27 +20,7 @@ export const CoreEngineSection = () => {
   // NEW: Ref to target the background video directly
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const logs: LogLine[] = [
-  { text: "user@majestik-node1:~$ ./launch_core.py --env=production", color: "#6366f1", delay: 300 },
-  { text: "[INFO] Initializing Majestik Core Engine v1.0...", color: "#a5b4fc", delay: 600 },
-  { text: "[SYSTEM] Verifying host hardware environment... CPU: OK | RAM: OK", color: "#a5b4fc", delay: 400 },
-  { text: "[SYSTEM] Booting secure local machine execution layers...", color: "#a5b4fc", delay: 500 },
-  { text: "[DATABASE] Connecting to localized Vector Instance...", color: "#38bdf8", delay: 600 },
-  { text: "[DATABASE] pgvector extension found. Mapping 1536-dim embeddings...", color: "#34d399", delay: 400 },
-  { text: "[MODULE] Loading external microservice registry...", color: "#38bdf8", delay: 500 },
-  { text: "[API] Registering module: Pivot Quest GEO & Core Web Vitals Audit...", color: "#c084fc", fontWeight: "bold", delay: 500 },
-  { text: "[API] External endpoint attached: RapidAPI Gateway [ACTIVE]", color: "#34d399", delay: 400 },
-  { text: "[CACHE] Initializing context-window memory cache (Redis pipeline)...", color: "#f43f5e", delay: 500 },
-  { text: "[CACHE] Volatile state memory: ACTIVE (Target latency: 0.8ms)", color: "#34d399", delay: 400 },
-  { text: "[SECURITY] Applying zero-trust local isolation protocols...", color: "#fbbf24", delay: 500 },
-  { text: "[ENGINE] Fetching localized model graph fragments...", color: "#a5b4fc", delay: 600 },
-  { text: "[ENGINE] Custom contextual guardrails applied successfully.", color: "#34d399", delay: 400 },
-  { text: "[SUCCESS] Majestik Core RAG Engine is fully operational.", color: "#c084fc", fontWeight: "bold", delay: 500 },
-  { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 300 },
-  { text: "user@majestik-node1:~$ listening on http://localhost:8080...", color: "#38bdf8", delay: 200 }
-];
 
-  // Intersection Observer to handle on-scroll trigger & video playback control
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -81,6 +61,25 @@ export const CoreEngineSection = () => {
   useEffect(() => {
     if (!isIntersected) return; // Wait to type logs until scrolled into view
 
+    const logs: LogLine[] = [
+      { text: "user@majestik-node1:~$ ./launch_core.py --env=production", color: "#6366f1", delay: 300 },
+      { text: "[INFO] Initializing Majestik Core Engine v1.0...", color: "#a5b4fc", delay: 600 },
+      { text: "[SYSTEM] Verifying host hardware environment... CPU: OK | RAM: OK", color: "#a5b4fc", delay: 400 },
+      { text: "[SYSTEM] Booting secure local machine execution layers...", color: "#a5b4fc", delay: 500 },
+      { text: "[DATABASE] Connecting to localized Vector Instance...", color: "#38bdf8", delay: 600 },
+      { text: "[DATABASE] pgvector extension found. Mapping 1536-dim embeddings...", color: "#34d399", delay: 400 },
+      { text: "[MODULE] Loading external microservice registry...", color: "#38bdf8", delay: 500 },
+      { text: "[API] Registering module: Pivot Quest GEO & Core Web Vitals Audit...", color: "#c084fc", fontWeight: "bold", delay: 500 },
+      { text: "[API] External endpoint attached: RapidAPI Gateway [ACTIVE]", color: "#34d399", delay: 400 },
+      { text: "[CACHE] Initializing context-window memory cache (Redis pipeline)...", color: "#f43f5e", delay: 500 },
+      { text: "[CACHE] Volatile state memory: ACTIVE (Target latency: 0.8ms)", color: "#34d399", delay: 400 },
+      { text: "[SECURITY] Applying zero-trust local isolation protocols...", color: "#fbbf24", delay: 500 },
+      { text: "[ENGINE] Fetching localized model graph fragments...", color: "#a5b4fc", delay: 600 },
+      { text: "[ENGINE] Custom contextual guardrails applied successfully.", color: "#34d399", delay: 400 },
+      { text: "[SUCCESS] Majestik Core RAG Engine is fully operational.", color: "#c084fc", fontWeight: "bold", delay: 500 },
+      { text: "user@majestik-node1:~$ READY_FOR_RAPID_EXECUTION=true", color: "#6366f1", delay: 300 },
+      { text: "user@majestik-node1:~$ listening on http://localhost:8080...", color: "#38bdf8", delay: 200 }
+    ];
     let currentLine = 0;
     let timeoutId: NodeJS.Timeout;
 
@@ -342,7 +341,7 @@ export const CoreEngineSection = () => {
                     }}
                   >
                     {log.text}
-                    {index === logs.length - 1 && showCursor && (
+                    {index === visibleLogs.length - 1 && showCursor && (
                       <span className="terminal-cursor-blink" style={{ marginLeft: "4px" }}>█</span>
                     )}
                   </p>
