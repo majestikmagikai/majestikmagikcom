@@ -28,6 +28,7 @@ export default function MainLayout({
     { name: 'Core Engine', url: '/#core-engine' },
     { name: 'Services', url: '/#services' },
     { name: 'About', url: '/#about' },
+    { name: 'Portfolio', url: '/portfolio' },
     { name: 'Testimonials', url: '/#testimonials' },
     { name: 'Contact', url: '/#contact' },
     { name: 'Login', url: 'https://app.majestikmagik.dev/dashboard', external: true }

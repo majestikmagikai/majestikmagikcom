@@ -1,0 +1,99 @@
+[
+  {
+    "id": "middleman-motors",
+    "title": "Middleman Motors",
+    "subtitle": "Full-Stack Automotive Platform & Data Pipeline",
+    "description": "High-performance dealership inventory web app featuring automated inventory ingestion, real-time filtering, dynamic image proxies, and edge-cached server responses.",
+    "category": "Full-Stack / Automotive",
+    "featured": true,
+    "metrics": [
+      { "label": "Performance Score", "value": "99 Desktop" },
+      { "label": "TTFB Latency", "value": "12ms Edge Response" },
+      { "label": "Main Thread Block", "value": "0ms TBT" }
+    ],
+    "techStack": ["React", "TypeScript", "Supabase", "Cloudflare Workers", "Tailwind CSS", "REST APIs"],
+    "liveUrl": "https://middlemanmotors.com",
+    "githubUrl": "https://github.com/middlemanmotors86-byte/Middleman-site",
+    "image": "/img/middlemanmotors_screenshot.png"
+  },
+  {
+    "id": "pivot-quest-dashboard",
+    "title": "Pivot Quest Analytics",
+    "subtitle": "Web Performance & Core Web Vitals Monitor",
+    "description": "Automated SEO, LLM ingestion, and Core Web Vitals tracking dashboard for monitoring site performance, AI chunkability, and search crawler visibility.",
+    "category": "Developer Tools / Analytics",
+    "featured": true,
+    "metrics": [
+      { "label": "Crawl Audit", "value": "Real-Time Schema" },
+      { "label": "LLM Readiness", "value": "llms.txt Compliant" }
+    ],
+    "techStack": ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
+    "liveUrl": "https://app.majestikmagik.dev/dashboard",
+    "githubUrl": "",
+    "demoVideoUrl": "",
+    "image": "/img/pivotquestwebvitals_screenshot.png"
+  },
+  {
+    "id": "cearco-chemicals",
+    "title": "CEARCO Chemicals",
+    "subtitle": "Specialty Chemical & Cleaning Equipment Hub",
+    "description": "Custom high-speed React storefront built for a specialty chemical manufacturer and pressure washer distribution brand, showcasing product lines and service diagnostics.",
+    "category": "E-Commerce / Industrial",
+    "featured": false,
+    "metrics": [
+      { "label": "UI Architecture", "value": "Component Library" },
+      { "label": "Site Speed", "value": "Sub-Second Hydration" }
+    ],
+    "techStack": ["React", "JavaScript", "Tailwind CSS", "Vite"],
+    "liveUrl": "https://cearcochemicals.com",
+    "githubUrl": "https://github.com/majestikmagik/cearcochemicals",
+    "image": "/img/cearcochemicals_screenshot.png"
+  },
+  {
+    "id": "parris-gainer",
+    "title": "Dr. Parris Gainer",
+    "subtitle": "Consulting & Mental Health Advocacy Portal",
+    "description": "Custom WordPress deployment designed for strategic mental health solutions, author publication showcases, disability advocacy counseling, and community engagement.",
+    "category": "CMS / Client Services",
+    "featured": false,
+    "metrics": [
+      { "label": "Content Engine", "value": "Custom Theme" },
+      { "label": "SEO Readiness", "value": "Optimized Schema" }
+    ],
+    "techStack": ["WordPress", "PHP", "MySQL", "CSS3"],
+    "liveUrl": "https://parrisgainer.com",
+    "image": "/img/parrisgainer_screenshot.png"
+  },
+  {
+    "id": "noel-customs",
+    "title": "Noel Customs",
+    "subtitle": "Custom Apparel & Embroidery Storefront",
+    "description": "High-converting Shopify e-commerce platform engineered for custom apparel, embroidered goods, dynamic order processing, and brand positioning.",
+    "category": "E-Commerce / Apparel",
+    "featured": false,
+    "metrics": [
+      { "label": "Checkout Flow", "value": "Shopify Engine" },
+      { "label": "Conversion UI", "value": "Mobile-First" }
+    ],
+    "techStack": ["Shopify", "Liquid", "JavaScript"],
+    "liveUrl": "https://noelcustoms.shop",
+    "githubUrl": "",
+    "image": "/img/noelcustomsshop_screenshot.png"
+  },
+  {
+    "id": "jamil-cleaning-app",
+    "title": "Jamil Cleaning Services",
+    "subtitle": "Commercial & Residential Booking Platform",
+    "description": "Custom web application engineered for streamlined cleaning service requests, automated client quotes, interactive scheduling pipelines, and responsive service management.",
+    "category": "Client Work / Web App",
+    "featured": false,
+    "metrics": [
+      { "label": "Booking Flow", "value": "Real-Time Lead Capture" },
+      { "label": "Deployment", "value": "Vercel Edge Network" }
+    ],
+    "techStack": ["React", "JavaScript", "Tailwind CSS", "Vercel"],
+    "liveUrl": "https://jamilcleaningapp.vercel.app/",
+    "githubUrl": "",
+    "image": "/img/jamilcleaningapp_screenshot.png"
+  }
+]

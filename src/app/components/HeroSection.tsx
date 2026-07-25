@@ -10,13 +10,13 @@ interface HeroSectionProps {
 const HeroSection: React.FC<HeroSectionProps> = () => {
 
   return (
-    <section id="home" aria-labelledby="home-heading" className="relative z-0 pt-32 pb-24 md:pt-48 md:pb-36 overflow-hidden bg-[#07080e]">
+    <section id="home" aria-labelledby="home-heading" className="relative z-0 pt-32 pb-24 md:pt-48 md:pb-36 overflow-hidden">
 
       {/* Apple-style centered cinematic ambient radial core glow */}
       <div
-        className="absolute inset-0 z-10 opacity-50 pointer-events-none"
+        className="absolute inset-0 z-10 opacity-90 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle at 50% 45%, rgba(99, 102, 241, 0.18) 0%, rgba(7, 8, 14, 0) 65%)',
+          background: 'radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.85) 0%, rgba(7, 8, 14, 0) 65%)',
         }}
       ></div>
 
