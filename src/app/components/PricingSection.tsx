@@ -65,7 +65,7 @@ const DEFAULT_MICRO_SERVICES: MicroService[] = [
   },
   { 
     service: 'Landing Page Redesign & Engineering', 
-    blurb: 'Transform existing static pages into high-fidelity, high-converting interfaces packed with modern responsive UI and seamless web animations.', 
+    blurb: 'We upgrade static websites into high-fidelity, responsive interfaces powered by fluid web animations and seamless full-stack API integrations. From visual polish to backend data flow, we build fast, interactive sites designed to engage users and convert visitors.', 
     price: '$550', 
     url: 'https://book.stripe.com/7sY9AT6Ka6OG9NYdNZdEs06' 
   },

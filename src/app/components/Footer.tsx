@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
             <div>
               <p className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">Direct Signal Packet</p>
               <p className="text-sm mt-1">
-                <a href="mailto:contact@majestikmagik.dev" className="text-slate-300 transition-colors hover:text-indigo-400 font-mono">
+                <a href="mailto:contact@majestikmagik.dev" className="hover:text-indigo-400 transition-colors py-1 block font-mono">
                   contact@majestikmagik.dev
                 </a>
               </p>
@@ -84,14 +84,14 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
           <div className="flex flex-col items-start space-y-4">
             <h3 className="text-xs font-mono font-bold tracking-widest text-indigo-400 uppercase">System Core Links</h3>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm w-full">
-              <li><a href="/privacy-policy" className="hover:text-indigo-400 transition-colors py-1 block">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" className="hover:text-indigo-400 transition-colors py-1 block">Terms of Service</a></li>
-              <li><a href="/cookie-policy" className="hover:text-indigo-400 transition-colors py-1 block">Cookie Policy</a></li>
-              <li><a href="/refund-policy" className="hover:text-indigo-400 transition-colors py-1 block">Refund Policy</a></li>
-              <li><a href="/intellectual-property" className="hover:text-indigo-400 transition-colors py-1 block">Intellectual Property</a></li>
-              <li><a href="/cyber-security-policy" className="hover:text-indigo-400 transition-colors py-1 block">Cyber Security</a></li>
-              <li><a href="/sitemap.xml" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Sitemap</a></li>
-              <li><a href="/faq" className="hover:text-indigo-400 transition-colors py-1 block">FAQ Matrix</a></li>
+              <li><a href="/privacy-policy" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Terms of Service</a></li>
+              <li><a href="/cookie-policy" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Cookie Policy</a></li>
+              <li><a href="/refund-policy" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Refund Policy</a></li>
+              <li><a href="/intellectual-property" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Intellectual Property</a></li>
+              <li><a href="/cyber-security-policy" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">Cyber Security</a></li>
+              <li><a href="/sitemap.xml" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs font-mono text-xs">Sitemap</a></li>
+              <li><a href="/faq" className="hover:text-indigo-400 transition-colors py-1 block font-mono text-xs">FAQ</a></li>
             </ul>
           </div>
 
@@ -154,11 +154,10 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
           {isClient && (
             <div className="text-center md:text-right max-w-md">
-              <div className="trustpilot-widget text-slate-400 hover:text-indigo-400 transition-colors" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="66c36745eb620c5977db34ef">
-                <a href="https://www.trustpilot.com/review/majestikmagik.com" target="_blank" rel="noopener noreferrer" className="underline">
-                  Verified Trustpilot Portal
-                </a>
+              <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a67624122933556471da38c" data-style-height="52px" data-style-width="100%" data-token="d76c4f8c-d0c3-4fa3-a72b-cc2de3857170">
+                <a href="https://www.trustpilot.com/review/majestikmagik.dev" target="_blank" rel="noopener">Trustpilot</a>
               </div>
+
               <div className="mt-2 text-[11px] leading-relaxed text-slate-600 italic">
                 “Majestik Magik didn’t just build a website — they built a platform that empowers my voice and mission.” <span className="text-slate-500 not-italic font-sans block mt-0.5">– Parris Gainer</span>
               </div>

@@ -61,6 +61,9 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
       { protocol: 'https', hostname: 'placehold.co' },
       { protocol: 'https', hostname: 'images.pexels.com' },    
+      { protocol: 'https', hostname: 'widget.trustpilot.com' },
+      { protocol: 'https', hostname: 'static.cloudflareinsights.com' },
+      { protocol: 'https', hostname: 'majestikmagik.dev'}
     ],
   },
 
