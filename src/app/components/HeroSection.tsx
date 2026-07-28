@@ -31,15 +31,14 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
       <div className="container relative px-6 mx-auto z-20 max-w-7xl text-center">
 
-        {/* Product Tag Badge */}
-        <div className="mb-6 scroll-animate">
-          <span className="inline-block text-xs font-mono font-bold tracking-widest text-indigo-400 uppercase bg-[#0d0f1a]/90 px-4 py-1.5 rounded-full border border-indigo-500/10 shadow-[0_0_15px_rgba(99,102,241,0.1)]">
-            Pivot Quest V1.0
-          </span>
+        {/* Floating Pill Badge */}
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-indigo-300 backdrop-blur-md scroll-animate opacity-90 ease-in-out duration-500">
+          <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+          The Gamified AI Co-Founder
         </div>
 
         {/* Massive Apple-Inspired Header Stack */}
-        <h1 className="mb-8 text-5xl md:text-7xl lg:text-8xl text-slate-100 font-bold tracking-tight leading-none scroll-animate opacity-90 ease-in-out duration-500">
+        <h1 className="mb-6 text-5xl md:text-7xl lg:text-8xl text-slate-100 font-bold tracking-tighter leading-[0.9] scroll-animate opacity-90 ease-in-out duration-500">
           Introducing <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-indigo-300 via-indigo-400 to-white scroll-animate opacity-90 ease-in-out duration-1000">
             Pivot Quest
@@ -47,9 +46,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </h1>
 
         {/* Elegant Centered Description */}
-        <p
-          className="max-w-2xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500"        >
-          From chaos to clarity, Pivot Quest is a gamified AI engine that keeps your business decisions sharp, your team aligned, and your execution on track.
+        <p className="max-w-2xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500">
+          Your autonomous AI Co-Founder that turns business chaos into clarity—keeping your strategy sharp, your team aligned, and your execution on track.
         </p>
 
         {/* Clean Call To Action Layer */}
@@ -59,7 +57,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:shadow-[0_0_45px_rgba(99,102,241,0.8)] border border-indigo-400/20"
-          >Start Your Quest
+          >
+            Start Your Quest
           </a>
         </div>
 
