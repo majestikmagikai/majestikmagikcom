@@ -46,7 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </h1>
 
         {/* Elegant Centered Description */}
-        <p className="max-w-2xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500">
+        <p className="max-w-3xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500">
           Your autonomous AI Co-Founder that turns business chaos into clarity—keeping your strategy sharp, your team aligned, and your execution on track.
         </p>
 
@@ -56,10 +56,13 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             href="https://app.majestikmagik.dev/sign-up"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:shadow-[0_0_45px_rgba(99,102,241,0.8)] border border-indigo-400/20"
+            className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.65)] hover:shadow-[0_0_65px_rgba(99,102,241,0.95)] border border-indigo-400/30"
           >
             Start Your Quest
           </a>
+          <p className="mt-3 text-xs text-slate-500 tracking-wide">
+            3 days free, then flexible tiers &nbsp;·&nbsp; Built for solo founders, by a solo founder
+          </p>
         </div>
 
         {/* Centerpiece Hardware Device / Interface Frame */}
@@ -87,6 +90,15 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             />
 
           </div>
+        </div>
+
+        {/* Feature Chips */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+          {['Powered by Edge AI', 'Sub-Second Latency', '100% Owned Workflows'].map((chip) => (
+            <span key={chip} className="text-xs font-mono text-indigo-300/70 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1.5 rounded-full tracking-wide">
+              {chip}
+            </span>
+          ))}
         </div>
 
         <p className="sr-only">
