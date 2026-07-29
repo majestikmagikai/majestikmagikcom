@@ -94,8 +94,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
         {/* Feature Chips */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
-          {['Powered by Edge AI', 'Sub-Second Latency', '100% Owned Workflows'].map((chip) => (
-            <span key={chip} className="text-xs font-mono text-indigo-300/70 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1.5 rounded-full tracking-wide">
+          {['Powered by Majestik Core API', 'Sub-Second Latency', 'Contextual Intelligence'].map((chip) => (
+            <span
+              key={chip}
+              className="text-xs font-mono text-indigo-300/70 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1.5 rounded-full tracking-wide"
+            >
               {chip}
             </span>
           ))}
