@@ -114,7 +114,7 @@ export const CoreEngineSection = () => {
       style={{
         position: "relative",
         padding: "100px 20px",
-        background: "#070913",
+        background: "rgb(30, 41, 59)",
         display: "flex",
         justifyContent: "center",
         overflow: "hidden"

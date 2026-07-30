@@ -55,15 +55,16 @@ const TestimonialsSection = () => {
   return (
     <section 
       id="testimonials" 
-      className="relative z-0 py-24 md:py-36 overflow-hidden bg-slate-950"
-    >
-      {/* Dynamic ambient radial core glow - Base layer (z-10) */}
-      <div
-        className="absolute inset-0 z-10 opacity-40 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(26, 81, 244, 0.15) 0%, rgba(2, 6, 23, 0) 70%)',
-        }}
-      ></div>
+      className="relative z-0 py-24 md:py-36 overflow-hidden"
+      style={{
+        position: "relative",
+        padding: "100px 20px",
+        background: "rgb(30, 41, 59)",
+        display: "flex",
+        justifyContent: "center",
+        overflow: "hidden"
+      }}
+    >      
 
       {/* High-end hardware processor micro-dot matrix pattern - Stacked safely on top (z-11) */}
       <div 

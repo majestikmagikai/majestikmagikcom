@@ -6,8 +6,8 @@ import { ExternalLink, Github, Youtube, Zap } from 'lucide-react';
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 py-16 px-4 sm:px-6 lg:px-8" style={{
-          background: 'radial-gradient(ellipse at 80% 0%, rgba(99, 102, 241, 0.85) 0%, rgba(7, 8, 14, 0) 65%)',
-        }}>
+        background: "rgb(30, 41, 59)",        
+      }}>
             {/* High-end hardware processor micro-dot matrix pattern */}
       <div
         className="absolute inset-0 z-[11] pointer-events-none opacity-20"

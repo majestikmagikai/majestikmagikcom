@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({
     <header
       ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isMobileMenuOpen
-          ? 'bg-[#07080e]/90 backdrop-blur-md border-b border-indigo-500/10 shadow-xl'
+          ? 'bg-[#1e293b/95] backdrop-blur-sm border-b border-indigo-500/10 shadow-xl'
           : 'bg-transparent border-b border-transparent shadow-none'
         }`}
     >

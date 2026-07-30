@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
   }, []);
 
   return (
-    <footer id="contact" aria-labelledby="contact-heading" className="relative z-0 bg-slate-950 text-slate-400 border-t border-slate-900 font-sans overflow-hidden">
+    <footer id="contact" aria-labelledby="contact-heading" className="relative z-0 bg-slate-800 text-slate-400 border-t border-slate-900 font-sans overflow-hidden">
 
       {/* Dynamic ambient radial core glow - Base layer (z-10) */}
       <div
@@ -146,7 +146,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
       </div>
 
       {/* Bottom Copyright Bar built inside full deep canvas layout */}
-      <div className="relative bg-slate-950/80 backdrop-blur-md border-t border-slate-900/60 py-6 z-20">
+      <div className="relative bg-slate-800 backdrop-blur-md border-t border-slate-900/60 py-6 z-20">
         <div className="container px-6 mx-auto max-w-7xl flex flex-col items-center justify-between text-xs font-mono text-slate-500 md:flex-row">
           <p className="mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Majestik Magik, Inc. All nodes protected.
