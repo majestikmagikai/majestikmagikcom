@@ -17,7 +17,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         className="absolute inset-0 z-10 opacity-90 pointer-events-none"
         style={{
           background: 'radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.85) 0%, rgb(15, 23, 42) 65%)',
-        }}
+          animation: 'pulse 3s infinite'
+        }}        
       ></div>
 
       {/* High-end hardware processor micro-dot matrix pattern */}
