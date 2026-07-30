@@ -184,7 +184,7 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#07080e] text-slate-300 selection:bg-indigo-500/30 selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#0f172a] text-slate-300 selection:bg-indigo-500/30 selection:text-white">
       <main className="flex-grow py-16 md:py-24">
         <div className="container mx-auto px-6 max-w-4xl">
           <Link

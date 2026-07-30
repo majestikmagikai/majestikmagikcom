@@ -5,8 +5,8 @@ import { ExternalLink, Github, Youtube, Zap } from 'lucide-react';
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 py-16 px-4 sm:px-6 lg:px-8" style={{
-        background: "rgb(30, 41, 59)",        
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-40 px-4 sm:px-6 lg:px-8" style={{
+        background: "rgb(15, 23, 42)",        
       }}>
             {/* High-end hardware processor micro-dot matrix pattern */}
       <div

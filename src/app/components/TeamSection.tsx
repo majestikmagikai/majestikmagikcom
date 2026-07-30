@@ -38,12 +38,7 @@ const TeamSection: React.FC = () => {
       aria-labelledby="team-heading" 
       className="relative z-0 py-8 md:py-15 overflow-hidden"
       style={{
-        position: "relative",
-        padding: "100px 20px",
-        background: "rgb(30, 41, 59)",
-        display: "flex",
-        justifyContent: "center",
-        overflow: "hidden"
+        background: "rgb(15, 23, 42)",        
       }}
     >      
 

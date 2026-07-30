@@ -33,7 +33,7 @@ export default {
         light: {
           background: '#F8FAFC',
           surface: '#FFFFFF',
-          text: '#0F172A',
+          text: '#0f172a',
           muted: '#64748b',
           border: '#E2E8F0',
         },

@@ -56,13 +56,8 @@ const TestimonialsSection = () => {
     <section 
       id="testimonials" 
       className="relative z-0 py-24 md:py-36 overflow-hidden"
-      style={{
-        position: "relative",
-        padding: "100px 20px",
-        background: "rgb(30, 41, 59)",
-        display: "flex",
-        justifyContent: "center",
-        overflow: "hidden"
+      style={{        
+        background: "rgb(15, 23, 42)",    
       }}
     >      
 

@@ -16,7 +16,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <div
         className="absolute inset-0 z-10 opacity-90 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.85) 0%, rgb(30, 41, 59) 65%)',
+          background: 'radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.85) 0%, rgb(15, 23, 42) 65%)',
         }}
       ></div>
 

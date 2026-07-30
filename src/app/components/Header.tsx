@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({
     <header
       ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${isScrolled || isMobileMenuOpen
-          ? 'bg-[#1e293b/95] backdrop-blur-sm border-b border-indigo-500/10 shadow-xl'
+          ? 'bg-[#1e293b/95] backdrop-blur-lg border-b border-indigo-500/10 shadow-xl'
           : 'bg-transparent border-b border-transparent shadow-none'
         }`}
     >
@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden absolute top-full left-0 right-0 bg-[#07080e] border-b border-indigo-500/10 shadow-2xl z-40" id="mobile-menu">
+        <div className="xl:hidden absolute top-full left-0 right-0 bg-[#0f172a] border-b border-indigo-500/10 shadow-2xl z-40" id="mobile-menu">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navItems.map((item) => (
               item.external ? (

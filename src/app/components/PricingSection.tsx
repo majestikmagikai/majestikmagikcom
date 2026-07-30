@@ -116,7 +116,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
       style={{
         position: "relative",
         padding: "100px 20px",
-        background: "rgb(30, 41, 59)",
+        background: "rgb(15, 23, 42)",
         display: "flex",
         justifyContent: "center",
         overflow: "hidden"

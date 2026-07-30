@@ -12,7 +12,7 @@
       <style type="text/css">
         body {
           font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          background-color: #07080e; /* Deep rich dark navy background */
+          background-color: #0f172a; /* Deep rich dark navy background */
           color: #f3f4f6;
           margin: 0;
           line-height: 1.6;
