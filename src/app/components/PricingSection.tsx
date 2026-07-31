@@ -48,7 +48,7 @@ const DEFAULT_MICRO_SERVICES: MicroService[] = [
   { 
     service: 'Shopify Email & Notification Engine', 
     blurb: 'Fix broken layout logic, patch dynamic variables, and optimize transaction notifications or marketing email templates.', 
-    price: '$200', 
+    price: '$600', 
     url: 'https://book.stripe.com/bJefZh2tU7SK2lw6lxdEs03' 
   },
   { 
@@ -59,20 +59,20 @@ const DEFAULT_MICRO_SERVICES: MicroService[] = [
   },
   { 
     service: 'Core Web Vitals & Speed Overhaul', 
-    blurb: 'Maximize Core Web Vitals (LCP, INP, CLS) and crush mobile latency by purging rendering bloat and optimizing script hydration.', 
-    price: '$400', 
+    blurb: 'Maximize Core Web Vitals (LCP, INP, CLS) and crush mobile latency by purging rendering bloat and optimizing script hydration for better data performance.', 
+    price: '$1,500', 
     url: 'https://book.stripe.com/28E5kDfgGflcd0abFRdEs05' 
   },
   { 
     service: 'Landing Page Redesign & Engineering', 
     blurb: 'We upgrade static websites into high-fidelity, responsive interfaces powered by fluid web animations and seamless full-stack API integrations. From visual polish to backend data flow, we build fast, interactive sites designed to engage users and convert visitors.', 
-    price: '$550', 
+    price: '$3,000', 
     url: 'https://book.stripe.com/7sY9AT6Ka6OG9NYdNZdEs06' 
   },
   { 
     service: 'Technical GEO & AI Visibility Audit', 
     blurb: 'Audit platform performance and inject optimized graph schema to ensure real-time AI engines like ChatGPT Search and Perplexity crawl, cite, and recommend your site.', 
-    price: '$300', 
+    price: '$2,500', 
     url: 'https://book.stripe.com/eVq00j5G66OGaS2bFRdEs07' 
   },
   { 
