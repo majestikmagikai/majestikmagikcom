@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {/* Floating Pill Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-indigo-300 backdrop-blur-md scroll-animate opacity-90 ease-in-out duration-500">
           <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-          The Gamified AI Co-Founder
+          ENTERPRISE PERFORMANCE & SEO ENGINE
         </div>
 
         {/* Massive Apple-Inspired Header Stack */}
@@ -48,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
         {/* Elegant Centered Description */}
         <p className="max-w-3xl mx-auto mb-10 text-base md:text-xl text-slate-400 font-sans leading-relaxed scroll-animate opacity-90 ease-in-out duration-500">
-          Your autonomous AI Co-Founder that turns business chaos into clarity—keeping your strategy sharp, your team aligned, and your execution on track.
+          Audit Core Web Vitals, track site speed, and generate SEO roadmaps in seconds.
         </p>
 
         {/* Clean Call To Action Layer */}
@@ -59,10 +59,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             rel="noopener noreferrer"
             className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.65)] hover:shadow-[0_0_65px_rgba(99,102,241,0.95)] border border-indigo-400/30"
           >
-            Start Your Quest
+            RUN A FREE SITE AUDIT
           </a>
           <p className="mt-3 text-xs text-slate-500 tracking-wide">
-            3 days free, then flexible tiers &nbsp;·&nbsp; Built for solo founders, by a solo founder
+            Built for founders, by a solo founder
           </p>
         </div>
 
@@ -95,7 +95,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
         {/* Feature Chips */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
-          {['Powered by Majestik Core API', 'Sub-Second Latency', 'Contextual Intelligence'].map((chip) => (
+          {['Powered by Majestik Core', 'Sub-Second Latency', 'Contextual Intelligence'].map((chip) => (
             <span
               key={chip}
               className="text-xs font-mono text-indigo-300/70 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1.5 rounded-full tracking-wide"
