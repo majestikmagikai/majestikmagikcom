@@ -73,7 +73,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
         <div className="flex items-center justify-between p-4 border-b bg-[#07080e]/80 border-indigo-500/10">
           <h3 id="chat-assistant-heading" className="flex items-center text-sm font-bold tracking-wide text-slate-100 uppercase font-mono">
             <MagicWandIcon className="w-5 h-5 mr-2 text-indigo-400 animate-pulse" />
-            MM AI Assistant
+            Majestik Magik AI Assistant
           </h3>
           <button
             onClick={handleToggleChat}
