@@ -45,6 +45,12 @@ interface PricingSectionProps {
 }
 
 const DEFAULT_MICRO_SERVICES: MicroService[] = [
+  {
+    service: 'AI Code Extraction & Frontend Quick-Fix',
+    blurb: 'Clean export of the front end assets & code off the no-code platform. Fix UI rendering, CSS breakages, and broken links. Deploy static front end to Vercel/Netlify/Supabase/Cloudflare with custom domain DNS setup.',
+    price: '$200',
+    url: 'https://book.stripe.com/bJe00jd8y0qi4tE11ddEs09'
+  },
   { 
     service: 'Shopify Email & Notification Engine', 
     blurb: 'Fix broken layout logic, patch dynamic variables, and optimize transaction notifications or marketing email templates.', 
