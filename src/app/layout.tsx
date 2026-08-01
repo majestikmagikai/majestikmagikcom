@@ -121,7 +121,16 @@ export default function RootLayout({
                     "Performance troubleshooting",
                     "Stripe subscription infrastructure",
                     "Technical SEO",
-                    "E-commerce deployment"
+                    "E-commerce deployment",
+                    "Lovable code export and migration",
+                    "Base44 app rescue service",
+                    "Fix broken vibe coded app",
+                    "Connect Supabase database to Lovable",
+                    "Deploy Bolt.new to AWS and Vercel",
+                    "AI prototype to production deployment",
+                    "Vibe coding rescue and repair",
+                    "AI-generated app debugging",
+                    "No-code to production migration"
                   ],
                   "hasOfferCatalog": {
                     "@type": "OfferCatalog",
@@ -401,6 +410,54 @@ export default function RootLayout({
                       "acceptedAnswer": {
                         "@type": "Answer",
                         "text": "Yes—tech, UX, SEO, and conversion audits with priority roadmaps and quick-win recommendations."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Can you export and migrate a Lovable app to a real codebase?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We specialize in Lovable code export and migration — taking your AI-generated project and moving it into a clean, production-ready Next.js or React codebase with proper routing, environment variables, and deployment pipelines."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Do you offer a Base44 app rescue service?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. If your Base44 app is broken, stalled, or needs to be migrated off the platform, we can audit the generated code, patch logic errors, and redeploy it as a standalone production application."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Can you fix a broken vibe coded app?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. We rescue vibe-coded apps built with Lovable, Bolt.new, Base44, or similar AI builders. Common fixes include broken routing, missing API integrations, database connection errors, and deployment failures."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Can you connect a Supabase database to a Lovable app?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We configure Supabase projects, set up Row Level Security, wire environment variables, and connect your Lovable-exported frontend to a live Supabase backend with auth, storage, and real-time data."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Can you deploy a Bolt.new app to AWS or Vercel?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We take your Bolt.new export, clean up the build config, and deploy it to Vercel, AWS Amplify, or Cloudflare Pages — including custom domains, CI/CD pipelines, and environment variable management."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Do you handle AI prototype to production deployment?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We take AI-generated prototypes from tools like Lovable, Bolt.new, v0, or Base44 and harden them for production: refactoring fragile code, adding error handling, securing API keys, setting up databases, and deploying to scalable infrastructure."
                       }
                     },
                     {
