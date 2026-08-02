@@ -128,7 +128,7 @@ const Header: React.FC<HeaderProps> = ({
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold uppercase tracking-wider text-xs py-2 px-4 rounded-lg transition-all duration-200 shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                className="bg-indigo-400/30 hover:bg-indigo-300/30 text-indigo-300 border border-indigo-400/30 font-mono uppercase tracking-wider text-xs py-2 px-4 rounded-lg transition-all duration-200"
               >
                 {item.name}
               </a>
@@ -178,7 +178,7 @@ const Header: React.FC<HeaderProps> = ({
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-lg px-3 py-2.5 text-xs font-mono font-bold uppercase tracking-widest bg-indigo-600 text-white text-center shadow-lg hover:bg-indigo-500 transition-colors"
+                  className="block rounded-lg px-3 py-2.5 text-xs font-mono uppercase tracking-widest border border-indigo-400/30 bg-indigo-300/10 hover:bg-indigo-400/30 text-indigo-300 text-center transition-colors duration-200"
                 >
                   {item.name}
                 </a>

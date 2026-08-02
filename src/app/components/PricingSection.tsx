@@ -206,7 +206,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({
                     href={m.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex w-full items-center justify-center rounded-lg px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider bg-slate-800 text-slate-300 border border-slate-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-500 transition-all duration-200"
+                    className="inline-flex w-full items-center justify-center rounded-lg px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider bg-indigo-400/30 hover:bg-indigo-300/30 text-indigo-300 border border-indigo-400/30 transition-all duration-200"
                   >
                     Buy Now
                   </a>

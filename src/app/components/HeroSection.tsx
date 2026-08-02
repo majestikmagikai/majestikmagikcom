@@ -57,9 +57,9 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             href="https://app.majestikmagik.dev/sign-up"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-indigo-600 hover:bg-indigo-400 text-white font-mono font-bold uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.65)] hover:shadow-[0_0_65px_rgba(99,102,241,0.95)] border border-indigo-400/30"
+            className="inline-block bg-indigo-300/10 hover:bg-indigo-400/30 text-indigo-300 font-mono uppercase tracking-wider text-xs py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_40px_rgba(99,102,241,0.65)] hover:shadow-[0_0_65px_rgba(99,102,241,0.95)] border border-indigo-300/30"
           >
-            RUN A FREE SITE AUDIT
+            Check Site Speed Instantly
           </a>
           <p className="mt-3 text-xs text-slate-500 tracking-wide">
             Built for founders, by a solo founder
