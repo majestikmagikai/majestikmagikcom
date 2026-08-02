@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import localFont from 'next/font/local';
+import { Inter } from 'next/font/google';
 import MainLayout from './components/MainLayout';
 import './globals.css';
 
-// Load Inter font with built-in Next.js optimization (Zero layout shift)
-const inter = localFont({
-  src: '../../public/fonts/Inter-VariableFont_opsz,wght.ttf',
+const inter = Inter({
+  subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+  preload: true,
 });
 
 export const metadata: Metadata = {

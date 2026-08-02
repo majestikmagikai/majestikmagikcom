@@ -147,7 +147,7 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
 
       {/* Bottom Copyright Bar built inside full deep canvas layout */}
       <div className="relative bg-slate-900 backdrop-blur-md border-t border-slate-900/60 py-6 z-20">
-        <div className="container px-6 mx-auto max-w-7xl flex flex-col items-center justify-between text-xs font-mono text-slate-500 md:flex-row">
+        <div className="container px-6 mx-auto max-w-7xl flex flex-col items-center justify-between text-xs font-mono text-slate-400 md:flex-row">
           <p className="mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Majestik Magik, Inc. All nodes protected.
           </p>
@@ -158,8 +158,8 @@ const Footer: React.FC<FooterProps> = ({ isAlwaysVisible }) => {
                 <a href="https://www.trustpilot.com/review/majestikmagik.dev" target="_blank" rel="noopener">Trustpilot</a>
               </div>
 
-              <div className="mt-2 text-[11px] leading-relaxed text-slate-600 italic">
-                “Majestik Magik didn’t just build a website — they built a platform that empowers my voice and mission.” <span className="text-slate-500 not-italic font-sans block mt-0.5">– Parris Gainer</span>
+              <div className="mt-2 text-[11px] leading-relaxed text-slate-400 italic">
+                “Majestik Magik didn’t just build a website — they built a platform that empowers my voice and mission.” <span className="text-slate-400 not-italic font-sans block mt-0.5">– Parris Gainer</span>
               </div>
             </div>
           )}

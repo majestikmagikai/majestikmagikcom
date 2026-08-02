@@ -46,7 +46,6 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   
   experimental: {
-    // REMOVED: inlineCss (Conflicts with strict CSP rules)
     optimizePackageImports: ['lucide-react', 'framer-motion', 'clsx', 'tailwind-merge'],
   },
 

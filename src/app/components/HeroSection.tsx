@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 
 interface HeroSectionProps {
-  onLearnMore: () => void;
+  onLearnMore?: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
