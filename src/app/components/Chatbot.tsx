@@ -40,7 +40,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
       {/* Floating Chat Trigger with Pulsing Aurora Ring */}
       <button
         onClick={handleToggleChat}
-        className="fixed bottom-6 right-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 hover:from-indigo-500 hover:to-purple-700 text-white p-4 rounded-full shadow-[0_0_25px_rgba(99,102,241,0.4)] hover:shadow-[0_0_35px_rgba(99,102,241,0.6)] transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#07080e]"
+        className="fixed bottom-6 right-6 border-2 border-indigo-300/10 bg-indigo-400/10 hover:bg-indigo-500/30 text-indigo-400 p-4 rounded-full transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#07080e]"
         aria-label={isChatOpen ? "Close chat" : "Open chat assistant"}
         disabled={!isGeminiInitialized && chatMessages.length === 0}
         type="button"
@@ -52,7 +52,7 @@ const Chatbot: React.FC<ChatbotProps> = ({
             <Image 
               src="/img/headphones-with-microphone.svg" 
               alt="Support icon" 
-              className="w-7 h-7 filter brightness-0 invert" 
+              className="w-7 h-7" style={{ filter: 'invert(58%) sepia(60%) saturate(500%) hue-rotate(200deg) brightness(100%)' }} 
               loading="lazy"
               width={28}
               height={28} 
