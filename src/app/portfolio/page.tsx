@@ -105,7 +105,7 @@ export default function Portfolio() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-2.5 px-4 rounded-xl transition-colors"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-300/10 hover:bg-indigo-400/30 text-indigo-300 border border-indigo-400 text-sm font-semibold py-2.5 px-4 rounded-xl transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" /> Live App
                 </a>
